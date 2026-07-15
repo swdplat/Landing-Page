@@ -419,12 +419,14 @@ body.nation-map *::after {
 
 /* 國名：中文在上、英文在下；中文黑且放大 */
 .name-card .zh-title {
+  font-family: "微軟正黑體";
   font-size: 20px;
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
 }
 .name-card .en-sub {
+  font-family: "微軟正黑體";
   margin-top: 4px;
   font-size: 13px;       /* 與先前中文小字同級 */
   color: var(--text);     /* 顏色與中文一致（黑） */
@@ -526,8 +528,8 @@ body.nation-map *::after {
   background: rgba(255,255,255,0.7);
 }
 .method-chip img { width: 18px; height: 18px; display: block; }
-.method-chip .m-zh { font-size: 12px; font-weight: 600; color: var(--text); }
-.method-chip .m-en { font-size: 11px; color: var(--muted); }
+.method-chip .m-zh { font-family: "微軟正黑體"; font-size: 12px; font-weight: 600; color: var(--text); }
+.method-chip .m-en { font-family: "微軟正黑體"; font-size: 11px; color: var(--muted); }
 /* 左側大類 icon 欄位 */
 .cat-icon-col {
   display: flex;
@@ -1068,7 +1070,7 @@ body.nation-map *::after {
 }
 
 .region-name .zh{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   color: #333;
 }

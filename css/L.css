@@ -180,7 +180,7 @@ body {
     width:62%;
 	height:auto;
 	margin:2% 0;
-	padding:3% 19%;
+	padding:3% 19% 3% 19%;
 	background-color:#d5ecff;
 	float:left;
 }
@@ -194,7 +194,7 @@ body {
 #brand .text h1 {
 	width:100%;
 	height:auto;
-	margin:0 0 3% 0;
+	margin:6% 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 48px;
@@ -321,15 +321,15 @@ body {
 }
 #global_payment ul p {
 	width:100%;
-	height:auto;
-	margin:0 0 1.5% 0;
+	height:135px;
+	margin:0 0 0% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 17px;
 	line-height: 36px;
 	font-weight: normal;
 	color: #333333;
-	text-align:left;
+	text-align:justify;
 	display:inline;
 	float:left;
 }
@@ -474,7 +474,7 @@ body {
 	line-height: 21px;
 	font-weight: normal;
 	color: #444444;
-	text-align:left;
+	text-align:justify;
 	display:inline;
 	float:left;
 }
@@ -612,7 +612,7 @@ body {
 	line-height: 32px;
 	font-weight: normal;
 	color: #444444;
-	text-align:left;
+	text-align:justify;
 	display:inline;
 	float:left;
 }
@@ -702,7 +702,7 @@ body {
 	line-height: 28px;
 	font-weight: normal;
 	color: #444444;
-	text-align:left;
+	text-align:justify;
 	display:inline;
 	float:left;
 }
@@ -949,8 +949,8 @@ body {
 	width:80%;
 	height:auto;
 	margin:0% 0;
-	padding:11% 10%;
-	background-image: url(../images/connect_bg.png);
+	padding:11% 10% 9% 10%;
+	background-image: url(../images/connect_bg.jpg);
 	background-size:100%;
 	float:left;
 }
@@ -984,9 +984,9 @@ body {
 }
 #connect .button {
 	width:22%;
-	margin:2% 4% 0 4%;
-	padding:0.95% 0 1.5% 0;
-	background-image: url(../images/main_visual_connect_button.png);
+	margin:15% 4% 0 3.5%;
+	padding:1.2% 0 1.5% 0;
+	background-image: url(../images/connect_button.png);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";

@@ -29,6 +29,11 @@ $(function() {
                     scrollTop: $('#diagram').offset().top
                 }, 1200);
             });
+	        $('#btn_top').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#wrapper').offset().top
+                }, 1200);
+            });
 	        $('#tab1').click(function() {
                 $('html,body').animate({
                     scrollTop: $('#map').offset().top
@@ -79,11 +84,11 @@ $(function() {
    	  <div class="btn">聯絡我們</div>
     </div>
 	
-    <!--主視覺-->
+<!--主視覺-->
     <div id="main_visual">
 	  <div id="main_visual_title" class="push-in-up animation"></div>
 	  <div id="main_btn">聯絡我們</div>
-	  <div id="more" class="animated bounce infinite"></div>
+	  <div id="more"></div>
 	  <div id="diagram"></div>
     </div>
     <!--全球遊戲支付領導品牌-->
@@ -234,7 +239,7 @@ $(function() {
 	</div>
 	
 	<!--安全交易-->
-	<div id="security">
+<div id="security">
       <h1>全方位交易安全解決方案</h1>
 	  <ul>
 		<li>
@@ -261,7 +266,7 @@ $(function() {
 	</div>
 	
 	<!--客服支援-->
-    <div id="customer_service">
+<div id="customer_service">
 	  <h1>客服支援</h1>
         <ul>
 	     <li>
@@ -283,10 +288,10 @@ $(function() {
     </div>
 	
 	<!--選擇MyCard-->
-    <div id="choice">
-      <h1>超過上千家遊戲公司選擇MyCard</h1>
-      <h2>MyCard支付平台深受台日韓頂尖手遊廠商信賴，攜手超過80%遊戲廠商，共創繁盛。<br>
-          更與PC端遊共同打造，提供玩家最好的支付體驗。</h2>
+<div id="choice">
+  <h1>超過上千家遊戲公司選擇MyCard</h1>
+  <h2>MyCard支付平台深受台日韓頂尖手遊廠商信賴，攜手超過80%遊戲廠商，共創繁盛。<br>
+  更與PC端遊共同打造，提供玩家最好的支付體驗。</h2>
     	<ul>
 	      <li><img src="images/game_icon/best_choice_1.png"></li>
 	      <li><img src="images/game_icon/best_choice_2.png"></li>
@@ -337,14 +342,14 @@ $(function() {
 	      <li><img src="images/game_icon/best_choice_47.png"></li>
 	      <li><img src="images/game_icon/best_choice_48.png"></li>
         </ul>
-	    <dl>
+  <dl>
 	      <dt><img src="images/company/garena.png"></dt>
     	  <dt><img src="images/company/gravity.png"></dt>
 	      <dt><img src="images/company/happytiik.png"></dt>
     	  <dt><img src="images/company/logo_bigo.png"></dt>
     	  <dt><img src="images/company/logo_bluebird.png"></dt>
 	      <dt><img src="images/company/logo_chinesegamer.png"></dt>
-    	  <dt><img src="images/company/logo_finger.png"></dt>
+    <dt><img src="images/company/logo_finger.png"></dt>
 	      <dt><img src="images/company/logo_gameflier.png"></dt>
 	      <dt><img src="images/company/logo_gravity.png"></dt>
 	      <dt><img src="images/company/logo_happytuk.png"></dt>
@@ -358,11 +363,11 @@ $(function() {
 	      <dt><img src="images/company/logo_wemade.png"></dt>
 	      <dt><img src="images/company/logo_xsolla.png"></dt>
     	  <dt><img src="images/company/logo_yile.png"></dt>
-        </dl>
-    </div>
+  </dl>
+</div>
 	
 	<!--合作流程-->
-    <div id="cooperate">
+<div id="cooperate">
 		<h1>MyCard合作流程</h1>
 		<h2>我們建立簡單清楚的合作流程，讓客戶快速贏得優勢</h2>
 		<ul>
@@ -395,14 +400,15 @@ $(function() {
 	</div>
 	
 	<!--聯絡我們-->
-	<div id="connect">
-	  <h1>馬上聯絡MyCard</h1>
-	  <h2>為公司開拓市場並增加營收</h2>
-	  <div class="button">前往聯絡我們</div>
+<div id="connect">
+	  <div class="button heartbeat animation">前往聯絡我們</div>
 	</div>
 	
+	<!--回到頂端鈕-->
+	<div id="btn_top"><img src="images/btn_top.png"></div>
+	
 	<!--版權宣告-->
-<div id="copyright">
+    <div id="copyright">
 		<div class="logo"><img src="images/mycard-logo.png"></div>
 		<div class="community">
 		    <ol><img src="images/community/threads.png"></ol>
@@ -413,7 +419,7 @@ $(function() {
 	    <p>© Soft-World International Corporation. All Rights Reserved.</p>
 	</div>
 		
-</div>
+    </div>
 		
 	<!-- 地圖套件與相關js -->
     <script src="map/country-info.js"></script>
