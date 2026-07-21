@@ -196,7 +196,7 @@ body.nation-map *::after {
 .map-frame {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1180px;
   margin: 0 auto;  /* 避免鎖捲動/手勢期間 viewport 寬度重算，導致外框視覺貼邊 */
   aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
   overflow: hidden;
@@ -230,7 +230,7 @@ body.nation-map *::after {
 
 /* SVG 子節點預設也套用 pan-y（避免點到 path 時 touch-action 回到 auto，導致手勢判斷不一致） */
 #mapSvg, #mapSvg * {
-  touch-action: pan-y;
+  touch-action: pan-y;  
 }
 
 /* 雙指手勢鎖定：強制由程式接管（避免頁面跟著捲動/縮放） */
@@ -245,6 +245,7 @@ body.nation-map *::after {
 /* 讓 mapFrame 可以當 toolbar 的定位容器 */
 .map-frame {
   position: relative;
+  background-color:#d5ecff;
 }
 
 /* === [04] 地圖浮層（工具列 / 提示文字） ===
@@ -419,14 +420,14 @@ body.nation-map *::after {
 
 /* 國名：中文在上、英文在下；中文黑且放大 */
 .name-card .zh-title {
-  font-family: "微軟正黑體";
+  font-family: "微軟正黑體", "PingFang TC";
   font-size: 20px;
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
 }
 .name-card .en-sub {
-  font-family: "微軟正黑體";
+  font-family: "微軟正黑體", "PingFang TC";
   margin-top: 4px;
   font-size: 13px;       /* 與先前中文小字同級 */
   color: var(--text);     /* 顏色與中文一致（黑） */
@@ -486,7 +487,7 @@ body.nation-map *::after {
 
 
 /* 點擊高亮 */
-.active-region { filter: drop-shadow(0 0 0 rgb(0, 181, 249)); stroke: var(--accent); stroke-width: 1.2; fill: rgba(114,216,255,0.18) !important; }
+.active-region { filter: drop-shadow(0 0 0 rgb(204, 204, 204)); stroke: var(--accent); stroke-width: 1.2; fill: rgba(0,173,238,0.75) !important; }
 
 /* 區塊標題 */
 .sec-title { font-weight: 800; margin: 6px 5px 10px; }
@@ -528,8 +529,8 @@ body.nation-map *::after {
   background: rgba(255,255,255,0.7);
 }
 .method-chip img { width: 18px; height: 18px; display: block; }
-.method-chip .m-zh { font-family: "微軟正黑體"; font-size: 12px; font-weight: 600; color: var(--text); }
-.method-chip .m-en { font-family: "微軟正黑體"; font-size: 11px; color: var(--muted); }
+.method-chip .m-zh { font-family: "微軟正黑體", "PingFang TC"; font-size: 12px; font-weight: 600; color: var(--text); }
+.method-chip .m-en { font-family: "微軟正黑體", "PingFang TC"; font-size: 11px; color: var(--muted); }
 /* 左側大類 icon 欄位 */
 .cat-icon-col {
   display: flex;
@@ -766,7 +767,7 @@ body.nation-map *::after {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
     height: 38%;              /* 再拉高些，避免被瀏覽器列遮住 */
     max-height: 42%;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px;
   }
 
   /* 內部 padding 縮小一點，減少左側空間，整體留 8px */
@@ -985,7 +986,8 @@ body.nation-map *::after {
 
 /* === 地圖下方：其他地區區塊 === */
 .region-section{
-  padding: 56px 0 72px;
+  margin:12px 0 0 0;
+  padding: 56px 0 72px 0;
   background: #fff;
 }
 
@@ -1098,3 +1100,12 @@ body.nation-map *::after {
   #mapSvg { cursor: grab; }
   #mapSvg:active { cursor: grabbing; }
 }
+
+以下根據昨天提出的問題提供修改
+
+1.全球化的支付平台ICON更換
+2.標題小字斷行及對齊問題
+3.地圖清單內的文字統一改為黑體字
+4.馬上聯絡MyCard標題優化
+
+再看看有沒問題

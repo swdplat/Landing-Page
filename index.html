@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang["zh-tw">
 
 <head>
 <meta charset="utf-8">
@@ -8,7 +8,9 @@
 
 <title>MyCard形象官網</title>
 <meta name="description" content="MyCard形象官網">
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	
+<!-- favico -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon_1.ico" />
 
 <link rel="stylesheet" href="css/L.css">
 <link rel="stylesheet" href="css/LM.css" media="only screen and (min-width:980px) and (max-width:1680px)">
@@ -16,12 +18,20 @@
 <link rel="stylesheet" href="css/S.css" media="only screen and (max-width:599px)">
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/motion.css">
+	
 <!-- 地圖套件css -->
 <link rel="stylesheet" href="map/nation-map-style.css">
 
-<SCRIPT src="js/jquery-1.4.2.min.js" type=text/javascript></SCRIPT>
-<SCRIPT src="js/jquery-1.2.3.pack.js" type=text/javascript></SCRIPT>
-<SCRIPT src="js/callout.js" type=text/javascript></SCRIPT> 
+<!-- jquery引入檔 -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/callout.js"></script>
+	
+<!-- google fonts 字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+
+
 <script language="javascript">
 $(function() {
 		    $('#more').click(function() {
@@ -72,6 +82,16 @@ $(function() {
 <div id="wrapper">
     <!--天邊-->
     <div id="top_bar">
+	  <div class="menu_icon"><img src="images/top_ber_menu.png"></div>
+	  <div id="menu_list">
+		<div id="menu_close"><img src="images/top_ber_close.png"></div>
+		<li id="tab1">服務地區</li>
+		<li id="tab2">整合行銷</li>
+		<li id="tab3">安全交易</li>
+		<li id="tab4">客服支援</li>
+		<li id="tab5">合作廠商</li>
+		<li id="tab6">合作流程</li>
+	  </div>
 	  <div class="logo"><img src="images/MyCard_logo.png"></div>
 	  <div class="menu">
 		<li id="tab1">服務地區</li>
@@ -86,19 +106,36 @@ $(function() {
 	
 <!--主視覺-->
     <div id="main_visual">
-	  <div id="main_visual_title" class="push-in-up animation"></div>
+	  <div id="main_visual_title" data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow bounceInRight center"></div>
 	  <div id="main_btn">聯絡我們</div>
 	  <div id="more"></div>
-	  <div id="diagram"></div>
+	  <div id="diagram">
+        <li class="p1">
+	      <h5><span class="amount">768</span>萬+</h5>
+		  <h6>MyCard會員數</h6>
+		</li>
+		<dl class="p2">
+		  <h5><span class="amount">2210</span>萬+</h5>
+		  <h6>MyCard官網月流量</h6>
+		</dl>
+		<li class="p3">
+		  <h5><span class="amount">51</span>萬+</h5>
+		  <h6>MyCard社群人數</h6>
+		</li>
+		<dl class="p4">
+		  <h5><span class="amount">200+</h5>
+		  <h6>支付方式</h6>
+		</dl>
+      </div>
     </div>
     <!--全球遊戲支付領導品牌-->
-    <div id="brand">
-	    <div class="photo"><img src="images/brand_p1.jpg"></div>
+    <div id="brand"> 
         <div class="text">
 		    <h1>全球遊戲支付領導品牌</h1>
 		    <h2>市占率第一、通路佈點最廣</h2>
             <p>全面涵蓋臺灣、香港、澳門多元支付方式，是您進入華語市場，觸及數億玩家的最強合作夥伴。</p>
 	    </div>
+		<div class="photo"><img src="images/brand_p1.jpg"></div>
 	</div>
 	<div id="global_payment">
 		<h1>全球化的支付平台</h1>
@@ -117,7 +154,7 @@ $(function() {
 		  <dl>
 			  <h1>MyCard點數</h1>
 			  <p>MyCard與台港各大便利商店、3C 賣場、連鎖賣場等實體通路夥伴，部署超過2萬個經銷點位，讓您的玩家隨時都能購買MyCard 點數。</p>
-			  <div class="icon"><img src="images/global_payment_icon3.png"></div>
+			  <div class="icon2"><img src="images/global_payment_icon3.png"></div>
 		  </dl>
 		</ul>
 		<dd>無論您的目標客戶身在何處，我們都能提供最符合當地習慣的支付服務，助您輕鬆實現全球化佈局</dd>
@@ -176,7 +213,7 @@ $(function() {
 	  <h2>深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務</h2>
 	  <div class="step">
         <ul>
-		  <li class="step1"></li>
+		  <li data-wow-delay="0.2s" data-wow-offset="5" class="step1 span3 wow fadeInLeft center"></li>
 		  <dl>
 			  <div class="icon"><img src="images/marketing_icon1.png"></div>
 			  <h3>行銷策略規劃</h3>
@@ -189,7 +226,7 @@ $(function() {
 		  </dl>
 		</ul>
 		<ul>
-		  <li class="step2"></li>
+		  <li data-wow-delay="0.4s" data-wow-offset="5" class="step2 span3 wow fadeInLeft center"></li>
 		   <dl>
 			  <div class="icon"><img src="images/marketing_icon3.png"></div>
 			  <h3>事前登錄導流服務</h3>
@@ -202,7 +239,7 @@ $(function() {
 		  </dl>
 		</ul>
 		<ul>
-		  <li class="step3"></li>
+		  <li data-wow-delay="0.6s" data-wow-offset="5" class="step3 span3 wow fadeInLeft center"></li>
 		  <dl>
 			  <div class="icon"><img src="images/marketing_icon5.png"></div>
 			  <h3>專業影音創作</h3>
@@ -215,7 +252,7 @@ $(function() {
 		  </dl>
 		</ul>
 		<ul>
-		  <li class="step4"></li>
+		  <li data-wow-delay="0.8s" data-wow-offset="5" class="step4 span3 wow fadeInLeft center"></li>
 		  <dl>
 			  <div class="icon"><img src="images/marketing_icon7.png"></div>
 			  <h3>線上+線下資源的<br>全方位曝光</h3>
@@ -228,11 +265,14 @@ $(function() {
 		  </dl>
 		</ul>
 		<ul>
-		  <li class="step5"></li>
-			<dd>
+		  <li data-wow-delay="1s" data-wow-offset="5" class="step5 span3 wow fadeInLeft center"></li>
+		  <dd>
 			  <div class="icon"><img src="images/marketing_icon9.png"></div>
 			  <h3>異業聯名企劃</h3>
 			  <p>媒合品牌、餐飲、影視、零售等跨領域資源，打造創新聯名內容，提高玩家參與度與市場聲量。</p>
+		  </dd>
+		  <dd>
+			<div class="mascot"><img src="images/marketing_icon10.png"></div>
 		  </dd>
 		</ul>
 	  </div>
@@ -242,22 +282,22 @@ $(function() {
 <div id="security">
       <h1>全方位交易安全解決方案</h1>
 	  <ul>
-		<li>
+		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInDown center">
 		  <dt><img src="images/security_icon1.png"></dt>
 		  <h5>全天候智慧監控</h5>
 		  <p>我們提供24小時不間斷的智慧監控，能快速偵測所有交易。一旦發現可疑的交易行為，像是詐欺、盜刷等，系統會立刻反應，全面保護您的客戶。</p>
 		</li>
-		<li>
+		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInUp center">
 		  <dt><img src="images/security_icon2.png"></dt>
 		  <h5>專業退單仲裁</h5>
 		  <p>MyCard 團隊已建立標準化爭議處理流程，能作為您的後盾，協助處理銀行或支付機構的退單仲裁流程。我們將為您爭取最大的權益，降低爭議造成的損失。</p>
 		</li>
-		<li>
+		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInDown center">
 		  <dt><img src="images/security_icon3.png"></dt>
 		  <h5>FIDO無密碼驗證</h5>
 		  <p>導入 FIDO 國際公認的新世代無密碼驗證標準。能大幅提升玩家帳號安全、杜絕密碼盜用風險，同時讓玩家登入更快速、更方便，是保障資安與體驗的未來趨勢。</p>  
 		</li>
-		<dl>
+		<dl data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInUp center">
 		  <dt><img src="images/security_icon4.png"></dt>
 		  <h5>彈性風控策略</h5>
 		  <p>MyCard 不只提供業界預設的頂級風險模型，更具備高度彈性，可針對活動、檔期或新品上線調整數值，讓您可以自訂風控規則、強化安全邏輯，讓防線更貼合您的遊戲營運需求。</p>  
@@ -292,7 +332,7 @@ $(function() {
   <h1>超過上千家遊戲公司選擇MyCard</h1>
   <h2>MyCard支付平台深受台日韓頂尖手遊廠商信賴，攜手超過80%遊戲廠商，共創繁盛。<br>
   更與PC端遊共同打造，提供玩家最好的支付體驗。</h2>
-    	<ul>
+    	<ul data-wow-delay="0.2s" data-wow-offset="20" class="span3 wow bounceInRight center">
 	      <li><img src="images/game_icon/best_choice_1.png"></li>
 	      <li><img src="images/game_icon/best_choice_2.png"></li>
     	  <li><img src="images/game_icon/best_choice_3.png"></li>
@@ -342,14 +382,14 @@ $(function() {
 	      <li><img src="images/game_icon/best_choice_47.png"></li>
 	      <li><img src="images/game_icon/best_choice_48.png"></li>
         </ul>
-  <dl>
+        <dl data-wow-delay="0.5s" data-wow-offset="20" class="span3 wow bounceInLeft center">
 	      <dt><img src="images/company/garena.png"></dt>
     	  <dt><img src="images/company/gravity.png"></dt>
 	      <dt><img src="images/company/happytiik.png"></dt>
     	  <dt><img src="images/company/logo_bigo.png"></dt>
     	  <dt><img src="images/company/logo_bluebird.png"></dt>
 	      <dt><img src="images/company/logo_chinesegamer.png"></dt>
-    <dt><img src="images/company/logo_finger.png"></dt>
+          <dt><img src="images/company/logo_finger.png"></dt>
 	      <dt><img src="images/company/logo_gameflier.png"></dt>
 	      <dt><img src="images/company/logo_gravity.png"></dt>
 	      <dt><img src="images/company/logo_happytuk.png"></dt>
@@ -363,7 +403,7 @@ $(function() {
 	      <dt><img src="images/company/logo_wemade.png"></dt>
 	      <dt><img src="images/company/logo_xsolla.png"></dt>
     	  <dt><img src="images/company/logo_yile.png"></dt>
-  </dl>
+        </dl>
 </div>
 	
 	<!--合作流程-->
@@ -374,26 +414,26 @@ $(function() {
 		  <li>
 		    <dt>Step.1</dt>
 		    <dd>準備資料</dd>
-		    <div class="sample"><img src="images/cooperate_step1.png"></div>
+		    <div data-wow-delay="0.1s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step1.png"></div>
 			<ol>確保所有必要的文件都已準備好，以供評估</ol>
 		  </li>
 		  <dl>
 			<dt>Step.2</dt>
 			<dd>合作確認</dd>
-			<div class="sample"><img src="images/cooperate_step2.png"></div>
+			<div data-wow-delay="0.2s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step2.png"></div>
 		  	<ol>達成共識並簽訂合約</ol>
 		  </dl>
 			<div id="dash_line"></div>
 		  <li>
 			<dt>Step.3</dt>
 			<dd>技術串接</dd>
-			<div class="sample"><img src="images/cooperate_step3.png"></div>
+			<div data-wow-delay="0.3s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step3.png"></div>
 			<ol>整合MyCard的系統並進行測試</ol>
 		  </li>
 		  <dl>
 			<dt>Step.4</dt>
 			<dd>行銷推廣</dd>
-			<div class="sample"><img src="images/cooperate_step4.png"></div>
+			<div data-wow-delay="0.4s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step4.png"></div>
 			<ol>實施行銷策略以提高知名度</ol>
 		  </dl>
 		</ul>
@@ -419,13 +459,20 @@ $(function() {
 	    <p>© Soft-World International Corporation. All Rights Reserved.</p>
 	</div>
 		
-    </div>
+</div>
 		
-	<!-- 地圖套件與相關js -->
-    <script src="map/country-info.js"></script>
-    <script src="map/payment-catalog.js"></script>
-    <script src="map/country-payments.js"></script>
-    <script src="map/nation-map-app.js"></script>
+<!-- 地圖套件與相關js-->
+<script src="map/country-info.js"></script>	
+<script src="map/payment-catalog.js"></script>
+<script src="map/country-payments.js"></script>
+<script src="map/nation-map-app.js"></script>
+		
+<!--視差滾動效果-->
+    <script src="dist/wow.min.js"></script>
+	<script>
+       new WOW().init();
+     </script>
+
 </body>
 
 </html>

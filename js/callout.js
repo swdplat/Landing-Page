@@ -1,33 +1,39 @@
 // JavaScript Document
 $(document).ready(function() {
+						   
+	$("#menu_list").hide()
 	
-	/*ºuµ°-¡‹Ω–•d*/
-    $("#black_screen").show()
-	$("#Invitation_card").show()
-	$("#Callout2").hide()
-	$("#Callout3").hide()
+	$(".menu_icon").click(function(){
+	  $("#menu_list").slideDown()
+	});
 	
-	$("#callout_close").click(function(){
-	  $("#black_screen").hide()
-	  $("#Invitation_card").hide()	
-	});	
+	$("#menu_close").click(function(){
+	  $("#menu_list").slideUp()
+	});
 	
-	$("#act2").click(function(){
-	  $("#Callout2").show()
-	  $("#black_screen").show()
-	});	
-	$("#callout_close2").click(function(){
-	  $("#black_screen").hide()
-	  $("#Callout2").hide()	
-	});	
+	$("#tab1").click(function(){
+	  $("#menu_list").slideUp()
+	});
 	
-	$("#act3").click(function(){
-	  $("#Callout3").show()
-	  $("#black_screen").show()
-	});	
-	$("#callout_close3").click(function(){
-	  $("#black_screen").hide()
-	  $("#Callout3").hide()	
-	});	
+	$("#tab2").click(function(){
+	  $("#menu_list").slideUp()
+	});
+	
+	$("#tab3").click(function(){
+	  $("#menu_list").slideUp()
+	});
+	
+	$("#tab4").click(function(){
+	  $("#menu_list").slideUp()
+	});
+	
+	$("#tab5").click(function(){
+	  $("#menu_list").slideUp()
+	});
+	
+	$("#tab6").click(function(){
+	  $("#menu_list").slideUp()
+	});
 	
 });
+

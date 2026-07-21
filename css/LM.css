@@ -40,7 +40,8 @@ body {
 	background-repeat: repeat-x;
 	background-size:100%;
 }
-
+#top_bar .menu_icon {display:none;}
+#menu_list {display:none;}
 #top_bar .logo {
 	width:4%;
 	margin:0.4% 0 0 2%;
@@ -51,7 +52,7 @@ body {
 #top_bar .menu {
 	width:42%;
 	height:auto;
-	margin:0.8% 0 0 2%;
+	margin:0.8% 24% 0 23%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -123,7 +124,7 @@ body {
 	top:0;
 	left:0;
 	width:27%;
-	margin:18.5% 12% 0 61%;
+	margin:18.5% 8% 0 65%;
 	padding:9% 0;
 	background-image: url(../images/main_visual_title.png);
 	background-repeat: no-repeat;
@@ -136,7 +137,7 @@ body {
 	top:0;
 	left:0;
 	width:18%;
-	margin:37% 16.5% 0 65.5%;
+	margin:37% 12.5% 0 69.5%;
 	padding:0.55% 0 1.5% 0;
 	background-image: url(../images/main_visual_connect_button.png);
 	background-repeat: no-repeat;
@@ -144,19 +145,21 @@ body {
 	font-family: "微軟正黑體";
 	font-size: 32px;
 	line-height: 32px;
-	font-weight: normal;
+	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
 	cursor:pointer;
 }
-#main_visual #main_btn img {width:100%}
+#main_visual #main_btn:hover {top:2px;}
+#main_visual #main_btn:active {top:4px;}
+#main_visual #main_btn img {width:100%;}
 #main_visual #more {
 	position:absolute;
 	z-index:3;
 	top:0;
 	left:0;
 	width:4.8%;
-	margin:45% 47.6% 0 47.6%;
+	margin:46% 47.6% 0 47.6%;
 	padding:2% 0 2% 0;
 	background-image: url(../images/main_visual_more.png);
 	background-repeat: no-repeat;
@@ -166,16 +169,77 @@ body {
 }
 #main_visual #more img {width:100%}
 #main_visual #diagram {
-    width:50%;
+    width:62%;
     height:auto;
-	margin:1.5% 25% 1% 25%;
-	padding:12% 0;
-	background-image: url(../images/main_visual_diagram_pc.png);
-	background-repeat: no-repeat;
-	background-size:100%;
+	margin:1.5% 19% 1% 19%;
+	padding:0% 0;
 	display:inline;
 	float:left;
 }
+#main_visual #diagram li {
+	width:44%;
+	margin:0 1% 1% 0;
+	padding:4.5% 0 4% 5%;
+	display:inline;
+	border-radius:20px;
+	float:left;
+}
+#main_visual #diagram dl {
+	width:44%;
+	margin:0 1% 1% 0;
+	padding:4.5% 0 4% 5%;
+	display:inline;
+	border-radius:20px;
+	float:right;
+}
+#main_visual #diagram .p1 {
+	background-image: url(../images/main_visual_diagram_p1.png);
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+#main_visual #diagram .p2 {
+	background-image: url(../images/main_visual_diagram_p2.png);
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+#main_visual #diagram .p3 {
+	background-image: url(../images/main_visual_diagram_p3.png);
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+#main_visual #diagram .p4 {
+	background-image: url(../images/main_visual_diagram_p4.png);
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+#main_visual #diagram h5 {
+	width:100%;
+	margin:0 0 0 0;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size: 48px;
+	line-height:48px;
+	font-weight: bold;
+	color: #ff0098;
+	text-alignleft;
+}
+#main_visual #diagram h6 {
+	width:100%;
+	margin:-1% 0 0 0;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size: 24px;
+	line-height:24px;
+	font-weight: bold;
+	color: #333333;
+	text-align:left;
+}
+#main_visual #diagram .amount {font-size: 72px!important; line-height:98px; }
+
+
+
+
+/*全球遊戲支付領導品牌*/
 #brand {
     width:62%;
 	height:auto;
@@ -240,7 +304,7 @@ body {
 	display:inline;
 	float:right;
 }
-#brand .photo img {width:100%;}
+#brand .photo img {width:100%; border-radius:20px;}
 #global_payment {
     width:62%;
 	height:auto;
@@ -340,6 +404,13 @@ body {
 	float:left;
 }
 #global_payment ul .icon img {width:100%;}
+#global_payment ul .icon2 {
+	width:60%;
+	margin:2% 20% 0% 20%;
+	padding:0 0;
+	float:left;
+}
+#global_payment ul .icon2 img {width:100%;}
 #global_payment dd {
 	width:100%;
 	height:auto;
@@ -364,7 +435,7 @@ body {
 	padding:0 0;
 	float:left;
 	overflow:hidden;
-    background: linear-gradient(to bottom,  rgba(239,239,239,1) 25%,rgba(255,255,255,1) 82%);
+    background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 35%);
 }
 
 
@@ -480,7 +551,7 @@ body {
 }
 #marketing .step ul dd {
 	width:95%;
-	height:599px;
+	height:290px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -524,6 +595,14 @@ body {
 	display:inline;
 	float:left;
 }
+#marketing .step ul dd .mascot {
+	width:96%;
+	margin:16% 2% 0 2%;
+	padding:0 0;
+	display:inline;
+	float:left;
+}
+#marketing .step ul dd .mascot img {width:100%;}
 
 /*全方位交易安全解決方案*/
 #security {
@@ -623,7 +702,7 @@ body {
 	width:62%;
 	height:auto;
 	margin:0 0 2% 0;
-	padding:0% 19% 1.5% 19%;
+	padding:0% 19% 3.5% 19%;
 	background-color:#ffffff;
 	float:left;
 }
@@ -650,8 +729,8 @@ body {
 	float:left;
 }
 #customer_service ul li {
-	width:26.1%;
-	height:320px;
+	width:27.1%;
+	height:335px;
 	margin:0 3% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -661,9 +740,9 @@ body {
 	float:left;
 }
 #customer_service ul dl {
-	width:26.1%;
-	height:320px;
-	margin:0 3% 0 0;
+	width:27.1%;
+	height:335px;
+	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 99%);
@@ -992,7 +1071,7 @@ body {
 	font-family: "微軟正黑體";
 	font-size: 27px;
 	line-height: 29px;
-	font-weight: normal;
+	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
 	float:left;
@@ -1032,6 +1111,7 @@ body {
 	cursor:pointer;
 	float:left;
 }
+#copyright .community ol img {width:100%;}
 #copyright p {
 	width:100%;
 	height:auto;
