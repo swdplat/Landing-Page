@@ -126,7 +126,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title.png);
+	background-image: url(../images/main_visual_title.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -139,7 +139,7 @@ body {
 	width:18%;
 	margin:37% 12.5% 0 69.5%;
 	padding:0.55% 0 1.5% 0;
-	background-image: url(../images/main_visual_connect_button.png);
+	background-image: url(../images/main_visual_connect_button.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
@@ -161,7 +161,7 @@ body {
 	width:4.8%;
 	margin:46% 47.6% 0 47.6%;
 	padding:2% 0 2% 0;
-	background-image: url(../images/main_visual_more.png);
+	background-image: url(../images/main_visual_more.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	cursor:pointer;
@@ -498,12 +498,12 @@ body {
 	display:inline;
 	float:left;
 }
-#marketing .step .step1 {background-image: url(../images/marketing_step1.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step2 {background-image: url(../images/marketing_step2.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step3 {background-image: url(../images/marketing_step3.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step4 {background-image: url(../images/marketing_step4.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step5 {background-image: url(../images/marketing_step5.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step ul dl {
+#marketing .step .step1 {background-image: url(../images/marketing_step1.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step2 {background-image: url(../images/marketing_step2.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step3 {background-image: url(../images/marketing_step3.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step4 {background-image: url(../images/marketing_step4.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step5 {background-image: url(../images/marketing_step5.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step ul dl {n
 	width:95%;
 	height:290px;
 	margin:0 5% 2% 0;
@@ -1065,7 +1065,7 @@ body {
 	width:22%;
 	margin:15% 4% 0 3.5%;
 	padding:1% 0 1.5% 0;
-	background-image: url(../images/connect_button.png);
+	background-image: url(../images/connect_button.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";

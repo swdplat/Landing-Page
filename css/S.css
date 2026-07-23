@@ -166,7 +166,7 @@ body {
 	width:100%;
 	height:auto;
 	margin:0 0;
-	padding:190% 0 10% 0;
+	padding:190% 0 5% 0;
 	background-image: url(../images/main_visual_mobile.jpg);
 	background-repeat: no-repeat;
 	background-size:100%;
@@ -177,9 +177,9 @@ body {
 	top:0;
 	left:0;
 	width:80%;
-	margin:105% 10% 0 10%;
+	margin:90% 10% 0 10%;
 	padding:25% 0;
-	background-image: url(../images/main_visual_title.png);
+	background-image: url(../images/main_visual_title.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -190,9 +190,9 @@ body {
 	top:0;
 	left:0;
 	width:60%;
-	margin:158% 20% 0 20%;
+	margin:143% 20% 0 20%;
 	padding:1.5% 0 5% 0;
-	background-image: url(../images/main_visual_connect_button.png);
+	background-image: url(../images/main_visual_connect_button.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
@@ -212,9 +212,9 @@ body {
 	top:0;
 	left:0;
 	width:18%;
-	margin:175% 41% 0 41%;
+	margin:165% 41% 0 41%;
 	padding:5% 0 3% 0;
-	background-image: url(../images/main_visual_more.png);
+	background-image: url(../images/main_visual_more.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	cursor:pointer;
@@ -224,7 +224,7 @@ body {
 #main_visual #diagram {
     width:90%;
     height:auto;
-	margin:0% 5% 1% 5%;
+	margin:-10% 5% 1% 5%;
 	padding:0% 0 4% 0;
 	display:inline;
 	float:left;
@@ -485,7 +485,7 @@ body {
 	width:100%;
 	height:auto;
 	margin:0 0;
-	padding:0 0;
+	padding:0 0 4% 0;
 	float:left;
 	overflow:hidden;
     background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 35%);
@@ -497,7 +497,7 @@ body {
 	width:90%;
 	height:auto;
 	margin:-2% 0;
-	padding:8% 5%;
+	padding:4% 5%;
 	background-color:#d5ecff;
 	float:left;
 }
@@ -518,7 +518,7 @@ body {
 #marketing h2 {
 	width:100%;
 	height:auto;
-	margin:0 0 2% 0;
+	margin:0 0 0% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 24px;
@@ -551,15 +551,15 @@ body {
 	display:inline;
 	float:left;
 }
-#marketing .step .step1 {background-image: url(../images/marketing_step1m.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step2 {background-image: url(../images/marketing_step2m.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step3 {background-image: url(../images/marketing_step3m.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step4 {background-image: url(../images/marketing_step4m.png); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step5 {background-image: url(../images/marketing_step5m.png); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step1 {background-image: url(../images/marketing_step1m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step2 {background-image: url(../images/marketing_step2m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step3 {background-image: url(../images/marketing_step3m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step4 {background-image: url(../images/marketing_step4m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step5 {background-image: url(../images/marketing_step5m.webp); background-repeat: no-repeat; background-size:100%;}
 #marketing .step ul dl {
-	width:48%;
-	height:290px;
-	margin:0 1% 2% 1%;
+	width:100%;
+	height:auto;
+	margin:0 0% 2% 0%;
 	padding:3% 0;
 	border-radius:10px;
 	display:inline;
@@ -567,8 +567,8 @@ body {
     float:left;
 }
 #marketing .step ul dl .icon {
-	width:70%;
-	margin:3% 15%;
+	width:30%;
+	margin:2% 35%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -577,10 +577,10 @@ body {
 #marketing .step ul dl h3 {
     width:88%;
 	height:auto;
-	margin:5% 0 1.5% 0;
+	margin:0% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 15px;
+	font-size: 22px;
 	line-height: 25px;
 	font-weight: bold;
 	color: #333333;
@@ -603,9 +603,9 @@ body {
 	float:left;
 }
 #marketing .step ul dd {
-	width:48%;
-	height:220px;
-	margin:0 1% 2% 1%;
+	width:100%;
+	height:auto;
+	margin:0 0% 2% 0%;
 	padding:3% 0;
 	border-radius:10px;
 	display:inline;
@@ -613,8 +613,8 @@ body {
     float:left;
 }
 #marketing .step ul dd .icon {
-	width:50%;
-	margin:3% 25%;
+	width:30%;
+	margin:3% 35%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -623,10 +623,10 @@ body {
 #marketing .step ul dd h3 {
     width:88%;
 	height:auto;
-	margin:5% 0 1.5% 0;
+	margin:0 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 15px;
+	font-size: 22px;
 	line-height: 25px;
 	font-weight: bold;
 	color: #333333;
@@ -663,8 +663,8 @@ body {
     width:90%;
 	height:auto;
 	margin:0 0 2% 0;
-	padding:8% 5%;
-	background-color:#d9d9d9;
+	padding:4% 5%;
+	background-color:#d1d1d9;
 	background-image: url(../images/security_bg2.jpg);
 	background-repeat: no-repeat;
 	background-size:100%;
@@ -693,16 +693,16 @@ body {
 }
 
 #security ul dt {
-	width:50%;
-	margin:2% 25% 4% 25%;
+	width:30%;
+	margin:2% 35% 2% 35%;
 	padding:0 0;
 	float:left;
 }
 #security ul dt img {width:100%;}
 #security ul li {
-	width:42%;
-	height:330px;
-	margin:0 1% 4% 1%;
+	width:94%;
+	height:auto;
+	margin:0 0% 4% 0%;
 	padding:2.5% 3%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
@@ -711,9 +711,9 @@ body {
 	float:left;
 }
 #security ul dl {
-	width:42%;
-	height:330px;
-	margin:0 1% 4% 1%;
+	width:94%;
+	height:auto;
+	margin:0 0% 4% 0%;
 	padding:2.5% 3%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
@@ -727,7 +727,7 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 18px;
+	font-size: 24px;
 	line-height: 28px;
 	font-weight: bold;
 	color: #4078bf;
@@ -805,8 +805,8 @@ body {
 	float:right;
 }
 #customer_service ul ol {
-	width:40%;
-	margin:2% 30% 2% 30%;
+	width:30%;
+	margin:2% 35% 2% 35%;
 	padding:0 0;
 	float:left;
 }
@@ -1119,7 +1119,7 @@ body {
 	width:70%;
 	margin:0% 15% 0 15%;
 	padding:3% 0 4% 0;
-	background-image: url(../images/connect_button.png);
+	background-image: url(../images/connect_button.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";

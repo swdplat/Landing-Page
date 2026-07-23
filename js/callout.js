@@ -11,27 +11,27 @@ $(document).ready(function() {
 	  $("#menu_list").slideUp()
 	});
 	
-	$("#tab1").click(function(){
+	$("#tab1m").click(function(){
 	  $("#menu_list").slideUp()
 	});
 	
-	$("#tab2").click(function(){
+	$("#tab2m").click(function(){
 	  $("#menu_list").slideUp()
 	});
 	
-	$("#tab3").click(function(){
+	$("#tab3m").click(function(){
 	  $("#menu_list").slideUp()
 	});
 	
-	$("#tab4").click(function(){
+	$("#tab4m").click(function(){
 	  $("#menu_list").slideUp()
 	});
 	
-	$("#tab5").click(function(){
+	$("#tab5m").click(function(){
 	  $("#menu_list").slideUp()
 	});
 	
-	$("#tab6").click(function(){
+	$("#tab6m").click(function(){
 	  $("#menu_list").slideUp()
 	});
 	

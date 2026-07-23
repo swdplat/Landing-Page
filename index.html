@@ -49,7 +49,17 @@ $(function() {
                     scrollTop: $('#map').offset().top
                 }, 1200);
             });
+	        $('#tab1m').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#map').offset().top
+                }, 1200);
+            });
          	$('#tab2').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#marketing').offset().top
+                }, 1200);
+            });
+	        $('#tab2m').click(function() {
                 $('html,body').animate({
                     scrollTop: $('#marketing').offset().top
                 }, 1200);
@@ -59,17 +69,37 @@ $(function() {
                     scrollTop: $('#security').offset().top
                 }, 1200);
             });
+	        $('#tab3m').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#security').offset().top
+                }, 1200);
+            });
 	        $('#tab4').click(function() {
                 $('html,body').animate({
                     scrollTop: $('#customer_service').offset().top
                 }, 1200);
             });
-	       $('#tab5').click(function() {
+	        $('#tab4m').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#customer_service').offset().top
+                }, 1200);
+            });
+	        $('#tab5').click(function() {
                 $('html,body').animate({
                     scrollTop: $('#choice').offset().top
                 }, 1200);
             });
-	       $('#tab6').click(function() {
+	        $('#tab5m').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#choice').offset().top
+                }, 1200);
+            });
+	        $('#tab6').click(function() {
+                $('html,body').animate({
+                    scrollTop: $('#cooperate').offset().top
+                }, 1200);
+            });
+	        $('#tab6m').click(function() {
                 $('html,body').animate({
                     scrollTop: $('#cooperate').offset().top
                 }, 1200);
@@ -85,12 +115,12 @@ $(function() {
 	  <div class="menu_icon"><img src="images/top_ber_menu.png"></div>
 	  <div id="menu_list">
 		<div id="menu_close"><img src="images/top_ber_close.png"></div>
-		<li id="tab1">服務地區</li>
-		<li id="tab2">整合行銷</li>
-		<li id="tab3">安全交易</li>
-		<li id="tab4">客服支援</li>
-		<li id="tab5">合作廠商</li>
-		<li id="tab6">合作流程</li>
+		<li id="tab1m">服務地區</li>
+		<li id="tab2m">整合行銷</li>
+		<li id="tab3m">安全交易</li>
+		<li id="tab4m">客服支援</li>
+		<li id="tab5m">合作廠商</li>
+		<li id="tab6m">合作流程</li>
 	  </div>
 	  <div class="logo"><img src="images/MyCard_logo.png"></div>
 	  <div class="menu">
@@ -144,17 +174,17 @@ $(function() {
 		  <li>
 			  <h1>國際佈局</h1>
 			  <p>MyCard於全球市場提供各地最受歡迎的支付方式。您只需透過MyCard，即可輕鬆開通全球支付，以最低開發成本快速完成全方位支付佈局。</p>
-			  <div class="icon"><img src="images/global_payment_icon1.png"></div>
+			  <div class="icon"><img src="images/global_payment_icon1.webp"></div>
 	      </li>
 		  <li>
 			  <h1>多元的支付方式</h1>
 			  <p>MyCard 提供最全面的多元支付，從線上支付到線下付款。包含信用卡、銀行轉帳、電信帳單、電子錢包、先買後付及商店繳費，MyCard全部都能支援。</p>
-			  <div class="icon"><img src="images/global_payment_icon2.png"></div>
+			  <div class="icon"><img src="images/global_payment_icon2.webp"></div>
 		  </li>
 		  <dl>
 			  <h1>MyCard點數</h1>
 			  <p>MyCard與台港各大便利商店、3C 賣場、連鎖賣場等實體通路夥伴，部署超過2萬個經銷點位，讓您的玩家隨時都能購買MyCard 點數。</p>
-			  <div class="icon2"><img src="images/global_payment_icon3.png"></div>
+			  <div class="icon2"><img src="images/global_payment_icon3.webp"></div>
 		  </dl>
 		</ul>
 		<dd>無論您的目標客戶身在何處，我們都能提供最符合當地習慣的支付服務，助您輕鬆實現全球化佈局</dd>
@@ -215,12 +245,12 @@ $(function() {
         <ul>
 		  <li data-wow-delay="0.2s" data-wow-offset="5" class="step1 span3 wow fadeInLeft center"></li>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon1.png"></div>
+			  <div class="icon"><img src="images/marketing_icon1.webp"></div>
 			  <h3>行銷策略規劃</h3>
 			  <p>依據遊戲特色擬定完整行銷主軸，整合故事線、核心賣點到風格視覺打造，建立一套能快速被記住的品牌資產，並延續市場佈局。</p>
 		  </dl>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon2.png"></div>
+			  <div class="icon"><img src="images/marketing_icon2.webp"></div>
 			  <h3>品牌代言媒合</h3>
 			  <p>依據不同國家與地區的目標玩家輪廓與遊戲風格，嚴選最適合的品牌代言人與跨領域 KOL / 實況主組合，串聯多平台口碑與聲量，放大品牌好感度與討論熱度。</p>
 		  </dl>
@@ -228,12 +258,12 @@ $(function() {
 		<ul>
 		  <li data-wow-delay="0.4s" data-wow-offset="5" class="step2 span3 wow fadeInLeft center"></li>
 		   <dl>
-			  <div class="icon"><img src="images/marketing_icon3.png"></div>
+			  <div class="icon"><img src="images/marketing_icon3.webp"></div>
 			  <h3>事前登錄導流服務</h3>
 			  <p>運用 MyCard通路資源與活動機制協助遊戲快速累積預註冊用戶，擴大上市前聲量與口碑基礎。</p>
 		  </dl>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon4.png"></div>
+			  <div class="icon"><img src="images/marketing_icon4.webp"></div>
 			  <h3>街頭玩家見面會</h3>
 			  <p>透過各大人潮集中之熱門場域進行線上線下整合的互動活動，加強與觀眾、玩家的凝聚力並創造可擴散的活動內容。</p>
 		  </dl>
@@ -241,12 +271,12 @@ $(function() {
 		<ul>
 		  <li data-wow-delay="0.6s" data-wow-offset="5" class="step3 span3 wow fadeInLeft center"></li>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon5.png"></div>
+			  <div class="icon"><img src="images/marketing_icon5.webp"></div>
 			  <h3>專業影音創作</h3>
 			  <p>提供音樂製作以及影片腳本策畫，以影音媒體強化遊戲情緒與品牌記憶度。</p>
 		  </dl>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon6.png"></div>
+			  <div class="icon"><img src="images/marketing_icon6.webp"></div>
 			  <h3>活動策展設計規畫</h3>
 			  <p>從各大國際展覽到在地化推廣等各類型活動，均可提供完整的展售方案、攤位設計、裝置物與活動規劃，將品牌核心概念帶入實體場域，延伸更多擴散機會。</p>
 		  </dl>
@@ -254,12 +284,12 @@ $(function() {
 		<ul>
 		  <li data-wow-delay="0.8s" data-wow-offset="5" class="step4 span3 wow fadeInLeft center"></li>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon7.png"></div>
+			  <div class="icon"><img src="images/marketing_icon7.webp"></div>
 			  <h3>線上+線下資源的<br>全方位曝光</h3>
 			  <p>串聯實體通路超商、銀行、連鎖賣場等宣傳點位、線上通路廣告資源，依各市場漾態規劃安排，打造高頻、高覆蓋的立體推廣網，提升投放效益。</p>
 		  </dl>
 		  <dl>
-			  <div class="icon"><img src="images/marketing_icon8.png"></div>
+			  <div class="icon"><img src="images/marketing_icon8.webp"></div>
 			  <h3>社群推廣&網站廣告</h3>
 			  <p>運用 MyCard 多平台社群與官網版位，搭配分群受眾精準行銷策略，有效溝通互動並提升轉換效率。</p>
 		  </dl>
@@ -267,13 +297,11 @@ $(function() {
 		<ul>
 		  <li data-wow-delay="1s" data-wow-offset="5" class="step5 span3 wow fadeInLeft center"></li>
 		  <dd>
-			  <div class="icon"><img src="images/marketing_icon9.png"></div>
+			  <div class="icon"><img src="images/marketing_icon9.webp"></div>
 			  <h3>異業聯名企劃</h3>
 			  <p>媒合品牌、餐飲、影視、零售等跨領域資源，打造創新聯名內容，提高玩家參與度與市場聲量。</p>
 		  </dd>
-		  <dd>
-			<div class="mascot"><img src="images/marketing_icon10.png"></div>
-		  </dd>
+		  
 		</ul>
 	  </div>
 	</div>
@@ -283,22 +311,22 @@ $(function() {
       <h1>全方位交易安全解決方案</h1>
 	  <ul>
 		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInDown center">
-		  <dt><img src="images/security_icon1.png"></dt>
+		  <dt><img src="images/security_icon1.webp"></dt>
 		  <h5>全天候智慧監控</h5>
 		  <p>我們提供24小時不間斷的智慧監控，能快速偵測所有交易。一旦發現可疑的交易行為，像是詐欺、盜刷等，系統會立刻反應，全面保護您的客戶。</p>
 		</li>
 		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInUp center">
-		  <dt><img src="images/security_icon2.png"></dt>
+		  <dt><img src="images/security_icon2.webp"></dt>
 		  <h5>專業退單仲裁</h5>
 		  <p>MyCard 團隊已建立標準化爭議處理流程，能作為您的後盾，協助處理銀行或支付機構的退單仲裁流程。我們將為您爭取最大的權益，降低爭議造成的損失。</p>
 		</li>
 		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInDown center">
-		  <dt><img src="images/security_icon3.png"></dt>
+		  <dt><img src="images/security_icon3.webp"></dt>
 		  <h5>FIDO無密碼驗證</h5>
 		  <p>導入 FIDO 國際公認的新世代無密碼驗證標準。能大幅提升玩家帳號安全、杜絕密碼盜用風險，同時讓玩家登入更快速、更方便，是保障資安與體驗的未來趨勢。</p>  
 		</li>
 		<dl data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInUp center">
-		  <dt><img src="images/security_icon4.png"></dt>
+		  <dt><img src="images/security_icon4.webp"></dt>
 		  <h5>彈性風控策略</h5>
 		  <p>MyCard 不只提供業界預設的頂級風險模型，更具備高度彈性，可針對活動、檔期或新品上線調整數值，讓您可以自訂風控規則、強化安全邏輯，讓防線更貼合您的遊戲營運需求。</p>  
 		</dl>
@@ -310,17 +338,17 @@ $(function() {
 	  <h1>客服支援</h1>
         <ul>
 	     <li>
-            <ol><img src="images/ustomer_service_icon1.png"></ol>
+            <ol><img src="images/ustomer_service_icon1.webp"></ol>
 	        <h6>將客訴轉化為「品牌好感度」</h6>
 	        <p>MyCard客服能快速解決問題，降低售後服務的客訴，轉化為玩家對您的遊戲品牌信任與持續消費。</p>
           </li>
 	      <li>
-	        <ol><img src="images/ustomer_service_icon2.png"></ol>
+	        <ol><img src="images/ustomer_service_icon2.webp"></ol>
 	        <h6>全天候即時客服</h6>
 	        <p>MyCard提供24小時不間斷售後服務。確保玩家隨時順利儲值，加速您的遊戲成長與市場連結。</p>
 	      </li>
 	      <dl>
-	        <ol><img src="images/ustomer_service_icon3.png"></ol>
+	        <ol><img src="images/ustomer_service_icon3.webp"></ol>
 	        <h6>跨語言支援</h6>
 	        <p>MyCard客服涵蓋中文、泰文、英文、印尼文等多語種，協助您處理跨國的支付與服務問題。</p>
 	      </dl>
@@ -333,76 +361,76 @@ $(function() {
   <h2>MyCard支付平台深受台日韓頂尖手遊廠商信賴，攜手超過80%遊戲廠商，共創繁盛。<br>
   更與PC端遊共同打造，提供玩家最好的支付體驗。</h2>
     	<ul data-wow-delay="0.2s" data-wow-offset="20" class="span3 wow bounceInRight center">
-	      <li><img src="images/game_icon/best_choice_1.png"></li>
-	      <li><img src="images/game_icon/best_choice_2.png"></li>
-    	  <li><img src="images/game_icon/best_choice_3.png"></li>
-    	  <li><img src="images/game_icon/best_choice_4.png"></li>
-    	  <li><img src="images/game_icon/best_choice_5.png"></li>
-    	  <li><img src="images/game_icon/best_choice_6.png"></li>
-      	  <li><img src="images/game_icon/best_choice_7.png" ></li>
-    	  <li><img src="images/game_icon/best_choice_8.png"></li>
-	      <li><img src="images/game_icon/best_choice_9.png"></li>
-	      <li><img src="images/game_icon/best_choice_10.png"></li>
-	      <li><img src="images/game_icon/best_choice_11.png" ></li>
-	      <li><img src="images/game_icon/best_choice_12.png"></li>
-          <li><img src="images/game_icon/best_choice_13.png"></li>
-	      <li><img src="images/game_icon/best_choice_14.png"></li>
-	      <li><img src="images/game_icon/best_choice_15.png"></li>
-	      <li><img src="images/game_icon/best_choice_16.png"></li>
-	      <li><img src="images/game_icon/best_choice_17.png"></li>
-	      <li><img src="images/game_icon/best_choice_18.png"></li>
-	      <li><img src="images/game_icon/best_choice_19.png" ></li>
-	      <li><img src="images/game_icon/best_choice_20.png"></li>
-	      <li><img src="images/game_icon/best_choice_21.png"></li>
-	      <li><img src="images/game_icon/best_choice_22.png"></li>
-	      <li><img src="images/game_icon/best_choice_23.png"></li>
-	      <li><img src="images/game_icon/best_choice_24.png"></li>
-	      <li><img src="images/game_icon/best_choice_25.png"></li>
-	      <li><img src="images/game_icon/best_choice_26.png"></li>
-	      <li><img src="images/game_icon/best_choice_27.png"></li>
-    	  <li><img src="images/game_icon/best_choice_28.png"></li>
-    	  <li><img src="images/game_icon/best_choice_29.png"></li>
-    	  <li><img src="images/game_icon/best_choice_30.png"></li>
-    	  <li><img src="images/game_icon/best_choice_31.png" ></li>
-    	  <li><img src="images/game_icon/best_choice_32.png"></li>
-    	  <li><img src="images/game_icon/best_choice_33.png"></li>
-    	  <li><img src="images/game_icon/best_choice_34.png"></li>
-    	  <li><img src="images/game_icon/best_choice_35.png"></li>
-    	  <li><img src="images/game_icon/best_choice_36.png"></li>
-	      <li><img src="images/game_icon/best_choice_37.png"></li>
-	      <li><img src="images/game_icon/best_choice_38.png"></li>
-    	  <li><img src="images/game_icon/best_choice_39.png"></li>
-    	  <li><img src="images/game_icon/best_choice_40.png"></li>
-    	  <li><img src="images/game_icon/best_choice_41.png"></li>
-    	  <li><img src="images/game_icon/best_choice_42.png"></li>
-    	  <li><img src="images/game_icon/best_choice_43.png"></li>
-    	  <li><img src="images/game_icon/best_choice_44.png" ></li>
-	      <li><img src="images/game_icon/best_choice_45.png"></li>
-	      <li><img src="images/game_icon/best_choice_46.png"></li>
-	      <li><img src="images/game_icon/best_choice_47.png"></li>
-	      <li><img src="images/game_icon/best_choice_48.png"></li>
+	      <li><img src="images/game_icon/best_choice_1.webp"></li>
+	      <li><img src="images/game_icon/best_choice_2.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_3.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_4.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_5.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_6.webp"></li>
+      	  <li><img src="images/game_icon/best_choice_7.webp" ></li>
+    	  <li><img src="images/game_icon/best_choice_8.webp"></li>
+	      <li><img src="images/game_icon/best_choice_9.webp"></li>
+	      <li><img src="images/game_icon/best_choice_10.webp"></li>
+	      <li><img src="images/game_icon/best_choice_11.webp" ></li>
+	      <li><img src="images/game_icon/best_choice_12.webp"></li>
+          <li><img src="images/game_icon/best_choice_13.webp"></li>
+	      <li><img src="images/game_icon/best_choice_14.webp"></li>
+	      <li><img src="images/game_icon/best_choice_15.webp"></li>
+	      <li><img src="images/game_icon/best_choice_16.webp"></li>
+	      <li><img src="images/game_icon/best_choice_17.webp"></li>
+	      <li><img src="images/game_icon/best_choice_18.webp"></li>
+	      <li><img src="images/game_icon/best_choice_19.webp" ></li>
+	      <li><img src="images/game_icon/best_choice_20.webp"></li>
+	      <li><img src="images/game_icon/best_choice_21.webp"></li>
+	      <li><img src="images/game_icon/best_choice_22.webp"></li>
+	      <li><img src="images/game_icon/best_choice_23.webp"></li>
+	      <li><img src="images/game_icon/best_choice_24.webp"></li>
+	      <li><img src="images/game_icon/best_choice_25.webp"></li>
+	      <li><img src="images/game_icon/best_choice_26.webp"></li>
+	      <li><img src="images/game_icon/best_choice_27.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_28.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_29.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_30.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_31.webp" ></li>
+    	  <li><img src="images/game_icon/best_choice_32.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_33.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_34.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_35.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_36.webp"></li>
+	      <li><img src="images/game_icon/best_choice_37.webp"></li>
+	      <li><img src="images/game_icon/best_choice_38.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_39.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_40.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_41.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_42.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_43.webp"></li>
+    	  <li><img src="images/game_icon/best_choice_44.webp" ></li>
+	      <li><img src="images/game_icon/best_choice_45.webp"></li>
+	      <li><img src="images/game_icon/best_choice_46.webp"></li>
+	      <li><img src="images/game_icon/best_choice_47.webp"></li>
+	      <li><img src="images/game_icon/best_choice_48.webp"></li>
         </ul>
         <dl data-wow-delay="0.5s" data-wow-offset="20" class="span3 wow bounceInLeft center">
-	      <dt><img src="images/company/garena.png"></dt>
-    	  <dt><img src="images/company/gravity.png"></dt>
-	      <dt><img src="images/company/happytiik.png"></dt>
-    	  <dt><img src="images/company/logo_bigo.png"></dt>
-    	  <dt><img src="images/company/logo_bluebird.png"></dt>
-	      <dt><img src="images/company/logo_chinesegamer.png"></dt>
-          <dt><img src="images/company/logo_finger.png"></dt>
-	      <dt><img src="images/company/logo_gameflier.png"></dt>
-	      <dt><img src="images/company/logo_gravity.png"></dt>
-	      <dt><img src="images/company/logo_happytuk.png"></dt>
-	      <dt><img src="images/company/logo_igs.png"></dt>
-	      <dt><img src="images/company/logo_infold.png"></dt>
-	      <dt><img src="images/company/logo_legend.png"></dt>
-	      <dt><img src="images/company/logo_nc.png"></dt>
-	      <dt><img src="images/company/logo_netmarble.png"></dt>
-          <dt><img src="images/company/logo_nexon.png"></dt>
-	      <dt><img src="images/company/logo_taiwanmobile.png"></dt>
-	      <dt><img src="images/company/logo_wemade.png"></dt>
-	      <dt><img src="images/company/logo_xsolla.png"></dt>
-    	  <dt><img src="images/company/logo_yile.png"></dt>
+	      <dt><img src="images/company/garena.webp"></dt>
+    	  <dt><img src="images/company/gravity.webp"></dt>
+	      <dt><img src="images/company/happytiik.webp"></dt>
+    	  <dt><img src="images/company/logo_bigo.webp"></dt>
+    	  <dt><img src="images/company/logo_bluebird.webp"></dt>
+	      <dt><img src="images/company/logo_chinesegamer.webp"></dt>
+          <dt><img src="images/company/logo_finger.webp"></dt>
+	      <dt><img src="images/company/logo_gameflier.webp"></dt>
+	      <dt><img src="images/company/logo_gravity.webp"></dt>
+	      <dt><img src="images/company/logo_happytuk.webp"></dt>
+	      <dt><img src="images/company/logo_igs.webp"></dt>
+	      <dt><img src="images/company/logo_infold.webp"></dt>
+	      <dt><img src="images/company/logo_legend.webp"></dt>
+	      <dt><img src="images/company/logo_nc.webp"></dt>
+	      <dt><img src="images/company/logo_netmarble.webp"></dt>
+          <dt><img src="images/company/logo_nexon.webp"></dt>
+	      <dt><img src="images/company/logo_taiwanmobile.webp"></dt>
+	      <dt><img src="images/company/logo_wemade.webp"></dt>
+	      <dt><img src="images/company/logo_xsolla.webp"></dt>
+    	  <dt><img src="images/company/logo_yile.webp"></dt>
         </dl>
 </div>
 	
@@ -414,26 +442,26 @@ $(function() {
 		  <li>
 		    <dt>Step.1</dt>
 		    <dd>準備資料</dd>
-		    <div data-wow-delay="0.1s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step1.png"></div>
+		    <div data-wow-delay="0.1s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step1.webp"></div>
 			<ol>確保所有必要的文件都已準備好，以供評估</ol>
 		  </li>
 		  <dl>
 			<dt>Step.2</dt>
 			<dd>合作確認</dd>
-			<div data-wow-delay="0.2s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step2.png"></div>
+			<div data-wow-delay="0.2s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step2.webp"></div>
 		  	<ol>達成共識並簽訂合約</ol>
 		  </dl>
 			<div id="dash_line"></div>
 		  <li>
 			<dt>Step.3</dt>
 			<dd>技術串接</dd>
-			<div data-wow-delay="0.3s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step3.png"></div>
+			<div data-wow-delay="0.3s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step3.webp"></div>
 			<ol>整合MyCard的系統並進行測試</ol>
 		  </li>
 		  <dl>
 			<dt>Step.4</dt>
 			<dd>行銷推廣</dd>
-			<div data-wow-delay="0.4s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step4.png"></div>
+			<div data-wow-delay="0.4s" data-wow-offset="5" class="sample span3 wow lightSpeedIn center"><img src="images/cooperate_step4.webp"></div>
 			<ol>實施行銷策略以提高知名度</ol>
 		  </dl>
 		</ul>
@@ -451,10 +479,10 @@ $(function() {
     <div id="copyright">
 		<div class="logo"><img src="images/mycard-logo.png"></div>
 		<div class="community">
-		    <ol><img src="images/community/threads.png"></ol>
-			<ol><img src="images/community/yt.png"></ol>
-			<ol><img src="images/community/ig.png"></ol>
-			<ol><img src="images/community/fb.png"></ol>
+		    <ol><a href="https://www.threads.com/@my_mycard" target="_blank"><img src="images/community/threads.png"></a></ol>
+			<ol><a href="https://www.youtube.com/@MyCard" target="_blank"><img src="images/community/yt.png"></a></ol>
+			<ol><a href="https://www.instagram.com/my_mycard/" target="_blank"><img src="images/community/ig.png"></a></ol>
+			<ol><a href="https://www.facebook.com/MyCard520/" target="_blank"><img src="images/community/fb.png"></a></ol>
 	    </div>
 	    <p>© Soft-World International Corporation. All Rights Reserved.</p>
 	</div>
