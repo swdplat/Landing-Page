@@ -1021,6 +1021,56 @@ body.nation-map *::after {
 @media (max-width: 1280px){
   .region-grid{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
+	
+@media (max-width: 1680px){
+  .region-grid{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .region-wrap{
+  width: min(1020px, calc(100% - 48px));margin: 0 auto;}
+  .region-btn{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 12px;
+  background: #f3f3f3;
+
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .region-btn:active{
+  transform: scale(.98);
+  }
+  .region-flag{
+  width: 36px;
+  height: 22px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  background: rgba(0,0,0,.05);
+  }
+  .map-frame {
+  position: relative;
+  width: 100%;
+  max-width:1020px;
+  margin: 0 auto;  /* 避免鎖捲動/手勢期間 viewport 寬度重算，導致外框視覺貼邊 */
+  aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+
+
+  /* iOS/Safari：提升合成層，減少 overlay/backdrop-filter 閃爍 */
+  transform: translateZ(0);
+  will-change: transform;
+  will-change: transform, opacity;
+  isolation: isolate;
+  }
+}
 
 @media (max-width: 640px){
   .region-wrap{ width: calc(100% - 28px); }

@@ -700,10 +700,10 @@ body {
 }
 #security ul dt img {width:100%;}
 #security ul li {
-	width:94%;
+	width:90%;
 	height:auto;
 	margin:0 0% 4% 0%;
-	padding:2.5% 3%;
+	padding:2.5% 5%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
 	box-shadow:2px 2px 3px rgba(20%,20%,20%,0.2);
@@ -711,10 +711,10 @@ body {
 	float:left;
 }
 #security ul dl {
-	width:94%;
+	width:90%;
 	height:auto;
 	margin:0 0% 4% 0%;
-	padding:2.5% 3%;
+	padding:2.5% 5%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
 	box-shadow:2px 2px 3px rgba(20%,20%,20%,0.2);
