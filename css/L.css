@@ -390,7 +390,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 17px;
-	line-height: 36px;
+	line-height: 28px;
 	font-weight: normal;
 	color: #333333;
 	text-align:justify;
@@ -647,7 +647,7 @@ body {
 #security ul dt img {width:100%;}
 #security ul li {
 	width:19%;
-	height:430px;
+	height:380px;
 	margin:0 2% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -658,7 +658,7 @@ body {
 }
 #security ul dl {
 	width:19%;
-	height:430px;
+	height:380px;
 	margin:0 2% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -687,8 +687,8 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 32px;
+	font-size: 18px;
+	line-height: 28px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;

@@ -245,7 +245,7 @@ body.nation-map *::after {
 /* 讓 mapFrame 可以當 toolbar 的定位容器 */
 .map-frame {
   position: relative;
-  background-color:#d5ecff;
+  background-color:#d5ecff!important;
 }
 
 /* === [04] 地圖浮層（工具列 / 提示文字） ===
@@ -1070,6 +1070,12 @@ body.nation-map *::after {
   will-change: transform, opacity;
   isolation: isolate;
   }
+
+  .map-frame {
+  position: relative;
+  background-color:#d5ecff!important;
+}
+
 }
 
 @media (max-width: 640px){
