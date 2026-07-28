@@ -36,7 +36,7 @@ body {
 	left:0;
 	margin:0;
 	padding:0 0 1% 0;
-	background-image: url(../images/top_bar_bg.png);
+	background-image: url(../images/top_bar_bg.webp);
 	background-repeat: repeat-x;
 	background-size:100% 100%;
 }
@@ -167,7 +167,7 @@ body {
 	height:auto;
 	margin:0 0;
 	padding:190% 0 5% 0;
-	background-image: url(../images/main_visual_mobile.jpg);
+	background-image: url(../images/main_visual_mobile.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -230,38 +230,38 @@ body {
 	float:left;
 }
 #main_visual #diagram li {
-	width:88%;
+	width:94%;
 	margin:0 0 2% 0;
-	padding:7.5% 0 6% 12%;
+	padding:5.5% 0 8% 6%;
 	display:inline;
 	border-radius:20px;
 	float:left;
 }
 #main_visual #diagram dl {
-	width:88%;
+	width:94%;
 	margin:0 0 2% 0;
-	padding:7.5% 0 6% 12%;
+	padding:5.5% 0 8% 6%;
 	display:inline;
 	border-radius:20px;
 	float:right;
 }
 #main_visual #diagram .p1 {
-	background-image: url(../images/main_visual_diagram_p1.png);
+	background-image: url(../images/main_visual_diagram_p1.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
 #main_visual #diagram .p2 {
-	background-image: url(../images/main_visual_diagram_p2.png);
+	background-image: url(../images/main_visual_diagram_p2.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
 #main_visual #diagram .p3 {
-	background-image: url(../images/main_visual_diagram_p3.png);
+	background-image: url(../images/main_visual_diagram_p3.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
 #main_visual #diagram .p4 {
-	background-image: url(../images/main_visual_diagram_p4.png);
+	background-image: url(../images/main_visual_diagram_p4.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -472,7 +472,7 @@ body {
 	font-family: "微軟正黑體";
 	font-size: 20px;
 	line-height: 28px;
-	font-weight: normal;
+	font-weight: bold;
 	color: #00a5e3;
 	text-align:justify;
 	display:inline;
@@ -544,10 +544,16 @@ body {
 	float:left;
 }
 #marketing .step li {
-	width:100%;
+	width:70%;
 	height:auto;
 	margin:0 0;
-	padding:10% 0;
+	padding:4.8% 15%;
+	font-family: "微軟正黑體";
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #333333;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -563,7 +569,6 @@ body {
 	padding:3% 0;
 	border-radius:10px;
 	display:inline;
-    background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(139,223,241,1) 100%);
     float:left;
 }
 #marketing .step ul dl .icon {
@@ -591,11 +596,11 @@ body {
 #marketing .step ul dl p {
     width:88%;
 	height:auto;
-	margin:2% 0 1.5% 0;
+	margin:2% 0 2.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 13px;
-	line-height: 18px;
+	font-size: 15px;
+	line-height: 21px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -609,7 +614,6 @@ body {
 	padding:3% 0;
 	border-radius:10px;
 	display:inline;
-    background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(139,223,241,1) 100%);
     float:left;
 }
 #marketing .step ul dd .icon {
@@ -623,7 +627,7 @@ body {
 #marketing .step ul dd h3 {
     width:88%;
 	height:auto;
-	margin:0 0 1.5% 0;
+	margin:0 0 2.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
 	font-size: 22px;
@@ -640,7 +644,7 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 21px;
 	font-weight: normal;
 	color: #444444;
@@ -656,6 +660,10 @@ body {
 	float:left;
 }
 #marketing .step ul dd .mascot img {width:100%;}
+.step1_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(139,223,241,0.5) 100%);}
+.step2_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(95,210,248,0.5) 100%);}
+.step3_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(36,186,248,0.5) 100%);}
+.step4_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(5,161,237,0.5) 100%);}
 
 
 /*全方位交易安全解決方案*/
@@ -665,7 +673,7 @@ body {
 	margin:0 0 2% 0;
 	padding:4% 5%;
 	background-color:#d1d1d9;
-	background-image: url(../images/security_bg2.jpg);
+	background-image: url(../images/security_bg2.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	float:left;
@@ -950,14 +958,14 @@ body {
 }
 #cooperate ul {
 	width:100%;
-	margin:0 0;
+	margin:2% 0 0 0;
 	padding:0 0;
 	float:left;
 }
 #cooperate ul li {
 	width:100%;
 	heigut:auto;
-	margin:0 0 0 0;
+	margin:2% 0 0 0;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -991,8 +999,8 @@ body {
 	float:right;
 }
 #cooperate ul li .sample {
-	width:100%;
-	margin:2.2% 0;
+	width:80%;
+	margin:3% 10% 3% 10%;
 	padding:0 0;
 	float:left;
 }
@@ -1003,8 +1011,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -1048,8 +1056,8 @@ body {
 	float:right;
 }
 #cooperate ul dl .sample {
-	width:100%;
-	margin:2.2% 0;
+	width:80%;
+	margin:3% 10% 3% 10%;
 	padding:0 0;
 	float:left;
 }
@@ -1060,8 +1068,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: bold;
 	color:  #333333;
 	text-align:center;
@@ -1083,7 +1091,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:40% 10% 58% 10%;
-	background-image: url(../images/connect_bg2.jpg);
+	background-image: url(../images/connect_bg2.webp);
 	background-size:100%;
 	float:left;
 }
