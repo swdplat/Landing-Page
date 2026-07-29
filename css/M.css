@@ -565,7 +565,7 @@ body {
 #marketing .step .step5 {background-image: url(../images/marketing_step5.webp); background-repeat: no-repeat; background-size:100%;}
 #marketing .step ul dl {
 	width:95%;
-	height:200px;
+	height:210px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -610,7 +610,7 @@ body {
 }
 #marketing .step ul dd {
 	width:95%;
-	height:200px;
+	height:210px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -649,7 +649,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:left;
+	text-align:justify;
 	display:inline;
 	float:left;
 }
@@ -911,7 +911,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:19%;
+	width:15.6%;
 	margin:2% 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
