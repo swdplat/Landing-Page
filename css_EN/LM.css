@@ -50,23 +50,23 @@ body {
 }
 #top_bar .logo img {width:100%;}
 #top_bar .menu {
-	width:42%;
+	width:62%;
 	height:auto;
-	margin:0.8% 23% 0 22%;
+	margin:0.8% 12% 0 11%;
 	padding:0 0;
 	display:inline;
 	float:left;
 }
 #top_bar .menu li {
-    width:12.6%;
+    width:14.6%;
 	height:auto;
-	margin:0 2% 0 2%;
+	margin:0 1% 0 1%;
 	padding:0.3% 0;
 	border-radius:50px;
 	background-color:transparent;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 13px;
+	line-height: 13px;
 	font-weight: normal;
 	color: #333;
 	text-align:center;
@@ -76,16 +76,16 @@ body {
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
 #top_bar .btn {
-	width:5%;
+	width:7%;
 	height:auto;
-	margin:0.75% 2% 0 0;
-	padding:0.25% 0 0.55% 0;
+	margin:0.5% 2% 0 0;
+	padding:0.55% 0 0.55% 0;
 	background-image: url(../images/top_bar_connect_button.png);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 13px;
+	line-height: 13px;
 	font-weight: normal;
 	color: #ffffff;
 	text-align:center;
@@ -126,7 +126,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title_CN.webp);
+	background-image: url(../images/main_visual_title_EN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -143,7 +143,7 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 32px;
+	font-size: 28px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #ffffff;
@@ -161,7 +161,7 @@ body {
 	width:4.8%;
 	margin:46% 47.6% 0 47.6%;
 	padding:2% 0 2% 0;
-	background-image: url(../images/main_visual_more.webp);
+	background-image: url(../images/main_visual_more_EN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	cursor:pointer;
@@ -249,7 +249,7 @@ body {
 	float:left;
 }
 #brand .text {
-	width:48%;
+	width:46%;
 	height:auto;
 	display:inline;
 	float:left;
@@ -261,8 +261,8 @@ body {
 	margin:0 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 44px;
-	line-height: 46px;
+	font-size: 36px;
+	line-height: 39px;
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
@@ -272,11 +272,11 @@ body {
 #brand .text h2 {
 	width:100%;
 	height:auto;
-	margin:0 0 3% 0;
+	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 24px;
+	line-height: 28px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -289,8 +289,8 @@ body {
 	margin:1% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 36px;
+	font-size: 18px;
+	line-height: 26px;
 	font-weight: normal;
 	color: #666666;
 	text-align:justify;
@@ -298,7 +298,7 @@ body {
 	float:left;
 }
 #brand .photo {
-	width:47%;
+	width:49%;
 	margin:0 0 0 0;
 	padding:0 0;
 	display:inline;
@@ -348,10 +348,10 @@ body {
 	float:left;
 }
 #global_payment ul li {
-	width:25.8%;
+	width:95%;
 	height:auto;
-	margin:0 2.9% 0 0;
-	padding:2% 2.5%;
+	margin:0 0% 2% 0;
+	padding:2% 2.5% 1% 2.5%;
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -359,10 +359,10 @@ body {
 	float:left;
 }
 #global_payment ul dl {
-	width:26%;
+	width:95%;
 	height:auto;
 	margin:0 0 0 0;
-	padding:2% 2.5%;
+	padding:2% 2.5% 1% 2.5%;
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -370,13 +370,13 @@ body {
 	float:left;
 }
 #global_payment ul h1 {
-	width:100%;
+	width:70%;
 	height:auto;
-	margin:0 0 3.5% 0;
+	margin:0 0 0.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
-	line-height: 32px;
+	font-size: 32px;
+	line-height: 36px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -384,12 +384,12 @@ body {
 	float:left;
 }
 #global_payment ul p {
-	width:100%;
-	height:130px;
-	margin:1.5% 0 1.5% 0;
+	width:70%;
+	height:auto;
+	margin:1.5% 0 0% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 28px;
 	font-weight: normal;
 	color: #333333;
@@ -398,17 +398,21 @@ body {
 	float:left;
 }
 #global_payment ul .icon {
-	width:60%;
-	margin:2% 20% 0% 20%;
+	position:relative;
+	width:25%;
+	margin:-7% 0 0 0;
 	padding:0 0;
-	float:left;
+	display:inline;
+	float:right;
 }
 #global_payment ul .icon img {width:100%;}
 #global_payment ul .icon2 {
-	width:60%;
-	margin:2% 20% 0% 20%;
+    position:relative;
+	width:25%;
+	margin:-7% 0 0 0;
 	padding:0 0;
-	float:left;
+	display:inline;
+	float:right;
 }
 #global_payment ul .icon2 img {width:100%;}
 #global_payment dd {

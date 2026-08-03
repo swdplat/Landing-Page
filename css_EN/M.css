@@ -179,7 +179,7 @@ body {
 	width:60%;
 	margin:68% 20% 0 20%;
 	padding:25% 0;
-	background-image: url(../images/main_visual_title_CN.webp);
+	background-image: url(../images/main_visual_title_EN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -214,7 +214,7 @@ body {
 	width:10%;
 	margin:122% 45% 0 45%;
 	padding:5% 0 3% 0;
-	background-image: url(../images/main_visual_more.webp);
+	background-image: url(../images/main_visual_more_EN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	cursor:pointer;
