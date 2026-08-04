@@ -8,6 +8,7 @@
 // [00] 基礎設定 / i18n（tr）
 // [01] 滾動導引（service_map → world_map / mapFrame）
 // [02] MapViewer：地圖載入、transform、手勢、點擊判定
+// [02b] 國家外觀可控系統（W1）：applyCountryStyles() 讀 COUNTRY_STYLE 套 fill/pattern/gradient
 // [03] 地圖下方其他地區（regionGrid）：依 country-payments 定義順序渲染
 // [04] 國旗載入：依 ISO2 / 國名決定檔案候選清單
 // [05] 金流顯示：模式切換（full/icon）、tooltip、行動版圓點與滑動同步
@@ -42,7 +43,97 @@ const REGION_LIST_MAX = Number.isFinite(MAP_CFG.regionListMax) ? MAP_CFG.regionL
 const SCROLL_TARGET_SELECTOR = MAP_CFG.scrollTargetSelector || '.world_map';
 const SCROLL_DURATION = Number.isFinite(MAP_CFG.scrollDuration) ? MAP_CFG.scrollDuration : 800;
 
+// === [00b] W3 八語系接線輔助（全部宣告為 const 箭頭，classic script 下不外洩到 window） ===
+// 目前生效 locale：委派給 map-i18n.js 的 window.NationMap.getLocale，缺席時退 zh-TW。
+const currentLocale = () => {
+  const NM = window.NationMap;
+  return (NM && typeof NM.getLocale === 'function') ? NM.getLocale() : 'zh-TW';
+};
+
+// W3 效能：Intl.DisplayNames 實例快取。切語系時 renderRegionGrid 迴圈最多 60 國各查一次，
+// 每次 new Intl.DisplayNames 成本不低；以 `locale|type|style` 為 key 快取，找不到才建、建完存起來。
+// classic script 下用 __nm 前綴避免與其他檔案的頂層 const 撞名。
+const __nmDisplayNamesCache = new Map();
+const __nmGetDisplayNames = (locale, type, style) => {
+  const key = locale + '|' + type + '|' + style;
+  let dn = __nmDisplayNamesCache.get(key);
+  if (!dn) {
+    dn = new Intl.DisplayNames([locale], { type, style });
+    __nmDisplayNamesCache.set(key, dn);
+  }
+  return dn;
+};
+
+// W3 防護縱深：頂層 escape helper（renderPayments 為頂層函式拿不到 this.escapeHtml）。
+// 與 MapViewer.escapeHtml 同一套規則，供付款名插進 innerHTML 前跳脫，和國名/幣名一致。
+const __nmEscapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'': '&#39;' }[ch]));
+
+// 國名／地區名：以 Intl.DisplayNames 依當前 locale 動態產生。
+// HK/MO 一律用 style:'short'（long 會輸出「中國香港特別行政區」塞爆 UI）。
+// 整段 try/catch：Intl 不支援或丟例外（無效 region code）時 fallback 回傳呼叫端字串（通常是 COUNTRY_INFO.zhName）。
+const localizedRegionName = (iso2, locale, fallback) => {
+  try {
+    if (!iso2 || typeof Intl === 'undefined' || !Intl.DisplayNames) return fallback;
+    const code = String(iso2).toUpperCase().split('-')[0];
+    if (code.length !== 2) return fallback;
+    const useShort = (code === 'HK' || code === 'MO');
+    const dn = __nmGetDisplayNames(locale, 'region', useShort ? 'short' : 'long');
+    const name = dn.of(code);
+    // Intl 對「格式正確但無對應」的 code 會原樣回傳 code（不丟例外）→ 視為未解析，退回 COUNTRY_INFO
+    return (name && name !== code) ? name : fallback;
+  } catch (_) {
+    return fallback;
+  }
+};
+
+// 幣名：以 Intl.DisplayNames(type:'currency') 依當前 locale 動態產生。
+// HK/MO 同樣走 style:'short'。失敗或無幣別（'—'）時 fallback 回 COUNTRY_INFO.currencyName。
+const localizedCurrencyName = (currencyCode, iso2, locale, fallback) => {
+  try {
+    if (!currencyCode || currencyCode === '—' || typeof Intl === 'undefined' || !Intl.DisplayNames) return fallback;
+    const region = String(iso2 || '').toUpperCase().split('-')[0];
+    const useShort = (region === 'HK' || region === 'MO');
+    const dn = __nmGetDisplayNames(locale, 'currency', useShort ? 'short' : 'long');
+    const upper = String(currencyCode).toUpperCase();
+    const name = dn.of(upper);
+    // 同 region：無對應幣別時 Intl 原樣回傳 code → 退回 COUNTRY_INFO 的 currencyName
+    return (name && name !== upper) ? name : fallback;
+  } catch (_) {
+    return fallback;
+  }
+};
+
+// 支付方式顯示名：走 window.NationMap.paymentName（payment-i18n.js），fallback 用 catalog 的 name_zh/name_en。
+const localizedPaymentName = (id, name_zh, name_en) => {
+  const fb = name_zh || name_en || '';
+  const NM = window.NationMap;
+  if (NM && typeof NM.paymentName === 'function') {
+    return NM.paymentName(id, currentLocale(), fb);
+  }
+  return tr('pay.method.' + id, fb);
+};
+
+// 掃 index.html 靜態字串：data-i18n → textContent；data-i18n-aria-label → aria-label。
+// 載入時與每次 setLocale 都會呼叫；tr(key) 命中字典即換，字典缺席則回退元素現有內容（優雅降級）。
+const applyStaticI18n = (root) => {
+  const scope = root || document;
+  scope.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (key) el.textContent = tr(key, el.textContent);
+  });
+  scope.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    if (key) el.setAttribute('aria-label', tr(key, el.getAttribute('aria-label') || ''));
+  });
+};
+
 function animateScrollTo(targetY, duration = 800) {
+  // 尊重 prefers-reduced-motion：直接跳到終點，避免造成暈眩的長距捲動動畫
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, targetY);
+    return;
+  }
+
   const startY = window.scrollY || document.documentElement.scrollTop || 0;
   const diff = targetY - startY;
   const startT = performance.now();
@@ -390,6 +481,17 @@ onTouchEnd(e) {
     // pointercancel：iOS/Android 在手勢中斷時可能觸發，若不清理會造成雙指狀態卡死
     // 刪除影響：手機端可能出現「縮放後無法再拖曳 / 無法再點擊」等殘留狀態。
     window.addEventListener('pointercancel', (e) => this.onPointerUp(e));
+
+    // iOS Safari 雙指縮放會送出 gesture 事件，會與我們自訂的 pinch 衝突
+    // 在 frameEl 攔截掉，避免畫面被瀏覽器一起放大整頁
+    // 刪除影響：iOS 上雙指縮放地圖時，瀏覽器可能同時放大整個頁面 UI
+    if (this.frameEl) {
+      ['gesturestart', 'gesturechange', 'gestureend'].forEach((evt) => {
+        this.frameEl.addEventListener(evt, (e) => {
+          if (e.cancelable) e.preventDefault();
+        }, { passive: false });
+      });
+    }
   }
 
   async load(fileName) {
@@ -429,6 +531,9 @@ onTouchEnd(e) {
 
     this.fitToContain();
     this.render();
+
+    // W1：SVG 節點已就位，套用 COUNTRY_STYLE 自訂國家外觀（見 [02b]）
+    this.applyCountryStyles();
   }
 
   fitToContain() {
@@ -533,6 +638,8 @@ onTouchEnd(e) {
     // 超過門檻才視為拖曳，避免點擊也被當成 drag
     if (!this.didDrag && (Math.abs(dx) + Math.abs(dy) >= this.dragThreshold)) {
       this.didDrag = true;
+      // 3.1.10 Tier 2【項目 10】真正開始拖曳後加 .is-panning,工具列淡化讓使用者專注
+      if (this.frameEl) this.frameEl.classList.add('is-panning');
     }
 
     this.tx = this.startTxTy.tx + dx;
@@ -636,6 +743,9 @@ onTouchEnd(e) {
       }
     }
 
+    // 3.1.10 Tier 2【項目 10】拖曳結束移除 .is-panning,工具列恢復
+    if (this.frameEl) this.frameEl.classList.remove('is-panning');
+
     if (this.pointerMap.size === 0) {
       this.lastPinchDist = null;
       this.lastCenter    = null;
@@ -674,6 +784,10 @@ onTouchEnd(e) {
     if (this.activeEl && this.activeEl !== target) this.activeEl.classList.remove('active-region');
     this.activeEl = target;
     this.activeEl.classList.add('active-region');
+    // 3.1.10 Tier 2【項目 2】active-region 一次性 pulse
+    this.activeEl.classList.add('just-activated');
+    setTimeout(() => { if (this.activeEl === target) target.classList.remove('just-activated'); }, 900);
+    // 3.1.14:ripple 漣漪已移除(視覺不夠科技,active-region pulse 已足夠回饋)
 
     const name = this.extractRegionName(target);
     const iso2 = this.findIso2(target);
@@ -708,17 +822,24 @@ onTouchEnd(e) {
       if (pid) return pid;
       p = p.parentNode;
     }
-    return '未命名地區';
+    return tr('ui.unnamedRegion', '未命名地區');
   }
 
   findIso2(el) {
     // 往上找最近的兩碼 ID；例如 UM-MQ 這種取前綴 UM
+    // 子島 / 屬地對照表：prefix 不存在 COUNTRY_PAYMENTS 時改用所屬母國 ISO2
+    // - UM (United States Minor Outlying Islands) → US
+    // - GO / JU (French Southern Territories 子島) → TF
+  const ISO2_REGION_PARENT = { UM: 'US', GO: 'TF', JU: 'TF' };
   let p = el;
   while (p && p !== this.viewport && p.nodeType === 1) {
     const id = (p.id || p.getAttribute && p.getAttribute('id') || '').toString();
     if (id) {
       const m = id.match(/^[A-Za-z]{2}(?:-[A-Za-z]{2})?$/);
-      if (m) return id.split('-')[0].toUpperCase();
+      if (m) {
+        const prefix = id.split('-')[0].toUpperCase();
+        return ISO2_REGION_PARENT[prefix] || prefix;
+      }
     }
     p = p.parentNode;
    }
@@ -751,6 +872,16 @@ onTouchEnd(e) {
       tx   : txTarget,
       ty   : tyTarget
     }));
+
+      // 尊重 prefers-reduced-motion：直接跳到終點 transform，不跑補間
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.scale      = scaleTarget;
+      this.tx         = txTarget;
+      this.ty         = tyTarget;
+      this.zoomFactor = this.scale / this.baseScale;
+      this.render();
+      return;
+    }
 
       // 動畫補間
     const s0   = this.scale,  sx0 = this.tx,  sy0 = this.ty;
@@ -832,6 +963,187 @@ render() {
   escapeHtml(s) { return String(s).replace(/[&<>"']/g, (ch) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'': '&#39;' }[ch])); }
 }
 
+// === [02b] 國家外觀可控系統（W1）：applyCountryStyles() ===
+// 功能：讀 window.COUNTRY_STYLE，展開 `_groups` 後逐國套用 fill / pattern / gradient 到
+//       #viewport 內對應的 SVG 圖形（`#XX` 或 `[id^="XX-"]`；世界地圖目前皆為扁平 <path>，
+//       但保留對 <g> 容器逐一套子節點的相容處理，避免未來換圖走鐘）。
+// 資料來源：country-style.js（COUNTRY_STYLE）。
+// 刪除影響：地圖回到單一石墨灰底色（3.1.15 以前的外觀），不影響任何手勢/transform。
+// 冪等：defs 容器 `#mcCountryStyleDefs` 只建立一次，重複呼叫會清空重建、不會疊加重複節點。
+// ------------------------------------------------------------
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+MapViewer.prototype.applyCountryStyles = function () {
+  const table = window.COUNTRY_STYLE;
+  if (!table || typeof table !== 'object') return;
+  if (!this.svg || !this.viewport) return;
+
+  // defs 容器：固定掛在 #mapSvg 底下（非 #viewport，避免被 transform 影響 pattern 座標系）
+  let defs = this.svg.querySelector('defs#mcCountryStyleDefs');
+  if (!defs) {
+    defs = document.createElementNS(SVG_NS, 'defs');
+    defs.setAttribute('id', 'mcCountryStyleDefs');
+    this.svg.insertBefore(defs, this.svg.firstChild);
+  } else {
+    defs.innerHTML = ''; // 冪等：重複呼叫時清空重建，不重複注入
+  }
+
+  // 0) 預設底色：把 `_default.fill` inline 套到 #viewport 內所有圖形，作為「未命中任何
+  //    群組/逐國規則」區域的基礎預設色（＝空區域唯一控制點）。此步先跑，之後 group + 逐國
+  //    的 specific fill/pattern/gradient 會覆蓋（inline 後寫贏先寫），故 pattern/gradient
+  //    國家不會被這層底色蓋掉。若無 _default.fill 則跳過，維持吃 CSS 的舊行為。
+  const defaultStyle = table._default || {};
+  if (defaultStyle.fill) {
+    const baseTargets = this.viewport.querySelectorAll('path, polygon, polyline');
+    baseTargets.forEach((shape) => { shape.style.fill = defaultStyle.fill; });
+  }
+
+  // 1) 展開 _groups → 逐國解析出最終樣式；逐國定義（top-level key）覆蓋群組展開結果
+  const resolved = {};
+  const groups = table._groups || {};
+  Object.keys(groups).forEach((groupName) => {
+    const group = groups[groupName] || {};
+    const members = Array.isArray(group.iso2) ? group.iso2 : [];
+    const groupStyle = {};
+    Object.keys(group).forEach((k) => { if (k !== 'iso2') groupStyle[k] = group[k]; });
+    members.forEach((iso2) => { resolved[iso2] = groupStyle; });
+  });
+  Object.keys(table).forEach((key) => {
+    if (key === '_default' || key === '_groups') return;
+    resolved[key] = table[key];
+  });
+
+  // 2) 逐國生成 paint 值（純色 / pattern url / gradient url）並套到對應圖形上
+  Object.keys(resolved).forEach((iso2) => {
+    const style = resolved[iso2];
+    if (!style) return;
+    const paint = this.resolveCountryPaint(defs, iso2, style);
+    if (!paint) return;
+    this.paintCountryElements(iso2, paint);
+  });
+};
+
+// 依樣式物件決定 fill 用值：純色直接回傳 hex；pattern/gradient 先建節點再回傳 url() 參照
+MapViewer.prototype.resolveCountryPaint = function (defs, iso2, style) {
+  if (style.fill) return style.fill;
+  if (style.pattern) return this.buildCountryPattern(defs, iso2, style.pattern);
+  if (style.gradient) return this.buildCountryGradient(defs, iso2, style.gradient);
+  return null;
+};
+
+// 找出 iso2 對應的 SVG 圖形並套 fill；元素可能本身就是 path/polygon/polyline，
+// 也可能是包多個子圖形的容器（例如未來改版把群島國家包成 <g>）——兩種都要處理。
+MapViewer.prototype.paintCountryElements = function (iso2, paintValue) {
+  const targets = this.viewport.querySelectorAll(`#${iso2}, [id^="${iso2}-"]`);
+  targets.forEach((el) => {
+    const isShape = /^(path|polygon|polyline|rect|circle)$/i.test(el.tagName);
+    const shapes = isShape ? [el] : Array.from(el.querySelectorAll('path, polygon, polyline, rect, circle'));
+    shapes.forEach((shape) => { shape.style.fill = paintValue; });
+  });
+};
+
+// pattern：stripes（斜條紋）/ dots（網點）/ image（貼圖平鋪）
+// patternUnits 固定用 userSpaceOnUse，讓 tile 錨定在地圖座標系（而非跟著每個國家的 bbox 縮放），
+// 避免地圖縮放時圖樣跟著跳動或產生摩爾紋。
+MapViewer.prototype.buildCountryPattern = function (defs, iso2, opts) {
+  const id = `mc-pat-${iso2}`;
+  const type = opts && opts.type;
+  let pattern;
+
+  if (type === 'stripes') {
+    const colors = Array.isArray(opts.colors) && opts.colors.length ? opts.colors : ['#2d3748', '#1a202c'];
+    const stripeW = Number.isFinite(opts.width) ? opts.width : 6;
+    const angle   = Number.isFinite(opts.angle) ? opts.angle : 45;
+    const tile    = stripeW * colors.length;
+
+    pattern = document.createElementNS(SVG_NS, 'pattern');
+    pattern.setAttribute('id', id);
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    pattern.setAttribute('width', tile);
+    pattern.setAttribute('height', tile);
+    pattern.setAttribute('patternTransform', `rotate(${angle})`);
+
+    colors.forEach((color, i) => {
+      const rect = document.createElementNS(SVG_NS, 'rect');
+      rect.setAttribute('x', i * stripeW);
+      rect.setAttribute('y', 0);
+      rect.setAttribute('width', stripeW);
+      rect.setAttribute('height', tile);
+      rect.setAttribute('fill', color);
+      pattern.appendChild(rect);
+    });
+  } else if (type === 'dots') {
+    const bg  = opts.bg  || '#2d3748';
+    const dot = opts.dot || '#e2e8f0';
+    const size = Number.isFinite(opts.size) ? opts.size : 2;
+    const gap  = Number.isFinite(opts.gap)  ? opts.gap  : 8;
+
+    pattern = document.createElementNS(SVG_NS, 'pattern');
+    pattern.setAttribute('id', id);
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    pattern.setAttribute('width', gap);
+    pattern.setAttribute('height', gap);
+
+    const bgRect = document.createElementNS(SVG_NS, 'rect');
+    bgRect.setAttribute('width', gap);
+    bgRect.setAttribute('height', gap);
+    bgRect.setAttribute('fill', bg);
+    pattern.appendChild(bgRect);
+
+    const circle = document.createElementNS(SVG_NS, 'circle');
+    circle.setAttribute('cx', gap / 2);
+    circle.setAttribute('cy', gap / 2);
+    circle.setAttribute('r', size);
+    circle.setAttribute('fill', dot);
+    pattern.appendChild(circle);
+  } else if (type === 'image') {
+    const href = opts.href;
+    if (!href) return null;
+    const tile = Number.isFinite(opts.tile) ? opts.tile : 32;
+
+    pattern = document.createElementNS(SVG_NS, 'pattern');
+    pattern.setAttribute('id', id);
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    pattern.setAttribute('width', tile);
+    pattern.setAttribute('height', tile);
+
+    const image = document.createElementNS(SVG_NS, 'image');
+    image.setAttributeNS('http://www.w3.org/1999/xlink', 'href', href);
+    image.setAttribute('href', href);
+    image.setAttribute('width', tile);
+    image.setAttribute('height', tile);
+    pattern.appendChild(image);
+  } else {
+    return null; // 未知 pattern type：不注入、也不讓整國變成無填色
+  }
+
+  defs.appendChild(pattern);
+  return `url(#${id})`;
+};
+
+// gradient：目前只支援 linear（stops + angle）；預留 type 欄位供未來擴充 radial
+MapViewer.prototype.buildCountryGradient = function (defs, iso2, opts) {
+  if (!opts || opts.type !== 'linear' || !Array.isArray(opts.stops) || !opts.stops.length) return null;
+
+  const id = `mc-grad-${iso2}`;
+  const angle = Number.isFinite(opts.angle) ? opts.angle : 0;
+
+  const grad = document.createElementNS(SVG_NS, 'linearGradient');
+  grad.setAttribute('id', id);
+  grad.setAttribute('gradientUnits', 'objectBoundingBox');
+  grad.setAttribute('gradientTransform', `rotate(${angle}, 0.5, 0.5)`);
+
+  opts.stops.forEach((s) => {
+    const stopEl = document.createElementNS(SVG_NS, 'stop');
+    stopEl.setAttribute('offset', s.offset);
+    stopEl.setAttribute('stop-color', s.color);
+    grad.appendChild(stopEl);
+  });
+
+  defs.appendChild(grad);
+  return `url(#${id})`;
+};
+
 // === 其他地區（#regionGrid）動態按鈕 ===
 function buildIso2ToEnglishNameMap() {
   const map = new Map();
@@ -872,6 +1184,8 @@ function renderRegionGrid(viewer){
 
     const info = (window.getCountryInfo ? window.getCountryInfo(enName) : null);
     const zhName = (info && info.zhName) ? info.zhName : enName;
+    // W3：國旗按鈕名稱依當前 locale 動態出（Intl.DisplayNames），失敗退 zhName。
+    const displayName = localizedRegionName(iso2, currentLocale(), zhName);
 
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -881,24 +1195,12 @@ function renderRegionGrid(viewer){
     btn.dataset.nameEn = enName;
     btn.dataset.nameZh = zhName;
 
-    const flagWrap = document.createElement('span');
-    flagWrap.className = 'region-flag';
-    const flagImg = document.createElement('img');
-    flagImg.alt = `${zhName}${tr('ui.flagSuffix', ' 國旗')}`;
-    flagWrap.appendChild(flagImg);
-
     const nameWrap = document.createElement('span');
     nameWrap.className = 'region-name';
-    // 不顯示英文，但保留在 dataset（上面已塞）
-    nameWrap.innerHTML = `<span class="zh">${zhName}</span>`;
+    // 顯示當前 locale 的地區名；原始 zh/en 名保留在 dataset（上面已塞）供 debug
+    nameWrap.innerHTML = `<span class="zh">${displayName}</span>`;
 
-    btn.appendChild(flagWrap);
     btn.appendChild(nameWrap);
-
-    // 現有的旗幟載入規則（webp→png→jpg）
-    if (typeof setFlagByIso2 === 'function') {
-      setFlagByIso2(flagImg, iso2);
-    }
 
     btn.addEventListener('click', () => {
       const el =
@@ -920,8 +1222,15 @@ function renderRegionGrid(viewer){
         viewer.activeEl.classList.remove('active-region');
       }
       viewer.activeEl = el || null;
-      if (el) el.classList.add('active-region');
+      if (el) {
+        el.classList.add('active-region');
+        // 3.1.10 Tier 2【項目 2】active-region 一次性 pulse
+        el.classList.add('just-activated');
+        setTimeout(() => { if (viewer.activeEl === el) el.classList.remove('just-activated'); }, 900);
+      }
 
+      // 記錄觸發元素，Esc 關閉資訊卡時把焦點還回這顆國旗按鈕
+      viewer.lastInfoTrigger = btn;
       viewer.showInfo({ name, iso2, bbox });
 
       // 點底下國旗後滾動到地圖區塊（整合頁面吃 .world_map）
@@ -943,35 +1252,154 @@ function renderRegionGrid(viewer){
   const btnReset   = document.getElementById('btnResetView');
   const mapHint    = document.getElementById('mapHint');
 
+  // 必要 DOM 防呆：缺少任一關鍵節點就放棄初始化，避免後續整批拋錯
+  if (!svg || !viewport || !infoPanel) {
+    console.error('[nation-map] missing required DOM');
+    return;
+  }
+
+  // infoPanel 補 ARIA（region + live region），供螢幕報讀器追蹤資訊卡變動
+  infoPanel.setAttribute('role', 'region');
+  infoPanel.setAttribute('aria-live', 'polite');
+  infoPanel.setAttribute('aria-label', tr('ui.countryInfo', '國家資訊'));
+
+  // W3：載入時先把 <html lang> 對齊生效 locale，並套用一次靜態字串（此時 window.t 已就緒）
+  if (document.documentElement) document.documentElement.setAttribute('lang', currentLocale());
+  applyStaticI18n(document);
+
   const viewer = new MapViewer(svg, viewport, infoPanel);
   bindServiceMapScroll();
 
+  // 記錄觸發 infoPanel 開啟的元素,Esc 關閉時把焦點還回去
+  viewer.lastInfoTrigger = null;
+
+  // 3.1.10 Tier 2【項目 4】鍵帽圖示 hint
   const updateHintText = () => {
     if (!mapHint) return;
     const isMobile = viewer.isMobileLike();
-    mapHint.textContent = isMobile
-      ? '雙指拖曳或縮放地圖；點擊地區查看資訊'
-      : '按住 ctrl + 滾輪進行縮放、拖曳平移；點擊地區查看資訊';
+    const uaData = navigator.userAgentData;
+    const isMac = (navigator.platform && navigator.platform.includes('Mac'))
+                  || (uaData && uaData.platform === 'macOS');
+    const modKey = isMac ? '⌘' : 'Ctrl';
+    if (isMobile) {
+      mapHint.textContent = tr('ui.hintMobile', '雙指拖曳或縮放地圖；點擊地區查看資訊');
+    } else {
+      // 桌機保留 <kbd> 鍵帽結構（3.1.10 視覺特徵）：修飾鍵＋滾輪為硬編碼安全字串，
+      // 其餘敘述文字走 tr('ui.hintDesktop') 依 locale 出。組合方式：<kbd>Mod</kbd> + <kbd>Wheel</kbd> 敘述。
+      const wheelWord = tr('ui.hintWheel', '滾輪');
+      const desc = tr('ui.hintDesktopSuffix', '縮放、拖曳平移；點擊地區查看資訊');
+      const holdWord = tr('ui.hintHold', '按住');
+      mapHint.innerHTML = holdWord + ' <kbd class="kbd">' + modKey + '</kbd> + <kbd class="kbd">' + wheelWord + '</kbd> ' + desc;
+    }
   };
   updateHintText();
 
-    // 更新外框大小＋重新限制邊界，
-    // 不重置縮放與中心
-  window.addEventListener('resize', () => {
-    viewer.updateFrameSize();
-    viewer.clampTranslation();
-    viewer.render();
+  // === [00c] W3 網頁語系接口（掛在 window.NationMap；切 locale 後即時重渲染、不重載頁面） ===
+  // map-i18n.js 已提供內部版 setLocale（只換 currentLocale）與 getLocale/getSupportedLocales。
+  // 這裡「包裝」setLocale：先委派內部版換 locale，再重繪所有受語系影響的 UI，並派事件。
+  const __i18nSetLocaleInternal = window.NationMap && window.NationMap.setLocale;
+
+  const rerenderAllI18n = () => {
+    // 1) 靜態字串（skip-link / h1 / 工具列 aria / 其他地區標題與敘述 / infoPanel aria）
+    applyStaticI18n(document);
+    // 2) 地圖操作提示（依裝置動態產生）
     updateHintText();
+    // 3) 地圖下方「其他地區」國旗清單（名稱走 Intl.DisplayNames）
+    renderRegionGrid(viewer);
+    // 4) 開啟中的資訊卡：重呼 showInfo → 國名/幣名/支付方式/模式鈕全部依新 locale 重繪
+    if (infoPanel.classList.contains('open') && viewer.currentInfo) {
+      viewer.showInfo(viewer.currentInfo);
+    }
+  };
+
+  window.NationMap = window.NationMap || {};
+  window.NationMap.setLocale = function setLocale(locale) {
+    // 委派 map-i18n 內部版做 normalize + 換 currentLocale；缺席時原樣回傳
+    const before = currentLocale();
+    const applied = (typeof __i18nSetLocaleInternal === 'function')
+      ? __i18nSetLocaleInternal(locale)
+      : locale;
+    // W3 效能：正規化後 locale 與現值相同 → 免重渲染、免派事件（仍回傳生效 locale）
+    if (applied === before) return applied;
+    // 更新 <html lang> 屬性
+    if (document.documentElement) document.documentElement.setAttribute('lang', applied);
+    // 即時重渲染
+    rerenderAllI18n();
+    // 派事件供外部整合頁面掛鉤
+    try {
+      document.dispatchEvent(new CustomEvent('nationmap:localechange', { detail: { locale: applied } }));
+    } catch (_) { /* 老瀏覽器無 CustomEvent 建構式時靜默略過 */ }
+    return applied;
+  };
+
+  // 3.1.10 Tier 2【項目 4】首次無修飾鍵滾輪 → pulse hint 提示使用者
+  let hintPulseGuard = false;
+  const pulseHintOnce = () => {
+    if (!mapHint || hintPulseGuard) return;
+    hintPulseGuard = true;
+    mapHint.classList.add('is-pulsing');
+    setTimeout(() => {
+      mapHint.classList.remove('is-pulsing');
+      // 重置 guard,允許 30 秒後再次提示
+      setTimeout(() => { hintPulseGuard = false; }, 30000);
+    }, 1300);
+  };
+  // SVG wheel 已被 viewer.bindEvents 捕捉,我們在 mapFrame 上補一個 capture-phase listener
+  // 只在「無 ctrlKey/metaKey + 桌機」時觸發 pulse
+  // 註:這裡用本地 getElementById 而非後面的 const mapFrame(避免 TDZ)
+  const mfForHint = document.getElementById('mapFrame');
+  if (mfForHint) {
+    mfForHint.addEventListener('wheel', (e) => {
+      if (viewer.isMobileLike()) return;
+      if (e.ctrlKey || e.metaKey) return;
+      pulseHintOnce();
+    }, { passive: true });
+  }
+
+    // 更新外框大小＋重新限制邊界，不重置縮放與中心
+    // 用 rAF 節流避免 resize / orientationchange / visualViewport 連續觸發造成抖動
+  let resizePending = false;
+  const onViewportResize = () => {
+    if (resizePending) return;
+    resizePending = true;
+    requestAnimationFrame(() => {
+      resizePending = false;
+      viewer.updateFrameSize();
+      viewer.clampTranslation();
+      viewer.render();
+      updateHintText();
+    });
+  };
+  window.addEventListener('resize', onViewportResize);
+  window.addEventListener('orientationchange', onViewportResize);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', onViewportResize);
+  }
+
+  // Esc 關閉資訊卡並把焦點還回觸發元素（若有記錄）
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (!infoPanel.classList.contains('open')) return;
+    infoPanel.classList.remove('open');
+    // 3.1.13 Tier 3【項目 7】關閉時移除 focus-mode,讓 vignette 淡出
+    if (viewer.frameEl) viewer.frameEl.classList.remove('focus-mode');
+    hideMethodTooltip();
+    const trigger = viewer.lastInfoTrigger;
+    if (trigger && typeof trigger.focus === 'function') {
+      try { trigger.focus(); } catch (_) { /* ignore */ }
+    }
   });
 
-  closeInfo.addEventListener('click', () => {
+  closeInfo && closeInfo.addEventListener('click', () => {
     infoPanel.classList.remove('open');
+    // 3.1.13 Tier 3【項目 7】關閉時移除 focus-mode
+    if (viewer.frameEl) viewer.frameEl.classList.remove('focus-mode');
     hideMethodTooltip();
   });
   const mapFrame = document.getElementById('mapFrame');
 
     // 手機版：點擊地圖空白處關閉資訊卡
-  mapFrame.addEventListener('click', (e) => {
+  mapFrame && mapFrame.addEventListener('click', (e) => {
     const isMobileLike = window.matchMedia('(max-width: 899px)').matches;
     if (!isMobileLike) return;
 
@@ -979,47 +1407,71 @@ function renderRegionGrid(viewer){
     const target = e.target;
     if (target.closest && target.closest('#infoPanel')) return;
     if (target.closest && target.closest('path, polygon, polyline, rect, circle')) return;
+      // 點到工具列 / 提示 / 付款方式圓點不關閉（避免手機誤觸關卡）
+    if (target.closest && target.closest('.map-toolbar, .map-tool-btn, .map-hint, .pay-dots')) return;
 
     infoPanel.classList.remove('open');
+    // 3.1.13 Tier 3【項目 7】手機版點空白也移除 focus-mode
+    if (viewer.frameEl) viewer.frameEl.classList.remove('focus-mode');
     hideMethodTooltip();
   });
 
-  if (btnZoomIn) {
-    btnZoomIn.addEventListener('click', () => {
-      viewer.zoomBy(1.25);  // 放大一點
-    });
-  }
+  btnZoomIn && btnZoomIn.addEventListener('click', () => {
+    viewer.zoomBy(1.25);  // 放大一點
+  });
 
-  if (btnZoomOut) {
-    btnZoomOut.addEventListener('click', () => {
-      viewer.zoomBy(1 / 1.25);  // 縮小一點
-    });
-  }
+  btnZoomOut && btnZoomOut.addEventListener('click', () => {
+    viewer.zoomBy(1 / 1.25);  // 縮小一點
+  });
 
-  if (btnReset) {
-    btnReset.addEventListener('click', () => {
-      // 視角重置
-      viewer.resetView();
+  btnReset && btnReset.addEventListener('click', () => {
+    // 視角重置
+    viewer.resetView();
 
-      // 面板收起
-      infoPanel.classList.remove('open');
+    // 面板收起
+    infoPanel.classList.remove('open');
 
-      // 地圖高亮取消
-      if (viewer.activeEl) {
-        viewer.activeEl.classList.remove('active-region');
-        viewer.activeEl = null;
-      }
+    // 地圖高亮取消
+    if (viewer.activeEl) {
+      viewer.activeEl.classList.remove('active-region');
+      viewer.activeEl = null;
+    }
 
-      // tooltip 關掉
-      hideMethodTooltip();
-    });
-  }
+    // tooltip 關掉
+    hideMethodTooltip();
+  });
+
+  // 3.1.10 Tier 2【項目 3】首屏 3 階段載入敘事:加 .is-booting,viewer.load() 完成後分階段移除
+  // 複用前面已宣告的 const mapFrame(避免 TDZ + 重複 getElementById)
+  if (mapFrame) mapFrame.classList.add('is-booting');
 
   try {
     await viewer.load('world.svg');
 
+    // Stage 1:地圖淡入(立即移除 is-booting)
+    requestAnimationFrame(() => {
+      if (mapFrame) mapFrame.classList.remove('is-booting');
+    });
+
     // 先渲染下方「其他地區」按鈕
     renderRegionGrid(viewer);
+
+    // 3.1.10 Tier 2【項目 6】region-section IntersectionObserver stagger 進場
+    const regionSection = document.getElementById('regionSection');
+    if (regionSection && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.disconnect(); // 觸發後即停止觀察,釋放資源
+          }
+        });
+      }, { threshold: 0.15 });
+      io.observe(regionSection);
+    } else if (regionSection) {
+      // 老瀏覽器 fallback:直接加 in-view 跳過動畫
+      regionSection.classList.add('in-view');
+    }
 
       // 1) 嘗試用 ISO2 = TW 找到台灣 path
     const viewportEl = document.getElementById('viewport');
@@ -1037,6 +1489,9 @@ function renderRegionGrid(viewer){
       }
       viewer.activeEl = tw;
       tw.classList.add('active-region');
+      // 3.1.10 Tier 2【項目 2 + 項目 3】首次台灣展現 = highlight-breath(stage 3),不重複 just-activated
+      tw.classList.add('highlight-breath');
+      setTimeout(() => tw.classList.remove('highlight-breath'), 1300);
 
       viewer.showInfo({ name, iso2, bbox });  // 初始狀態就顯示台灣資訊
     }
@@ -1047,128 +1502,42 @@ function renderRegionGrid(viewer){
 
 
   // 旗幟來源嘗試：Exact / _ / - ；svg→png 退回
-function flagCandidates(en){
-  const base     = './assest/national-flag/';
-  const variants = [
-    en, en.replace(/\s+/g,'_'), en.replace(/\s+/g,'-')
-  ];
-  const exts = ['.svg', '.png', '.jpg'];
-  const list = [];
-  variants.forEach(v => exts.forEach(ext => list.push(base + encodeURIComponent(v + ext))));
-  return list;
-}
-function setFlag(imgEl, en){
-  const tries         = flagCandidates(en);
-  let   i             = 0;
-  const next          = ()=> { if (i >= tries.length) { imgEl.removeAttribute('src'); imgEl.alt = 'No flag'; return; } imgEl.src = tries[i++]; };
-        imgEl.onerror = next;
-  next();
-}
-
   // === 國旗載入：依「國名簡寫檔案」 ===
   // 旗幟放在 /assest/national-flag/，檔名為 ISO2：US.webp、TW.webp、JP.webp...
 const FLAG_BASE = './assest/national-flag/';
 function setFlagByIso2(imgEl, iso2){
-  const codeList = [String(iso2||'').toUpperCase(), String(iso2||'').toLowerCase()].filter(Boolean);
-  const exts     = ['.webp', '.svg', '.png', '.jpg'];
-  const tries    = [];
-  codeList.forEach(c => exts.forEach(ext => tries.push(FLAG_BASE + c + ext)));
-  let   i             = 0;
-  const next          = ()=>{ if (i >= tries.length) { imgEl.removeAttribute('src'); imgEl.alt = 'No flag'; return; } imgEl.src = tries[i++]; };
-        imgEl.onerror = next;
-  next();
-}
+  // 最佳化：直接走小寫 .webp（命中率近 100%），只有失敗才退到大寫 .webp 後援
+  // 避免原本一律先試大寫 .webp/.svg/.png/.jpg 造成 4 次 404
+  const lower = String(iso2||'').toLowerCase();
+  const upper = String(iso2||'').toUpperCase();
+  if (!lower) { imgEl.removeAttribute('src'); imgEl.alt = 'No flag'; return; }
 
-
-  // 英文標準國名（對應 world.svg 的 title）→ ISO 3166-1 alpha-2 碼
-const ISO2_BY_NAME = {
-  "Taiwan"              : "TW",
-  "Japan"               : "JP",
-  "United States"       : "US",
-  "United Kingdom"      : "GB",
-  "Korea, Republic of"  : "KR",
-  "Singapore"           : "SG",
-  "Hong Kong"           : "HK",
-  "Australia"           : "AU",
-  "Canada"              : "CA",
-  "Germany"             : "DE",
-  "France"              : "FR",
-  "Italy"               : "IT",
-  "Spain"               : "ES",
-  "Netherlands"         : "NL",
-  "Sweden"              : "SE",
-  "Norway"              : "NO",
-  "Denmark"             : "DK",
-  "Finland"             : "FI",
-  "Poland"              : "PL",
-  "Czechia"             : "CZ",
-  "Austria"             : "AT",
-  "Switzerland"         : "CH",
-  "Belgium"             : "BE",
-  "Ireland"             : "IE",
-  "New Zealand"         : "NZ",
-  "Thailand"            : "TH",
-  "Malaysia"            : "MY",
-  "Philippines"         : "PH",
-  "Indonesia"           : "ID",
-  "Viet Nam"            : "VN",
-  "India"               : "IN",
-  "United Arab Emirates": "AE",
-  "Turkey"              : "TR",
-  "Brazil"              : "BR",
-  "Mexico"              : "MX",
-  "Argentina"           : "AR",
-  "South Africa"        : "ZA"
-};
-
-
-  // 若 `country-info.js` 也想放 iso2，可在該檔加上 {iso2:"TW"}；下方會優先讀它
-function getIso2ByName(enName){
-  if (window.COUNTRY_INFO && window.COUNTRY_INFO[enName] && window.COUNTRY_INFO[enName].iso2) {
-    return window.COUNTRY_INFO[enName].iso2.toUpperCase();
-  }
-  return ISO2_BY_NAME[enName] || null;
-}
-
-function flagCandidatesByIso2(iso2){
-  if (!iso2) return [];
-  const codes = [iso2.toUpperCase(), iso2.toLowerCase()];
-  const exts  = ['.webp', '.svg', '.png', '.jpg'];
-  const list  = [];
-  codes.forEach(c => exts.forEach(ext => list.push(FLAG_BASE + c + ext)));
-  return list;
-}
-function setFlagByName(imgEl, enName){
-  // 說明：以「英文國名」→ ISO2 → 國旗檔名候選；目前未被呼叫（主流程走 setFlagByIso2）。
-  // 刪除影響：不影響現行點擊流程；但在資料只有國名、沒有 ISO2 的情境會少一層容錯。
-    // 1) 依 iso2 簡寫檔名
-  const iso2  = getIso2ByName(enName);
-  let   tries = flagCandidatesByIso2(iso2);
-
-    // 2) 後援：國名直接當檔名（空白→底線/連字號/原樣），避免少數例外
-  const variants = [enName, enName.replace(/\s+/g,'_'), enName.replace(/\s+/g,'-')];
-  const exts     = ['.webp','.svg','.png','.jpg'];
-  variants.forEach(v => exts.forEach(ext => tries.push(FLAG_BASE + encodeURIComponent(v + ext))));
-
-  let   i    = 0;
-  const next = ()=> {
-    if (i >= tries.length) { imgEl.removeAttribute('src'); imgEl.alt = tr('ui.noFlag', '無國旗'); return; }
-    imgEl.src = tries[i++];
+  const fallback = FLAG_BASE + upper + '.webp';
+  imgEl.onerror = ()=>{
+      // 大寫後援也失敗就放棄，避免無限重試
+    imgEl.onerror = ()=>{ imgEl.removeAttribute('src'); imgEl.alt = 'No flag'; };
+    imgEl.src = fallback;
   };
-  imgEl.onerror = next;
-  next();
+  imgEl.src = FLAG_BASE + lower + '.webp';
 }
 
 
   // 點擊事件
 MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
+  // W3：記住當前顯示國，供 setLocale 時重呼 showInfo 重繪（bbox 為 content 座標，重繪不跳位）
+  this.currentInfo = { name, iso2, bbox };
+
   const info = (window.getCountryInfo ? getCountryInfo(name) : null)
                || { zhName: name, currencyCode: '—', currencyName: '—', iso2 };
 
   const infoBody = document.getElementById('infoBody');
-  const zh       = this.escapeHtml(info.zhName || name);
+  // W3：國名／幣名改由 Intl.DisplayNames 依當前 locale 動態出；HK/MO 用 short；
+  //     Intl 失敗（不支援或無效 code）時 fallback 回 COUNTRY_INFO 的 zhName/currencyName，絕不白屏。
+  const loc      = currentLocale();
+  const regionKey = iso2 || (info && info.iso2) || '';
+  const zh       = this.escapeHtml(localizedRegionName(regionKey, loc, info.zhName || name));
   const en       = this.escapeHtml(name);
-  const curZh    = this.escapeHtml(info.currencyName || '—');
+  const curZh    = this.escapeHtml(localizedCurrencyName(info.currencyCode, regionKey, loc, info.currencyName || '—'));
   const curEn    = this.escapeHtml(info.currencyCode || '—');
 
   infoBody.innerHTML = `
@@ -1178,7 +1547,6 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
     </section>
 
     <section class="card meta-card card--naked">
-      <div class="flag-box"><img id="flagImg" alt="${zh}${tr('ui.flagSuffix',' 國旗')}" /></div>
       <div class="currency-box">
         <div class="zh-cur">${curZh}</div>
       </div>
@@ -1204,12 +1572,17 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
     const old = header.querySelector('.mode-toggle');
     if (old) old.remove();
 
+      // A11y：外層保留 .mode-toggle 維持 .knob / .is-icon 視覺樣式
+      //       內層改用 role=radiogroup + 兩顆 button[role=radio]
+      //       讓鍵盤 / 螢幕報讀器可用
     const toggle           = document.createElement('div');
           toggle.className = 'mode-toggle';
           toggle.innerHTML = `
       <div class = "knob"></div>
-      <div class = "opt opt-full">清單</div>
-      <div class = "opt opt-icon">圖標</div>
+      <div role="radiogroup" aria-label="${tr('ui.payModeLabel', '付款方式顯示模式')}">
+        <button type="button" class="opt opt-full" role="radio" aria-checked="true">${tr('ui.modeList', '清單')}</button>
+        <button type="button" class="opt opt-icon" role="radio" aria-checked="false">${tr('ui.modeIcon', '圖標')}</button>
+      </div>
     `;
 
       // 正確插在 controls 區塊前面，而不是 closeInfo 本身
@@ -1223,27 +1596,63 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
       // 沿用上次模式（記在 infoBody data-paymode）
     const mode          = infoBody.getAttribute('data-paymode') || 'full';
     const paymentsMount = document.getElementById('paymentsCard');
-    if (mode === 'icon') {
-      toggle.classList.add('is-icon');
-      paymentsMount.classList.add('icon-only');
-    }
-    toggle.querySelector('.opt-full').classList.toggle('active', mode === 'full');
-    toggle.querySelector('.opt-icon').classList.toggle('active', mode === 'icon');
+    const optFull       = toggle.querySelector('.opt-full');
+    const optIcon       = toggle.querySelector('.opt-icon');
 
-    toggle.addEventListener('click', () => {
-      const isIcon = toggle.classList.toggle('is-icon');
+      // 共用：把 toggle 狀態套到 DOM / class / aria-checked / tabindex
+    const applyMode = (isIcon) => {
+      toggle.classList.toggle('is-icon', isIcon);
       paymentsMount.classList.toggle('icon-only', isIcon);
       infoBody.setAttribute('data-paymode', isIcon ? 'icon' : 'full');
-      toggle.querySelector('.opt-full').classList.toggle('active', !isIcon);
-      toggle.querySelector('.opt-icon').classList.toggle('active',  isIcon);
+      optFull.classList.toggle('active', !isIcon);
+      optIcon.classList.toggle('active',  isIcon);
+      optFull.setAttribute('aria-checked', String(!isIcon));
+      optIcon.setAttribute('aria-checked', String(isIcon));
+      // radiogroup 鍵盤焦點規範：只有被選中的 radio 可 Tab 進入
+      optFull.tabIndex = isIcon ? -1 : 0;
+      optIcon.tabIndex = isIcon ? 0 : -1;
       hideMethodTooltip();
+    };
+
+    applyMode(mode === 'icon');
+
+      // 點擊整個 toggle（含 knob 與兩顆 button）都切換
+      // 注意：button 點擊會冒泡到 toggle，這裡用「目標 opt-full 強制 full、opt-icon 強制 icon」
+    toggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('.opt');
+      if (btn === optFull) {
+        applyMode(false);
+      } else if (btn === optIcon) {
+        applyMode(true);
+      } else {
+        // 點到 knob 或空白：保留原本 toggle 行為
+        applyMode(!toggle.classList.contains('is-icon'));
+      }
+    });
+
+      // A11y 鍵盤支援：Enter / Space 切換、ArrowLeft 切到 full、ArrowRight 切到 icon
+    toggle.addEventListener('keydown', (e) => {
+      const key = e.key;
+      if (key === 'ArrowLeft') {
+        e.preventDefault();
+        applyMode(false);
+        optFull.focus();
+      } else if (key === 'ArrowRight') {
+        e.preventDefault();
+        applyMode(true);
+        optIcon.focus();
+      } else if (key === 'Enter' || key === ' ' || key === 'Spacebar') {
+        // 在目前焦點的 radio 上 Enter/Space 切換到對應模式
+        e.preventDefault();
+        const focused = document.activeElement;
+        if (focused === optFull) applyMode(false);
+        else if (focused === optIcon) applyMode(true);
+        else applyMode(!toggle.classList.contains('is-icon'));
+      }
     });
   }
 
-    // 以 iso2 載國旗（例如 UM-xxx 只取 UM）
-  const flagImg = document.getElementById('flagImg');
-  const code    = (iso2 || (info && info.iso2) || '').toString().split('-')[0];
-  setFlagByIso2(flagImg, code);
+  const code = (iso2 || (info && info.iso2) || '').toString().split('-')[0];
 
     // 渲染支援付款方式
   const paymentsMount = document.getElementById('paymentsCard');
@@ -1261,9 +1670,23 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
   const fw = this.frameW;
   const fh = this.frameH;
 
+  // 3.1.10 Tier 2【項目 5】info-float 進場條件式 will-change(animationend 移除)
+  const armWillChange = () => {
+    if (!this.infoPanel) return;
+    this.infoPanel.classList.add('is-opening');
+    const onEnd = () => {
+      this.infoPanel.classList.remove('is-opening');
+      this.infoPanel.removeEventListener('transitionend', onEnd);
+    };
+    this.infoPanel.addEventListener('transitionend', onEnd);
+  };
+
   if (isMobileLike) {
     this.infoPanel.classList.remove('right');
+    armWillChange();
     this.infoPanel.classList.add('open');
+    // 3.1.13 Tier 3【項目 7】vignette focus mode:資訊卡開啟時周圍變暗,讓視線聚焦中心
+    if (this.frameEl) this.frameEl.classList.add('focus-mode');
     if (this.frameEl) {
       this.frameEl.classList.remove('dock-right');
     }
@@ -1283,7 +1706,10 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
     const dockRight = cxRatio < 0.38;                             // 偏左 → 卡片靠右
 
     this.infoPanel.classList.toggle('right', dockRight);
+    armWillChange();
     this.infoPanel.classList.add('open');
+    // 3.1.13 Tier 3【項目 7】vignette focus mode
+    if (this.frameEl) this.frameEl.classList.add('focus-mode');
 
     if (this.frameEl) {
       this.frameEl.classList.toggle('dock-right', dockRight);
@@ -1319,7 +1745,7 @@ function hideMethodTooltip() {
 function attachMethodTooltip(chip, meta) {
   if (!methodTooltipEl) return;
 
-  const label = tr(`pay.method.${meta.id}`, meta.name_zh || '');
+  const label = localizedPaymentName(meta.id, meta.name_zh, meta.name_en);
   if (!label) return;
 
   let hovering = false;
@@ -1424,7 +1850,7 @@ function renderPayments(iso2, mountEl){
 
   const title = document.createElement('h3');
   title.className = 'sec-title';
-  title.textContent = '支援付款方式';
+  title.textContent = tr('ui.supportedPayments', '支援付款方式');
 
   cats.forEach(cat => {
     const ids = data[cat.id] || [];
@@ -1463,8 +1889,14 @@ function renderPayments(iso2, mountEl){
       const m = byId.get(id);
       if (!m) return;
 
-      const chip           = document.createElement('div');
+        // A11y：chip 改為 <button>，讓鍵盤可聚焦並補 aria-label（含類別資訊）
+      const chip      = document.createElement('button');
+            chip.type = 'button';
             chip.className = 'method-chip';
+      // W3：方式名走 payment-i18n 依當前 locale 出；類別名暫無 i18n 資料，沿用 catalog name_zh
+      const methodLabel   = localizedPaymentName(m.id, m.name_zh, m.name_en);
+      const categoryLabel = tr(`pay.category.${cat.id}`, cat.name_zh || cat.name_en || '');
+      chip.setAttribute('aria-label', `${methodLabel} - ${categoryLabel}`);
 
       const mImg     = document.createElement('img');
             mImg.alt = m.name_en || m.name_zh;
@@ -1472,8 +1904,10 @@ function renderPayments(iso2, mountEl){
 
       const mText = document.createElement('div');
       mText.className = 'method-name';
+        // icon-only 模式下 .m-zh 改用 visually-hidden 風格隱藏（不再 display:none）
+        // 保留給螢幕報讀器；視覺資訊靠 tooltip 補
       mText.innerHTML = `
-        <span class="m-zh">${tr(`pay.method.${m.id}`, m.name_zh || '')}</span>
+        <span class="m-zh">${__nmEscapeHtml(localizedPaymentName(m.id, m.name_zh, m.name_en))}</span>
       `;
       chip.dataset.nameEn = m.name_en || '';
 
@@ -1490,9 +1924,12 @@ function renderPayments(iso2, mountEl){
   });
 
   if (!frag.childNodes.length) {
-    const empty             = document.createElement('div');
-          empty.className   = 'kv';
-          empty.textContent = '正在積極爭取此區域的付款方式!';
+    // 3.1.13:精簡空狀態 — 移除信封 icon 與 mailto 連結,僅保留標題與簡述
+    const empty = document.createElement('div');
+    empty.className = 'payments-empty';
+    empty.innerHTML =
+      '<p class="empty-title">' + tr('ui.emptyTitle', '正在積極爭取中') + '</p>' +
+      '<p class="empty-sub">' + tr('ui.emptySub', '此區域支付方式即將上線') + '</p>';
     frag.appendChild(empty);
   }
 

@@ -628,15 +628,15 @@ body.nation-map *::after {
 }
 .mode-toggle .knob {
   position: absolute; top: 2px; bottom: 2px;
-  width: calc(50% - 4px);
-  left: 2px;                          /* full 模式在左 */
-  border-radius: 6px;
+  width: calc(38% - 0%);
+  left: 1%;                          /* full 模式在左 */
+  border-radius: 4px;
   background: rgba(255,255,255,0.9);
   transition: left .22s ease, width .22s ease, background .22s ease;
   box-shadow: var(--shadow);
 }
 .mode-toggle.is-icon .knob {
-  left: calc(50% + 2px);              /* icon 模式在右 */
+  left: calc(38% + 0%);              /* icon 模式在右 */
 }
 .mode-toggle .opt {
   flex: 1; text-align: center; font-size: 12px; line-height: 1;
@@ -997,6 +997,7 @@ body.nation-map *::after {
 }
 
 .region-title{
+  font-family: "微軟正黑體";
   font-size: 34px;
   font-weight: bold;
   color:#3184e4;
@@ -1005,11 +1006,17 @@ body.nation-map *::after {
 }
 
 .region-desc{
-  font-size: 16px;
-  line-height: 42px;
+  font-family: "微軟正黑體";
+  font-size: 18px;
+  line-height: 24px;
   color: rgba(0,0,0,.55);
-  margin-bottom: 28px;
+  margin:3% 0 2% 0;
 }
+
+.empty-title {font-size: 15px; line-height: 22px; margin:18px 0 0 6px;}
+.empty-sub {font-size: 15px; line-height: 22px; margin:0 0 0 6px;}
+
+
 
 /* Grid：桌機 4 欄，平板 3 欄，手機 2 欄 */
 .region-grid{

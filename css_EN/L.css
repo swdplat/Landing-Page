@@ -804,8 +804,8 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 48px;
-	line-height: 48px;
+	font-size: 42px;
+	line-height: 42px;
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
@@ -818,8 +818,8 @@ body {
 	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 22px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -888,8 +888,8 @@ body {
 	margin:0 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 24px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -911,14 +911,14 @@ body {
 	float:left;
 }
 #cooperate ul li dt {
-	width:33%;
+	width:26%;
 	margin:0 2% 0 0;
 	padding:1% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 22px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -926,12 +926,13 @@ body {
 	float:left;
 }
 #cooperate ul li dd {
-	width:65%;
+	width:72%;
+	height:50px;
 	margin:0 0 0 0;
 	padding:0.5% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 34px;
-	line-height: 34px;
+	font-size: 23px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -951,8 +952,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 18px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -968,14 +969,14 @@ body {
 	float:right;
 }
 #cooperate ul dl dt {
-	width:33%;
+	width:26%;
 	margin:0 2% 0 0;
 	padding:1% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 22px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -983,12 +984,13 @@ body {
 	float:left;
 }
 #cooperate ul dl dd {
-	width:65%;
+	width:72%;
+	height:50px;
 	margin:0 0 0 0;
 	padding:0.5% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 34px;
-	line-height: 34px;
+	font-size: 23px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -1008,8 +1010,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 18px;
+	line-height: 26px;
 	font-weight: bold;
 	color:  #333333;
 	text-align:center;
@@ -1031,7 +1033,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:11% 10% 9% 10%;
-	background-image: url(../images/connect_bg_CN.webp);
+	background-image: url(../images/connect_bg_EN.webp);
 	background-size:100%;
 	float:left;
 }
