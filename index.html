@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/motion.css">
 	
 <!-- 地圖套件css -->
-<link rel="stylesheet" href="map/nation-map-style.css">
+<link rel="stylesheet" href="./map/nation-map-style.css" />
 
 <!-- jquery引入檔 -->
 <script src="js/jquery-3.6.0.min.js"></script>
@@ -191,50 +191,56 @@ $(function() {
 	</div>
 	
 	<!--服務地區-->
-	<div id="map">
-<section class="world_map" data-aos="fade-up">
-    <main class="app-main">
-      <div id="mapFrame" class="map-frame">
-        <!-- nation-map-app.js 使用的 SVG + viewport -->
-        <svg id="mapSvg" xmlns="http://www.w3.org/2000/svg">
-          <g id="viewport"></g>
-        </svg>
-        <!-- 右上角工具列：放大 / 縮小 / 重置 -->
-        <div class="map-toolbar">
-          <button class="map-tool-btn" id="btnZoomIn" aria-label="放大">
-            <img src="./assest/icon/plus.svg" alt="">
-          </button>
-          <button class="map-tool-btn" id="btnZoomOut" aria-label="縮小">
-            <img src="./assest/icon/minus.svg" alt="">
-          </button>
-          <button class="map-tool-btn" id="btnResetView" aria-label="重置視圖">
-            <img src="./assest/icon/restart.svg" alt="">
-          </button>
-        </div>
+	<div id="map-region">
+		<section class="world_map" data-aos="fade-up">
 
-      <aside id="infoPanel" class="info-float">
-        <header class="info-header">
-          <div class="info-controls">
-            <button id="closeInfo" class="icon-btn" aria-label="關閉">✕</button>
-          </div>
-        </header>
-        <div class="info-body" id="infoBody"></div>
-      </aside>
-
-      <div class="map-hint" id="mapHint">滾輪縮放、拖曳平移；點擊地區查看資訊</div>
-      </div>
-      <!-- 地圖下方「其他地區」 -->
-      <section class="region-section" id="regionSection" aria-label="其他地區">
-        <div class="region-wrap">
-          <h2 class="region-title">其他地區</h2>
-          <p class="region-desc">深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。</p>
-
-          <!-- 國家按鈕由 JS 動態產生 -->
-          <div class="region-grid" id="regionGrid"></div>
-    </div>
-</section>
-      <!-- 支付 icon 模式浮動 tooltip -->
-      <div id="methodTooltip" class="method-tooltip" role="tooltip"></div>
+			<main class="app-main mc-map" role="main">
+			 <a href="#mapFrame" class="skip-link" data-i18n="ui.skipToMap">跳到地圖內容</a>
+			 <h1 class="visually-hidden" data-i18n="ui.pageTitle">MyCard 全球支付方式地圖</h1>
+			 <div id="mapFrame" class="map-frame">
+			   <!-- nation-map-app.js 使用的 SVG + viewport -->
+			   <svg id="mapSvg" xmlns="http://www.w3.org/2000/svg">
+				 <g id="viewport"></g>
+			   </svg>
+			   <!-- 右上角工具列：放大 / 縮小 / 重置 -->
+			   <div class="map-toolbar">
+				 <button class="map-tool-btn" id="btnZoomIn" aria-label="放大" data-i18n-aria-label="ui.zoomIn">
+				   <img src="./assest/icon/plus.svg" alt="">
+				 </button>
+				 <button class="map-tool-btn" id="btnZoomOut" aria-label="縮小" data-i18n-aria-label="ui.zoomOut">
+				   <img src="./assest/icon/minus.svg" alt="">
+				 </button>
+				 <button class="map-tool-btn" id="btnResetView" aria-label="重置視圖" data-i18n-aria-label="ui.resetView">
+				   <img src="./assest/icon/restart.svg" alt="">
+				 </button>
+			   </div>
+	   
+			 <aside id="infoPanel" class="info-float" role="region" aria-label="國家資訊" data-i18n-aria-label="ui.countryInfo">
+			   <header class="info-header">
+				 <div class="info-controls">
+				   <button id="closeInfo" class="icon-btn" aria-label="關閉" data-i18n-aria-label="ui.close">✕</button>
+				 </div>
+			   </header>
+			   <div class="info-body" id="infoBody"></div>
+			 </aside>
+	   
+			 <div class="map-hint" id="mapHint">滾輪縮放、拖曳平移；點擊地區查看資訊</div>
+			 </div>
+			 <!-- 地圖下方「其他地區」 -->
+			 <section class="region-section" id="regionSection" aria-label="其他地區國旗清單">
+			   <div class="region-wrap">
+				 <h2 class="region-title" data-i18n="ui.otherRegions">其他地區</h2>
+				 <p class="region-desc" data-i18n="ui.regionDesc">深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。</p>
+	   
+				 <!-- 國家按鈕由 JS 動態產生 -->
+				 <div class="region-grid" id="regionGrid"></div>
+			   </div>
+			 </section>
+		   </main>
+	   
+			<!-- 金流 icon 模式浮動 tooltip -->
+			<div id="methodTooltip" class="method-tooltip" role="tooltip"></div>
+		</section>
 	</div>
 
 	<!--整合行銷-->
@@ -459,14 +465,14 @@ $(function() {
 		
 <!-- script -->
     <!-- W3 八語系：map-i18n.js 必須最先載入（window.t 要在其他 script 執行前就緒） -->
-    <script src="map/map-i18n.js"></script>
-    <script src="map/country-info.js"></script>
-    <script src="map/payment-catalog.js"></script>
+    <script src="./map/map-i18n.js"></script>
+    <script src="./map/country-info.js"></script>
+    <script src="./map/payment-catalog.js"></script>
     <!-- payment-i18n.js 疊在 payment-catalog.js 之上、nation-map-app.js 之前 -->
-    <script src="map/payment-i18n.js"></script>
-    <script src="map/country-payments.js"></script>
-    <script src="map/country-style.js"></script>
-    <script src="map/nation-map-app.js"></script>
+    <script src="./map/payment-i18n.js"></script>
+    <script src="./map/country-payments.js"></script>
+    <script src="./map/country-style.js"></script>
+    <script src="./map/nation-map-app.js"></script>
 		
 <!--視差滾動效果-->
     <script src="dist/wow.min.js"></script>
