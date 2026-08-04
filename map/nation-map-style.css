@@ -2,10 +2,91 @@
    MyCard Map｜nation-map-style.css（整理註解版）
    - 功能：地圖畫布、浮動資訊卡、金流顯示、提示與工具列、其他地區區塊、RWD
    - 重點：Reset/主題變數只在 body.nation-map 生效；未掛該 class 時，var(--*) 可能為空而導致邊框/底色/字色不套用。
+     3.1.10:已在 :root 補上完整 token,即使 body 不掛 class 仍正常運作;body.nation-map 區段保留以利未來深色模式 toggle。
    - 刪除影響：移除 Reset 會恢復瀏覽器預設 margin/padding/字級；跨瀏覽器版面差異會放大（特別是 mobile）。
 ============================================================ */
 
-/* === 全域變數與重置（僅套用在含有 .nation-map 的頁面） === */
+/* ============================================================
+   3.1.10 Tier 2【項目 1】Design Token 系統化（:root,不依賴 body.nation-map）
+   涵蓋:Atlas Paper Ocean / Ink 石墨 / Accent 三層 / 5 級 elevation / 8pt spacing
+        / atlas-ease / 6 級 typography
+   舊變數透過 mapping 維持向後相容(--bg/--surface/--text/--muted/--border/--accent/--shadow)
+============================================================ */
+.mc-map {
+  /* === Atlas Paper Ocean(海洋米白色階) === */
+  --ocean-50:  #ffffff;
+  --ocean-100: #f4f6f9;
+  --ocean-200: #eaedf0;
+  --ocean-300: #d9dee4;
+
+  /* === Ink(國家石墨灰色階) === */
+  --ink-100: #f7f8fa;
+  --ink-300: #cbd0d8;
+  --ink-500: #6b7280;
+  --ink-700: #4a5568;
+  --ink-800: #2d3748;
+  --ink-900: #1a202c;
+
+  /* === Accent(品牌藍三層) === */
+  --accent-soft: #93c5fd;
+  --accent-base: #3b82f6;
+  --accent-deep: #1d4ed8;
+
+  /* === Elevation 5 級陰影 === */
+  --elev-0: none;
+  --elev-1: 0 1px 2px rgba(15,23,42,0.04), 0 1px 3px rgba(15,23,42,0.06);
+  --elev-2: 0 2px 4px rgba(15,23,42,0.05), 0 4px 12px rgba(15,23,42,0.08);
+  --elev-3: 0 4px 8px rgba(15,23,42,0.06), 0 12px 28px rgba(15,23,42,0.10);
+  --elev-4: 0 8px 16px rgba(15,23,42,0.08), 0 24px 48px rgba(15,23,42,0.14);
+
+  /* === Spacing 8pt 階梯 === */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* === Radius === */
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 24px;
+
+  /* === Motion 曲線 === */
+  --ease-atlas:  cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-soft:   cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* === Typography 6 級字型 === */
+  --type-display:  28px;
+  --type-headline: 22px;
+  --type-title:    16px;
+  --type-body:     14px;
+  --type-caption:  13px;
+  --type-micro:    12px;
+
+  /* === Legacy 變數 mapping(向後相容,既有 var(--accent)/var(--text) 仍能解析)=== */
+  --bg:        var(--ocean-50);
+  --surface:   #ffffff;
+  --surface-2: var(--ocean-100);
+  --text:      var(--ink-900);
+  --muted:     var(--ink-500);
+  --border:    var(--ocean-300);
+  --accent:    var(--accent-base);
+  --accent-2:  #60a5fa;            /* legacy medium-light blue,保持 3.1.7 設計意圖一致 */
+  --shadow:    var(--elev-2);
+
+  /* === 3.1.13:按鈕光暈紫(全部 hover/focus halo 從藍 → 紫) === */
+  --glow:        #b541f3;
+  --glow-rgb:    181, 65, 243;
+
+  /* === 3.1.13 Tier 3【項目 6】focus-visible 統一玻璃光暈 token === */
+  --focus-ring:  0 0 0 2px var(--surface), 0 0 0 4px var(--glow), 0 0 0 8px rgba(var(--glow-rgb), 0.18);
+}/* === 全域變數與重置（僅套用在含有 .nation-map 的頁面） === */
 /* === [01] Reset + 主題變數（作用域：body.nation-map） ===
    - 功能：把瀏覽器預設樣式歸零，並提供本頁共用的色彩/陰影變數。
    - 刪除影響：各元素會回到瀏覽器預設 margin/padding/字型；版面與間距可能跑掉。

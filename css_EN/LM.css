@@ -653,7 +653,7 @@ body {
 #security ul dt img {width:100%;}
 #security ul li {
 	width:45%;
-	height:auto;
+	height:120px;
 	margin:0 2% 2% 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -664,7 +664,7 @@ body {
 }
 #security ul dl {
 	width:45%;
-	height:auto;
+	height:120px;
 	margin:0 0 2% 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -679,7 +679,7 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 20px;
 	font-weight: bold;
 	color: #4078bf;
@@ -737,7 +737,7 @@ body {
 }
 #customer_service ul li {
 	width:27.1%;
-	height:335px;
+	height:300px;
 	margin:0 3% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -748,7 +748,7 @@ body {
 }
 #customer_service ul dl {
 	width:27.1%;
-	height:335px;
+	height:300px;
 	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -770,8 +770,8 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 32px;
+	font-size: 16px;
+	line-height: 28px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -784,8 +784,8 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 28px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
