@@ -50,23 +50,23 @@ body {
 }
 #top_bar .logo img {width:100%;}
 #top_bar .menu {
-	width:62%;
+	width:42%;
 	height:auto;
-	margin:0.8% 12% 0 11%;
+	margin:0.8% 23% 0 22%;
 	padding:0 0;
 	display:inline;
 	float:left;
 }
 #top_bar .menu li {
-    width:14.6%;
+    width:12.6%;
 	height:auto;
-	margin:0 1% 0 1%;
+	margin:0 2% 0 2%;
 	padding:0.3% 0;
 	border-radius:50px;
 	background-color:transparent;
 	font-family: "微軟正黑體";
-	font-size: 13px;
-	line-height: 13px;
+	font-size: 16px;
+	line-height: 16px;
 	font-weight: normal;
 	color: #333;
 	text-align:center;
@@ -76,16 +76,16 @@ body {
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
 #top_bar .btn {
-	width:7%;
+	width:5%;
 	height:auto;
-	margin:0.5% 2% 0 0;
-	padding:0.55% 0 0.55% 0;
+	margin:0.75% 2% 0 0;
+	padding:0.25% 0 0.55% 0;
 	background-image: url(../images/top_bar_connect_button.png);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 13px;
-	line-height: 13px;
+	font-size: 16px;
+	line-height: 16px;
 	font-weight: normal;
 	color: #ffffff;
 	text-align:center;
@@ -126,7 +126,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title_EN.webp);
+	background-image: url(../images/main_visual_title_CN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -143,7 +143,7 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 28px;
+	font-size: 32px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #ffffff;
@@ -161,7 +161,7 @@ body {
 	width:4.8%;
 	margin:46% 47.6% 0 47.6%;
 	padding:2% 0 2% 0;
-	background-image: url(../images/main_visual_more_EN.webp);
+	background-image: url(../images/main_visual_more.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 	cursor:pointer;
@@ -249,7 +249,7 @@ body {
 	float:left;
 }
 #brand .text {
-	width:46%;
+	width:48%;
 	height:auto;
 	display:inline;
 	float:left;
@@ -261,8 +261,8 @@ body {
 	margin:0 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 40px;
-	line-height: 42px;
+	font-size: 44px;
+	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
@@ -272,10 +272,10 @@ body {
 #brand .text h2 {
 	width:100%;
 	height:auto;
-	margin:0 0 2% 0;
+	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 28px;
 	font-weight: bold;
 	color: #3184e4;
@@ -289,8 +289,8 @@ body {
 	margin:1% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 26px;
+	font-size: 16px;
+	line-height: 23px;
 	font-weight: normal;
 	color: #666666;
 	text-align:justify;
@@ -298,7 +298,7 @@ body {
 	float:left;
 }
 #brand .photo {
-	width:49%;
+	width:47%;
 	margin:0 0 0 0;
 	padding:0 0;
 	display:inline;
@@ -348,10 +348,10 @@ body {
 	float:left;
 }
 #global_payment ul li {
-	width:95%;
+	width:94%;
 	height:auto;
 	margin:0 0% 2% 0;
-	padding:2% 2.5% 1% 2.5%;
+	padding:2% 2.5% 0 2.5%
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -359,10 +359,10 @@ body {
 	float:left;
 }
 #global_payment ul dl {
-	width:95%;
+	width:94%;
 	height:auto;
-	margin:0 0 0 0;
-	padding:2% 2.5% 1% 2.5%;
+	margin:0 0 2% 0;
+	padding:2% 2.5% 0 2.5%;
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -370,13 +370,13 @@ body {
 	float:left;
 }
 #global_payment ul h1 {
-	width:70%;
+	width:73%;
 	height:auto;
-	margin:0 0 0.5% 0;
+	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 32px;
-	line-height: 36px;
+	font-size: 36px;
+	line-height: 38px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -384,13 +384,13 @@ body {
 	float:left;
 }
 #global_payment ul p {
-	width:70%;
+	width:73%;
 	height:auto;
-	margin:1.5% 0 0% 0;
+	margin:1.5% 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: normal;
 	color: #333333;
 	text-align:justify;
@@ -398,18 +398,16 @@ body {
 	float:left;
 }
 #global_payment ul .icon {
-	position:relative;
-	width:25%;
-	margin:-7% 0 0 0;
+	width:23%;
+	margin:-9% 0% 0% 0%;
 	padding:0 0;
 	display:inline;
 	float:right;
 }
 #global_payment ul .icon img {width:100%;}
 #global_payment ul .icon2 {
-    position:relative;
-	width:25%;
-	margin:-7% 0 0 0;
+	width:23%;
+	margin:-9% 0% 0% 0%;
 	padding:0 0;
 	display:inline;
 	float:right;
@@ -422,7 +420,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 20px;
-	line-height: 28px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #00a5e3;
 	text-align:center;
@@ -488,34 +486,34 @@ body {
 	float:left;
 }
 #marketing .step ul {
-	width:50%;
-	margin:2% 0 0 0;
+	width:25%;
+	margin:0;
 	padding:0 0;
 	display:inline;
 	float:left;
 }
 #marketing .step li {
-	width:82%;
+	width:70%;
 	height:auto;
 	margin:0 0;
-	padding:3.5% 10% 3.5% 8%;
+	padding:7% 15%;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 26px;
+	font-size: 32px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
 	display:inline;
 	float:left;
 }
-#marketing .step .step1 {background-image: url(../images/marketing_step1_EN.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step2 {background-image: url(../images/marketing_step2_EN.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step3 {background-image: url(../images/marketing_step3_EN.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step4 {background-image: url(../images/marketing_step4_EN.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step5 {background-image: url(../images/marketing_step5_EN.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step ul dl {
+#marketing .step .step1 {background-image: url(../images/marketing_step1.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step2 {background-image: url(../images/marketing_step2.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step3 {background-image: url(../images/marketing_step3.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step4 {background-image: url(../images/marketing_step4.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step5 {background-image: url(../images/marketing_step5.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step ul dl {n
 	width:95%;
-	height:230px;
+	height:260px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -523,8 +521,8 @@ body {
     float:left;
 }
 #marketing .step ul dl .icon {
-	width:28%;
-	margin:1% 36%;
+	width:50%;
+	margin:3% 25%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -533,7 +531,7 @@ body {
 #marketing .step ul dl h3 {
     width:88%;
 	height:auto;
-	margin:2% 0 1.5% 0;
+	margin:5% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
 	font-size: 20px;
@@ -547,11 +545,11 @@ body {
 #marketing .step ul dl p {
     width:88%;
 	height:auto;
-	margin:1% 0 1.5% 0;
+	margin:2% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 13px;
-	line-height: 18px;
+	font-size: 16px;
+	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -560,7 +558,7 @@ body {
 }
 #marketing .step ul dd {
 	width:95%;
-	height:230px;
+	height:260px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -568,8 +566,8 @@ body {
     float:left;
 }
 #marketing .step ul dd .icon {
-	width:28%;
-	margin:1% 36%;
+	width:50%;
+	margin:3% 25%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -578,7 +576,7 @@ body {
 #marketing .step ul dd h3 {
     width:88%;
 	height:auto;
-	margin:2% 0 1.5% 0;
+	margin:5% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
 	font-size: 20px;
@@ -592,22 +590,29 @@ body {
 #marketing .step ul dd p {
     width:88%;
 	height:auto;
-	margin:1% 0 1.5% 0;
+	margin:2% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 13px;
-	line-height: 18px;
+	font-size: 16px;
+	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
 	display:inline;
 	float:left;
 }
+#marketing .step ul dd .mascot {
+	width:96%;
+	margin:16% 2% 0 2%;
+	padding:0 0;
+	display:inline;
+	float:left;
+}
+#marketing .step ul dd .mascot img {width:100%;}
 .step1_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(139,223,241,0.5) 100%);}
 .step2_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(95,210,248,0.5) 100%);}
 .step3_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(36,186,248,0.5) 100%);}
 .step4_bg {background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(5,161,237,0.5) 100%);}
-
 
 
 /*全方位交易安全解決方案*/
@@ -628,7 +633,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 44px;
+	font-size: 46px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -643,19 +648,19 @@ body {
 	padding:0 0 0% 0;
 	float:left;
 }
+
 #security ul dt {
-	width:22%;
-	margin:2% 2% 0 2%;
+	width:50%;
+	margin:4% 25% 4% 25%;
 	padding:0 0;
-	display:inline;
 	float:left;
 }
 #security ul dt img {width:100%;}
 #security ul li {
-	width:45%;
-	height:120px;
-	margin:0 2% 2% 0;
-	padding:1.5% 2%;
+	width:20%;
+	height:260px;
+	margin:0 2% 0 0;
+	padding:1.5% 1.5%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
 	box-shadow:2px 2px 3px rgba(20%,20%,20%,0.2);
@@ -663,10 +668,10 @@ body {
 	float:left;
 }
 #security ul dl {
-	width:45%;
-	height:120px;
-	margin:0 0 2% 0;
-	padding:1.5% 2%;
+	width:20%;
+	height:260px;
+	margin:0 2% 0 0;
+	padding:1.5% 1.5%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
 	box-shadow:2px 2px 3px rgba(20%,20%,20%,0.2);
@@ -674,34 +679,33 @@ body {
 	float:right;
 }
 #security ul h5 {
-	width:72%;
+	width:100%;
 	height:auto;
-	margin:2% 0 1.5% 0;
+	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 22px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #4078bf;
-	text-align:left;
+	text-align:center;
 	display:inline;
-	float:right;
+	float:left;
 }
 #security ul p {
-    width:72%;
+    width:100%;
 	height:auto;
-	margin:0% 0 1.5% 0;
+	margin:4% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 16px;
+	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
 	display:inline;
-	float:right;
+	float:left;
 }
-
 
 
 /*客服支援*/
@@ -719,7 +723,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 44px;
+	font-size: 46px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -737,7 +741,7 @@ body {
 }
 #customer_service ul li {
 	width:27.1%;
-	height:300px;
+	height:335px;
 	margin:0 3% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -748,7 +752,7 @@ body {
 }
 #customer_service ul dl {
 	width:27.1%;
-	height:300px;
+	height:335px;
 	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -770,8 +774,8 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -784,8 +788,8 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 12px;
-	line-height: 18px;
+	font-size: 16px;
+	line-height: 28px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -855,14 +859,16 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:10%;
-	margin:0 0.55% 1.5% 0.55%;
+	width:11.5%;
+	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
 	display:inline;
 	float:left;
 }
 #choice dl dt img {width:100%; border-radius:10px;}
+
+
 
 /*合作流程*/
 #cooperate {
@@ -1036,7 +1042,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:11% 10% 9% 10%;
-	background-image: url(../images/connect_bg_EN.webp);
+	background-image: url(../images/connect_bg_CN.webp);
 	background-size:100%;
 	float:left;
 }

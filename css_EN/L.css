@@ -850,15 +850,14 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:10%;
-	margin:0 0.55% 1.5% 0.55%;
+	width:11.5%;
+	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
 	display:inline;
 	float:left;
 }
 #choice dl dt img {width:100%; border-radius:10px;}
-
 /*合作流程*/
 #cooperate {
     width:62%;
