@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/motion.css">
 	
 <!-- 地圖套件css -->
-<link rel="stylesheet" href="./nation-map-style.css" />
+<link rel="stylesheet" href="map/nation-map-style.css">
 
 <!-- jquery引入檔 -->
 <script src="js/jquery-3.6.0.min.js"></script>
@@ -173,17 +173,17 @@ $(function() {
 		<ul>
 		  <li>
 			  <h1>國際佈局</h1>
-			  <p>MyCard 於全球市場提供各地最受歡迎的支付方式。您只需透過 MyCard，即可輕鬆開通全球支付，以最低開發成本快速完成全方位支付佈局。</p>
+			  <p>MyCard於全球市場提供各地最受歡迎的支付方式。您只需透過MyCard，即可輕鬆開通全球支付，以最低開發成本快速完成全方位支付佈局。</p>
 			  <div class="icon"><img src="images/global_payment_icon1.webp"></div>
 	      </li>
 		  <li>
 			  <h1>多元的支付方式</h1>
-			  <p>MyCard 提供最全面的多元支付，從線上支付到線下付款。包含信用卡、銀行轉帳、電信帳單、電子錢包、先買後付及商店繳費，MyCard 全部都能支援。</p>
+			  <p>MyCard提供最全面的多元支付，從線上支付到線下付款。包含信用卡、銀行轉帳、電信帳單、電子錢包、先買後付及商店繳費，MyCard全部都能支援。</p>
 			  <div class="icon"><img src="images/global_payment_icon2.webp"></div>
 		  </li>
 		  <dl>
 			  <h1>MyCard點數</h1>
-			  <p>MyCard 與台港各大便利商店、3C 賣場及連鎖賣場等實體通路夥伴，部署超過2萬個經銷點位，讓您的玩家隨時都能購買 MyCard 點數。</p>
+			  <p>MyCard與台港各大便利商店、3C賣場及連鎖賣場等實體通路夥伴，部署超過2萬個經銷點位，讓您的玩家隨時都能購買MyCard點數。</p>
 			  <div class="icon2"><img src="images/global_payment_icon3.webp"></div>
 		  </dl>
 		</ul>
@@ -191,56 +191,50 @@ $(function() {
 	</div>
 	
 	<!--服務地區-->
-	<div id="map-region">
-		<section class="world_map" data-aos="fade-up">
+	<div id="map">
+<section class="world_map" data-aos="fade-up">
+    <main class="app-main">
+      <div id="mapFrame" class="map-frame">
+        <!-- nation-map-app.js 使用的 SVG + viewport -->
+        <svg id="mapSvg" xmlns="http://www.w3.org/2000/svg">
+          <g id="viewport"></g>
+        </svg>
+        <!-- 右上角工具列：放大 / 縮小 / 重置 -->
+        <div class="map-toolbar">
+          <button class="map-tool-btn" id="btnZoomIn" aria-label="放大">
+            <img src="./assest/icon/plus.svg" alt="">
+          </button>
+          <button class="map-tool-btn" id="btnZoomOut" aria-label="縮小">
+            <img src="./assest/icon/minus.svg" alt="">
+          </button>
+          <button class="map-tool-btn" id="btnResetView" aria-label="重置視圖">
+            <img src="./assest/icon/restart.svg" alt="">
+          </button>
+        </div>
 
-			<main class="app-main mc-map" role="main">
-			 <a href="#mapFrame" class="skip-link" data-i18n="ui.skipToMap">跳到地圖內容</a>
-			 <h1 class="visually-hidden" data-i18n="ui.pageTitle">MyCard 全球支付方式地圖</h1>
-			 <div id="mapFrame" class="map-frame">
-			   <!-- nation-map-app.js 使用的 SVG + viewport -->
-			   <svg id="mapSvg" xmlns="http://www.w3.org/2000/svg">
-				 <g id="viewport"></g>
-			   </svg>
-			   <!-- 右上角工具列：放大 / 縮小 / 重置 -->
-			   <div class="map-toolbar">
-				 <button class="map-tool-btn" id="btnZoomIn" aria-label="放大" data-i18n-aria-label="ui.zoomIn">
-				   <img src="./assest/icon/plus.svg" alt="">
-				 </button>
-				 <button class="map-tool-btn" id="btnZoomOut" aria-label="縮小" data-i18n-aria-label="ui.zoomOut">
-				   <img src="./assest/icon/minus.svg" alt="">
-				 </button>
-				 <button class="map-tool-btn" id="btnResetView" aria-label="重置視圖" data-i18n-aria-label="ui.resetView">
-				   <img src="./assest/icon/restart.svg" alt="">
-				 </button>
-			   </div>
-	   
-			 <aside id="infoPanel" class="info-float" role="region" aria-label="國家資訊" data-i18n-aria-label="ui.countryInfo">
-			   <header class="info-header">
-				 <div class="info-controls">
-				   <button id="closeInfo" class="icon-btn" aria-label="關閉" data-i18n-aria-label="ui.close">✕</button>
-				 </div>
-			   </header>
-			   <div class="info-body" id="infoBody"></div>
-			 </aside>
-	   
-			 <div class="map-hint" id="mapHint">滾輪縮放、拖曳平移；點擊地區查看資訊</div>
-			 </div>
-			 <!-- 地圖下方「其他地區」 -->
-			 <section class="region-section" id="regionSection" aria-label="其他地區國旗清單">
-			   <div class="region-wrap">
-				 <h2 class="region-title" data-i18n="ui.otherRegions">其他地區</h2>
-				 <p class="region-desc" data-i18n="ui.regionDesc">深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。</p>
-	   
-				 <!-- 國家按鈕由 JS 動態產生 -->
-				 <div class="region-grid" id="regionGrid"></div>
-			   </div>
-			 </section>
-		   </main>
-	   
-			<!-- 金流 icon 模式浮動 tooltip -->
-			<div id="methodTooltip" class="method-tooltip" role="tooltip"></div>
-		</section>
+      <aside id="infoPanel" class="info-float">
+        <header class="info-header">
+          <div class="info-controls">
+            <button id="closeInfo" class="icon-btn" aria-label="關閉">✕</button>
+          </div>
+        </header>
+        <div class="info-body" id="infoBody"></div>
+      </aside>
+
+      <div class="map-hint" id="mapHint">滾輪縮放、拖曳平移；點擊地區查看資訊</div>
+      </div>
+      <!-- 地圖下方「其他地區」 -->
+      <section class="region-section" id="regionSection" aria-label="其他地區">
+        <div class="region-wrap">
+          <h2 class="region-title">其他地區</h2>
+          <p class="region-desc">深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。</p>
+
+          <!-- 國家按鈕由 JS 動態產生 -->
+          <div class="region-grid" id="regionGrid"></div>
+    </div>
+</section>
+      <!-- 支付 icon 模式浮動 tooltip -->
+      <div id="methodTooltip" class="method-tooltip" role="tooltip"></div>
 	</div>
 
 	<!--整合行銷-->
@@ -258,7 +252,7 @@ $(function() {
 		  <dl data-wow-delay="0.1s" data-wow-offset="5" class="step1_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon2.webp"></div>
 			  <h3>品牌代言媒合</h3>
-			  <p>精選符合市場與遊戲風格的代言人及KOL，串聯多平台話題，提升品牌好感與聲量。</p>
+			  <p>精選符合市場與遊戲風格的代言人及KOL，串聯多平台話題及提升品牌好感與聲量。</p>
 		  </dl>
 		</ul>
 		<ul>
@@ -266,7 +260,7 @@ $(function() {
 		   <dl data-wow-delay="0.4s" data-wow-offset="5" class="step2_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon3.webp"></div>
 			  <h3>遊戲上市前預熱</h3>
-			  <p>運用MyCard通路與活動資源，推動事前登錄，快速累積玩家，擴大上市前聲量。</p>
+			  <p>運用MyCard的通路與活動資源，推動事前登錄，快速累積玩家，擴大上市前聲量。</p>
 		  </dl>
 		  <dl data-wow-delay="0.4s" data-wow-offset="5" class="step2_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon4.webp"></div>
@@ -278,13 +272,13 @@ $(function() {
 		  <li data-wow-delay="0.8s" data-wow-offset="5" class="step3 span3 wow fadeInLeft center">通路曝光</li>
 		  <dl data-wow-delay="0.8s" data-wow-offset="5" class="step3_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon7.webp"></div>
-			  <h3>線上+線下全方位曝光</h3>
+			  <h3>線上線下全方位曝光</h3>
 			  <p>整合超商、銀行、賣場及線上廣告資源，打造高覆蓋推廣網，提升投放成效。</p>
 		  </dl>
 		  <dl data-wow-delay="0.8s" data-wow-offset="5" class="step3_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon8.webp"></div>
 			  <h3>社群推廣&網站廣告</h3>
-			  <p>運用 MyCard 多平台資源，精準分眾行銷，提升互動與轉換。</p>
+			  <p>運用MyCard的多平台資源來精準分眾行銷，進而提升互動與轉換。</p>
 		  </dl>
 		</ul>
 		<ul>
@@ -292,12 +286,12 @@ $(function() {
 		  <dd data-wow-delay="1.2s" data-wow-offset="5" class="step4_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon9.webp"></div>
 			  <h3>異業聯名企劃</h3>
-			  <p>整合品牌、餐飲、影視與零售資源，創造聯名話題與市場熱度。</p>
+			  <p>整合品牌、餐飲、影視以及零售資源，創造聯名話題與市場熱度。</p>
 		  </dd>
 		  <dd data-wow-delay="1.2s" data-wow-offset="5" class="step4_bg span3 wow fadeInLeft center">
 			  <div class="icon"><img src="images/marketing_icon10.webp"></div>
 			  <h3>異業會員導流</h3>
-			  <p>串聯合作品牌會員生態圈，透過跨平台導流與異業點數兌換等機制，擴大玩家觸及並帶動新客獲取。</p>
+			  <p>串聯合作品牌會員生態圈並透過跨平台導流與異業點數兌換等機制，擴大玩家觸及並帶動新客獲取。</p>
 		  </dd>
 		</ul>
 	  </div>
@@ -315,7 +309,7 @@ $(function() {
 		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInUp center">
 		  <dt><img src="images/security_icon2.webp"></dt>
 		  <h5>專業退單仲裁</h5>
-		  <p>MyCard 團隊的標準化退單仲裁流程，協助處理爭議，保障您的權益。</p>
+		  <p>MyCard團隊的標準化退單仲裁流程，協助處理爭議，保障您的權益。</p>
 		</li>
 		<li data-wow-delay="0.2s" data-wow-offset="5" class="span3 wow fadeInDown center">
 		  <dt><img src="images/security_icon3.webp"></dt>
@@ -355,7 +349,7 @@ $(function() {
 	<!--選擇MyCard-->
 <div id="choice">
   <h1>超過上千家遊戲公司選擇MyCard</h1>
-  <h2>MyCard支付平台深受台日韓頂尖手遊廠商信賴，攜手超過80%遊戲廠商，共創繁盛。<br>
+  <h2>MyCard 支付平台深受台日韓頂尖手遊廠商信賴，攜手超過80%遊戲廠商，共創繁盛。<br>
   更與PC端遊共同打造，提供玩家最好的支付體驗。</h2>
     	<ul data-wow-delay="0.2s" data-wow-offset="20" class="span3 wow bounceInRight center">
 	      <li><img src="images/game_icon/best_choice_1.webp"></li>
@@ -465,14 +459,14 @@ $(function() {
 		
 <!-- script -->
     <!-- W3 八語系：map-i18n.js 必須最先載入（window.t 要在其他 script 執行前就緒） -->
-    <script src="./map-i18n.js"></script>
-    <script src="./country-info.js"></script>
-    <script src="./payment-catalog.js"></script>
+    <script src="map/map-i18n.js"></script>
+    <script src="map/country-info.js"></script>
+    <script src="map/payment-catalog.js"></script>
     <!-- payment-i18n.js 疊在 payment-catalog.js 之上、nation-map-app.js 之前 -->
-    <script src="./payment-i18n.js"></script>
-    <script src="./country-payments.js"></script>
-    <script src="./country-style.js"></script>
-    <script src="./nation-map-app.js"></script>
+    <script src="map/payment-i18n.js"></script>
+    <script src="map/country-payments.js"></script>
+    <script src="map/country-style.js"></script>
+    <script src="map/nation-map-app.js"></script>
 		
 <!--視差滾動效果-->
     <script src="dist/wow.min.js"></script>

@@ -232,7 +232,7 @@ body {
 #main_visual #diagram li {
 	width:94%;
 	margin:0 0 2% 0;
-	padding:5.5% 0 8% 6%;
+	padding:5.5% 0 12% 6%;
 	display:inline;
 	border-radius:20px;
 	float:left;
@@ -240,7 +240,7 @@ body {
 #main_visual #diagram dl {
 	width:94%;
 	margin:0 0 2% 0;
-	padding:5.5% 0 8% 6%;
+	padding:5.5% 0 12% 6%;
 	display:inline;
 	border-radius:20px;
 	float:right;
@@ -521,7 +521,7 @@ body {
 	margin:0 0 0% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
+	font-size: 21px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
@@ -878,7 +878,7 @@ body {
 	margin:0 0 4% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 22px;
+	font-size: 21px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
@@ -948,7 +948,7 @@ body {
 	margin:0 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
+	font-size: 21px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;

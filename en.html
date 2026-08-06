@@ -161,7 +161,7 @@ $(function() {
     <!--全球遊戲支付領導品牌-->
     <div id="brand"> 
         <div class="text">
-		    <h1>Global leader<br>in game payments</h1>
+		    <h1>Global leader in game payments</h1>
 		    <h2>Ranked first in market share with the most extensive distribution network.</h2>
             <p>Offering diverse payment methods across Taiwan, Hong Kong, Macau, and worldwide, we are your ideal partner for entering the gaming market and reaching hundreds of millions of players globally.</p>
 	    </div>
@@ -460,10 +460,15 @@ It is also jointly developed with PC online games to provide players with the be
 </div>
 		
 <!-- 地圖套件與相關js-->
-<script src="map/country-info.js"></script>	
-<script src="map/payment-catalog.js"></script>
-<script src="map/country-payments.js"></script>
-<script src="map/nation-map-app.js"></script>
+<!-- W3 八語系：map-i18n.js 必須最先載入（window.t 要在其他 script 執行前就緒） -->
+    <script src="map/map-i18n.js"></script>
+    <script src="map/country-info.js"></script>
+    <script src="map/payment-catalog.js"></script>
+    <!-- payment-i18n.js 疊在 payment-catalog.js 之上、nation-map-app.js 之前 -->
+    <script src="map/payment-i18n.js"></script>
+    <script src="map/country-payments.js"></script>
+    <script src="map/country-style.js"></script>
+    <script src="map/nation-map-app.js"></script>
 		
 <!--視差滾動效果-->
     <script src="dist/wow.min.js"></script>
