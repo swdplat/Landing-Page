@@ -18,6 +18,7 @@ window.PAYMENT_METHODS = {
     { id: "jcb", name_zh: "JCB", name_en: "JCB", icon: "./assest/payments/vendor/credit_card/jcb.svg" },
     { id: "union_pay", name_zh: "銀聯", name_en: "UnionPay", icon: "./assest/payments/vendor/credit_card/union_pay.svg" },
     { id: "paypal_card", name_zh: "PayPal", name_en: "PayPal", icon: "./assest/payments/vendor/ewallet/paypal_card.svg" },
+    { id: "paypal", name_zh: "PayPal", name_en: "PayPal", icon: "./assest/payments/vendor/ewallet/paypal.svg" },
     { id: "_placeholder_credit_card_1", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/credit_card/_placeholder_credit_card_1.svg" },
     { id: "_placeholder_credit_card_2", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/credit_card/_placeholder_credit_card_2.svg" },
   ],
