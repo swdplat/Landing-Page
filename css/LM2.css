@@ -14,25 +14,7 @@ body {
 	margin:0 auto 0 auto;
 	background-color:#ffffff;
 }
-
-#alpaca ul {
-	width:40%;
-	height:auto;
-	margin:10% 30%;
-	padding:0 0;
-	float:left;
-}
-#alpaca ul li {
-	width:42%;
-	height:auto;
-	margin:0% 4% 0 4%;
-	padding:0 0;
-	cursor:pointer;
-	float:left;
-}
-#alpaca ul li img {
-	width:100%;
-}
+		
 #wrapper {
 	width:100%;
 	height:auto;
@@ -132,7 +114,7 @@ body {
 	height:auto;
 	margin:0 0;
 	padding:48% 0 0 0;
-	background-image: url(../images/main_visual_pc.webp);
+	background-image: url(../images/main_visual_pc2.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -1056,7 +1038,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:11% 10% 9% 10%;
-	background-image: url(../images/connect_bg.webp);
+	background-image: url("../images/connect_bg2.webp");
 	background-size:100%;
 	float:left;
 }

@@ -14,7 +14,26 @@ body {
 	margin:0 auto 0 auto;
 	background-color:#ffffff;
 }
-		
+
+#alpaca ul {
+	width:80%;
+	height:auto;
+	margin:20% 10%;
+	padding:0 0;
+	float:left;
+}
+#alpaca ul li {
+	width:42%;
+	height:auto;
+	margin:0% 4% 0 4%;
+	padding:0 0;
+	cursor:pointer;
+	float:left;
+}
+#alpaca ul li img {
+	width:100%;
+}
+
 #wrapper {
 	width:100%;
 	height:auto;
