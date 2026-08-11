@@ -1117,13 +1117,13 @@ body.nation-map *::after {
   .region-btn{
   display: flex;
   align-items: center;
+  text-align:center;
   gap: 12px;
   width: 100%;
   padding: 10px 10px;
   border: 1px solid rgba(0,0,0,.15);
   border-radius: 12px;
   background: #f3f3f3;
-
   cursor: pointer;
   transition: transform .12s ease, box-shadow .12s ease;
   }
@@ -1177,7 +1177,7 @@ body.nation-map *::after {
   display: flex;
   align-items: center;
   gap: 12px;
-
+  text-align:center!important;
   width: 100%;
   padding: 14px 14px;
   border: 1px solid rgba(0,0,0,.15);
@@ -1212,21 +1212,22 @@ body.nation-map *::after {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-  text-align: left;
+  text-align:center!important;
 }
 
-.region-name .zh{
+.region-name .zh {
   font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 18px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: normal;
-  color: #333;
+  text-align: center;
 }
 
 .region-name .en{
   font-size: 12px;
   margin-top: 6px;
   color: rgba(0,0,0,.55);
+	text-align:center;
 }
 
 @media (max-width: 360px){

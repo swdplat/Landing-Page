@@ -14,7 +14,75 @@ body {
 	margin:0 auto 0 auto;
 	background-color:#ffffff;
 }
-		
+
+#alpaca {
+    width:100%;
+	height:auto;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	overflow:hidden;
+	float:left;
+    background-color:#ffffff;
+}
+#alpaca ul {
+	width:40%;
+	height:auto;
+	margin:10% 30%;
+	padding:0 0;
+	float:left;
+}
+#alpaca ul li {
+	width:42%;
+	height:auto;
+	margin:0% 2%;
+	padding:0% 0 4% 0;
+	border: 8px solid #5ea0ee;
+	background-color:#dedede;
+	border-radius:20px;
+	cursor:pointer;
+	float:left;
+}
+#alpaca ul li:hover {background-color:#ffffff;}
+#alpaca ul li ol {
+	width:40%;
+	height:auto;
+	margin:0 30%;
+	padding:8% 0;
+	border-radius:400px;
+	float:left;
+}
+#alpaca ul li ol img {
+	width:100%;
+}
+#alpaca ul li h1 {
+	width:100%;
+	height:auto;
+	margin:0% 0% 0 0%;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size:68px;
+	line-height: 68px;
+	font-weight: bold;
+	color: #333;
+	text-align:center;
+	cursor:pointer;
+}
+#alpaca ul li h2 {
+	width:100%;
+	height:auto;
+	margin:2% 0% 0 0%;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size:21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #0a3c77;
+	text-align:center;
+	cursor:pointer;
+}
+
+
+
 #wrapper {
 	width:100%;
 	height:auto;

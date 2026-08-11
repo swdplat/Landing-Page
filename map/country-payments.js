@@ -9,8 +9,8 @@ window.COUNTRY_PAYMENTS = {
   "TW": { // 台灣
     "map-flag-Places": true,
     methods: {
-      credit_card    : ["visa", "mastercard", "jcb", "paypal", "union_pay"],
-      ewallet        : ["line_pay", "jko_pay", "taiwan_pay", "easy_wallet", "apple_pay", "google_pay", "pxpay_plus", "pi_app", "plus_pay", "ez_pay", "i_pass_money", "icash_pay"],
+      credit_card    : ["visa", "mastercard", "jcb", "union_pay"],
+      ewallet        : ["line_pay", "jko_pay", "taiwan_pay", "easy_wallet", "apple_pay", "google_pay", "paypal", "pxpay_plus", "pi_app", "plus_pay", "ez_pay", "i_pass_money", "icash_pay"],
       bank_transfer  : ["hncb_webatm", "ctbc_webatm", "e_sun_webatm", "taishin_webatm", "tfb_webatm", "land_bank_webatm", "scsb_webatm", "bo_t_webatm", "mega_icbc_webatm", "first_webatm", "chb_webatm", "postal_webatm", "tcb_webatm"],
       carrier_billing: ["cht_mb", "fet_mb", "twm_mb"],
       cash_store     : ["seven_eleven_tw", "family_mart_tw", "hi_life_tw", "ok_mart_tw"],
