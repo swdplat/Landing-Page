@@ -15,7 +15,6 @@ body {
 	background-color:#ffffff;
 }
 
-<<<<<<< HEAD
 #alpaca {
     width:100%;
 	height:auto;
@@ -25,8 +24,6 @@ body {
 	float:left;
     background-color:#ffffff;
 }
-=======
->>>>>>> e959da407d857da1ba41089f1dc4cc58f931e152
 #alpaca ul {
 	width:40%;
 	height:auto;
@@ -37,7 +34,6 @@ body {
 #alpaca ul li {
 	width:42%;
 	height:auto;
-<<<<<<< HEAD
 	margin:0% 2%;
 	padding:0% 0 4% 0;
 	border: 8px solid #5ea0ee;
@@ -87,16 +83,6 @@ body {
 
 
 
-=======
-	margin:0% 4% 0 4%;
-	padding:0 0;
-	cursor:pointer;
-	float:left;
-}
-#alpaca ul li img {
-	width:100%;
-}
->>>>>>> e959da407d857da1ba41089f1dc4cc58f931e152
 #wrapper {
 	width:100%;
 	height:auto;
