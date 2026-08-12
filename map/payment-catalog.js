@@ -68,7 +68,7 @@ window.PAYMENT_METHODS = {
   bank_transfer: [
     { id: "hncb_webatm", name_zh: "華南銀行", name_en: "HNCB WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/b33689e025cbab7616a437e35099a2d0ce418594/map/assest/payments/vendor/bank_transfer/hncb_webatm.svg" },
     { id: "ctbc_webatm", name_zh: "中國信託", name_en: "CTBC WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/038c738062661831d0835aa53c4d04b31cbfed5b/map/assest/payments/vendor/bank_transfer/ctbc_webatm.svg" },
-    { id: "e_sun_webatm", name_zh: "玉山銀行", name_en: "E.SUN WebATM", icon: "./assest/payments/vendor/bank_transfer/e_sun_webatm.svg" },
+    { id: "e_sun_webatm", name_zh: "玉山銀行", name_en: "E.SUN WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/053766572429f0c7d454c6fa9613e516d36c1330/map/assest/payments/vendor/bank_transfer/e_sun_webatm.svg" },
     { id: "taishin_webatm", name_zh: "台新銀行", name_en: "Taishin WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/038c738062661831d0835aa53c4d04b31cbfed5b/map/assest/payments/vendor/bank_transfer/taishin_webatm.svg" },
     { id: "tfb_webatm", name_zh: "台北富邦", name_en: "TFB WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/038c738062661831d0835aa53c4d04b31cbfed5b/map/assest/payments/vendor/bank_transfer/tfb_webatm.svg" },
     { id: "land_bank_webatm", name_zh: "土地銀行", name_en: "Land Bank WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/038c738062661831d0835aa53c4d04b31cbfed5b/map/assest/payments/vendor/bank_transfer/land_bank_webatm.svg" },
