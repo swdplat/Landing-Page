@@ -140,7 +140,7 @@ window.PAYMENT_METHODS = {
   ],
   carrier_billing: [
     { id: "cht_mb", name_zh: "中華電信", name_en: "Chunghwa Telecom", icon: "./assest/payments/vendor/carrier_billing/cht_mb.svg" },
-    { id: "fet_mb", name_zh: "遠傳電信", name_en: "FarEasTone", icon: "./assest/payments/vendor/carrier_billing/fet_mb.svg" },
+    { id: "fet_mb", name_zh: "遠傳電信", name_en: "FarEasTone", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/fdc277c1746691b225c360bf12886a8e83de2780/assest/payments/vendor/carrier_billing/FET_MB.svg" },
     { id: "twm_mb", name_zh: "台灣大哥大", name_en: "TaiwanMobile", icon: "./assest/payments/vendor/carrier_billing/twm_mb.svg" },
     { id: "_placeholder_carrier_billing_1", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/carrier_billing/_placeholder_carrier_billing_1.svg" },
     { id: "_placeholder_carrier_billing_2", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/carrier_billing/_placeholder_carrier_billing_2.svg" },
