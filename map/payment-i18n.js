@@ -34,7 +34,7 @@
     _placeholder_credit_card_2: { zh: '填名字', en: '英文名稱', cn: '填名字' },
     line_pay: { zh: 'LINE Pay', en: 'LINE Pay', cn: 'LINE Pay' },
     jko_pay: { zh: '街口支付', en: 'JKOPay', cn: '街口支付' },
-    taiwan_pay: { zh: '台灣Pay', en: 'TaiwanPay', cn: '台湾Pay' },
+    taiwan_pay: { zh: 'TWQR', en: 'TWQR', cn: 'TWQR' },
     easy_wallet: { zh: '悠遊付', en: 'Easy Wallet', cn: '悠游付' },
     apple_pay: { zh: 'Apple Pay', en: 'Apple Pay', cn: 'Apple Pay' },
     google_pay: { zh: 'Google Pay', en: 'Google Pay', cn: 'Google Pay' },

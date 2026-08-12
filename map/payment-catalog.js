@@ -66,7 +66,7 @@ window.PAYMENT_METHODS = {
     { id: "nine_pay", name_zh: "9Pay", name_en: "9Pay", icon: "./assest/payments/vendor/ewallet/nine_pay.svg" },
   ],
   bank_transfer: [
-    { id: "hncb_webatm", name_zh: "華南銀行", name_en: "HNCB WebATM", icon: "./assest/payments/vendor/bank_transfer/hncb_webatm.svg" },
+    { id: "hncb_webatm", name_zh: "華南銀行", name_en: "HNCB WebATM", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/b33689e025cbab7616a437e35099a2d0ce418594/map/assest/payments/vendor/bank_transfer/hncb_webatm.svg" },
     { id: "ctbc_webatm", name_zh: "中國信託", name_en: "CTBC WebATM", icon: "./assest/payments/vendor/bank_transfer/ctbc_webatm.svg" },
     { id: "e_sun_webatm", name_zh: "玉山銀行", name_en: "E.SUN WebATM", icon: "./assest/payments/vendor/bank_transfer/e_sun_webatm.svg" },
     { id: "taishin_webatm", name_zh: "台新銀行", name_en: "Taishin WebATM", icon: "./assest/payments/vendor/bank_transfer/taishin_webatm.svg" },
