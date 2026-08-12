@@ -157,7 +157,7 @@ window.PAYMENT_METHODS = {
     { id: "hi_life_tw", name_zh: "萊爾富便利商店", name_en: "HiLIFE", icon: "./assest/payments/vendor/cash_store/hi_life_tw.svg" },
     { id: "ok_mart_tw", name_zh: "OK 超商", name_en: "OKMart", icon: "./assest/payments/vendor/cash_store/ok_mart_tw.svg" },
     { id: "alfamart", name_zh: "Alfa Group", name_en: "", icon: "./assest/payments/vendor/cash_store/alfamart.svg" },
-    { id: "indomaret", name_zh: "Indomaret", name_en: "", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/03b382e2c9e02004a74d827d00e097f2afabb0e4/assest/payments/vendor/cash_store/Indomaret.svg" },
+    { id: "indomaret", name_zh: "Indomaret", name_en: "", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/798aac61b07545358a49d745ad0d57813a99c9f2/assest/payments/vendor/cash_store/Indomaret.svg" },
     { id: "_placeholder_cash_store_1", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/cash_store/_placeholder_cash_store_1.svg" },
     { id: "_placeholder_cash_store_2", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/cash_store/_placeholder_cash_store_2.svg" },
     { id: "_placeholder_cash_store_3", name_zh: "填名字", name_en: "英文名稱", icon: "./assest/payments/vendor/cash_store/_placeholder_cash_store_3.svg" },
