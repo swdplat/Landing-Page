@@ -1876,7 +1876,24 @@ function renderPayments(iso2, mountEl){
     head.className = 'cat-head';
     const catTitle = document.createElement('div');
     catTitle.className = 'cat-title';
-    catTitle.textContent = tr(`pay.category.${cat.id}`, cat.name_zh || '');
+
+const isTaiwan = String(iso2 || '').toUpperCase() === 'TW';
+
+if (cat.id === 'ewallet' && !isTaiwan) {
+  const locale = (window.NationMap && typeof window.NationMap.getLocale === 'function')
+    ? window.NationMap.getLocale()
+    : 'zh-TW';
+
+  const loc = String(locale).toLowerCase();
+
+  if (loc === 'zh-cn') {
+    catTitle.textContent = '电子钱包';
+  } else {
+    catTitle.textContent = '電子錢包';
+  }
+} else {
+  catTitle.textContent = tr(`pay.category.${cat.id}`, cat.name_zh || '');
+}
     // head 只放標題，icon 留在左欄
     head.appendChild(catTitle);
 

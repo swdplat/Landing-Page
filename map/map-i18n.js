@@ -151,6 +151,54 @@
     'pay.category.subscription': '訂閱服務'
   };
 
+  BASE['zh-HK'] = {
+    'ui.skipToMap': '跳到地圖內容',
+    'ui.pageTitle': 'MyCard 全球支付方式地圖',
+    'ui.zoomIn': '放大',
+    'ui.zoomOut': '縮小',
+    'ui.resetView': '重置視圖',
+    'ui.close': '關閉',
+    'ui.countryInfo': '國家資訊',
+    'ui.hintDesktop': '滾輪縮放、拖曳平移；點擊地區查看資訊',
+    'ui.hintMobile': '雙指拖曳或縮放地圖；點擊地區查看資訊',
+    'ui.modeList': '清單',
+    'ui.modeIcon': '圖標',
+    'ui.supportedPayments': '支援付款方式',
+    'ui.otherRegions': '其他地區',
+    // #14 行銷文案，D 檔標註「佔位，待官方定稿」——內容屬品牌語言，非工程/AI 可定稿範圍。
+    'ui.regionDesc': '深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。',
+    // #15 alt 後綴：目前 nation-map-app.js 既有寫法為 `${zhName}${tr('ui.flagSuffix', ' 國旗')}`
+    // （直接字串相接、fallback 內建前導空白）。此欄位值刻意「不」內建前導空白，交由 WG-3
+    // 接線時依各語系書寫習慣決定要不要插空白（中日文語系通常不需要，見下方 ja 的「の国旗」）。
+    'ui.flagSuffix': '國旗',
+    'ui.unnamedRegion': '未命名地區',
+    // ---- 補充：WG-3 接線時發現 D 檔未涵蓋的 6 條 UI 字串，中文原文取自 nation-map-app.js
+    // 既有 tr(key, fallback) 呼叫端的 fallback 字串（權威來源），非本輪自編：
+    //   ui.payModeLabel      ← nation-map-app.js:1564
+    //   ui.emptyTitle        ← nation-map-app.js:1916
+    //   ui.emptySub          ← nation-map-app.js:1917
+    //   ui.hintHold          ← nation-map-app.js:1275
+    //   ui.hintWheel         ← nation-map-app.js:1273
+    //   ui.hintDesktopSuffix ← nation-map-app.js:1274
+    // 桌機提示組字方式：holdWord + <kbd>Mod</kbd> + <kbd>hintWheel</kbd> + hintDesktopSuffix
+    'ui.payModeLabel': '付款方式顯示模式',
+    'ui.emptyTitle': '正在積極爭取中',
+    'ui.emptySub': '此區域支付方式即將上線',
+    'ui.hintHold': '按住',
+    'ui.hintWheel': '滾輪',
+    'ui.hintDesktopSuffix': '縮放、拖曳平移；點擊地區查看資訊',
+    // ---- 補充：W3 收尾，補「支付類別標題」8 語系（碼審抓到的缺口）——
+    // 對應 nation-map-app.js 呼叫 tr(`pay.category.${cat.id}`, cat.name_zh)，
+    // 這 7 條的 zh-TW 值＝ payment-catalog.js PAYMENT_CATEGORIES 各 category 的 name_zh（權威來源）：
+    'pay.category.credit_card': '信用卡',
+    'pay.category.ewallet': '電子錢包',
+    'pay.category.bank_transfer': '銀行轉帳',
+    'pay.category.carrier_billing': '行動電話帳單付款',
+    'pay.category.cash_store': '實體商店繳費',
+    'pay.category.bnpl': '先買後付',
+    'pay.category.subscription': '訂閱服務'
+  };
+
   // ---- en（完整字典，對應 D 檔 #1-16） ----
   BASE['en'] = {
     'ui.skipToMap': 'Skip to map content',
