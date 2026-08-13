@@ -120,7 +120,7 @@ window.PAYMENT_METHODS = {
     { id: "metrobank_otc_ph", name_zh: "Metrobank OTC", name_en: "Metrobank OTC", icon: "./assest/payments/vendor/bank_transfer/metrobank_otc_ph.svg" },
     { id: "robinson_s_bank_otc", name_zh: "Robinson's Bank OTC", name_en: "Robinson's Bank OTC", icon: "./assest/payments/vendor/bank_transfer/robinson_s_bank_otc.svg" },
     { id: "robinson_s_online", name_zh: "Robinson's Online", name_en: "Robinson's Online", icon: "./assest/payments/vendor/bank_transfer/robinson_s_online.svg" },
-    { id: "fast", name_zh: "FAST", name_en: "FAST", icon: "./assest/payments/vendor/bank_transfer/fast.svg" },
+    { id: "fast", name_zh: "FAST", name_en: "FAST", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/edb6526e41b86a38dee73f4bc7cefa950f493fe1/assest/payments/vendor/bank_transfer/fast.svg" },
     { id: "bangkok_bank", name_zh: "Bangkok bank", name_en: "Bangkok bank", icon: "./assest/payments/vendor/bank_transfer/bangkok_bank.svg" },
     { id: "k_plus", name_zh: "K-PLUS", name_en: "K-PLUS", icon: "./assest/payments/vendor/bank_transfer/k_plus.svg" },
     { id: "krung_thai_bank", name_zh: "Krung Thai bank", name_en: "Krung Thai bank", icon: "./assest/payments/vendor/bank_transfer/krung_thai_bank.svg" },
