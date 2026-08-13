@@ -617,6 +617,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
+	letter-spacing:normal;
 	color: #444444;
 	text-align:justify;
 	display:inline;
@@ -662,6 +663,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
+	letter-spacing:normal;
 	color: #444444;
 	text-align:justify;
 	display:inline;
