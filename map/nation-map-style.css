@@ -1303,7 +1303,7 @@ body.nation-map *::after {
 }
 
 /* 修改阿倪檔案的css樣式影響 */
-@media screen and (min-width: 600px) and (max-width: 3840px){
+@media screen and (min-width: 300px) and (max-width: 3840px){
   body, img, p, ul, li, ol, h1, h2, h3, h4, h5, h6, th, dl, dd, dt, b, a, div {
         line-height: normal;
 }
