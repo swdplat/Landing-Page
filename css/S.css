@@ -26,16 +26,16 @@ body {
     background-color:#ffffff;
 }
 #alpaca ul {
-	width:60%;
+	width:90%;
 	height:auto;
-	margin:10% 20%;
+	margin:10% 5%;
 	padding:0 0;
 	float:left;
 }
 #alpaca ul li {
-	width:94%;
+	width:42%;
 	height:auto;
-	margin:0% 2% 18% 2%;
+	margin:2% 2% 2% 2%;
 	padding:0% 0 4% 0;
 	border: 6px solid #5ea0ee;
 	background-color:#dedede;
@@ -61,8 +61,8 @@ body {
 	margin:0% 0% 0 0%;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size:52px;
-	line-height: 52px;
+	font-size:42px;
+	line-height: 42px;
 	font-weight: bold;
 	color: #333;
 	text-align:center;
@@ -74,8 +74,8 @@ body {
 	margin:2% 0% 0 0%;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size:17px;
-	line-height: 26px;
+	font-size:14px;
+	line-height: 19px;
 	font-weight: bold;
 	color: #0a3c77;
 	text-align:center;

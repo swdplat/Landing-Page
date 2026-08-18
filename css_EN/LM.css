@@ -258,11 +258,11 @@ body {
 #brand .text h1 {
 	width:100%;
 	height:auto;
-	margin:0 0 3% 0;
+	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 44px;
-	line-height: 46px;
+	font-size: 40px;
+	line-height: 42px;
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
@@ -276,7 +276,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 22px;
-	line-height: 28px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -290,7 +290,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 16px;
-	line-height: 23px;
+	line-height: 20px;
 	font-weight: normal;
 	color: #666666;
 	text-align:justify;
@@ -351,7 +351,7 @@ body {
 	width:94%;
 	height:auto;
 	margin:0 0% 2% 0;
-	padding:2% 2.5% 0 2.5%
+	padding:2% 2.5% 0 2.5%;
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -407,7 +407,7 @@ body {
 #global_payment ul .icon img {width:100%;}
 #global_payment ul .icon2 {
 	width:23%;
-	margin:-9% 0% 0% 0%;
+	margin:-8% 0% 0% 0%;
 	padding:0 0;
 	display:inline;
 	float:right;
@@ -498,8 +498,8 @@ body {
 	margin:0 0;
 	padding:3.5% 10% 3.5% 8%;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 26px;
+	font-size: 24px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -513,7 +513,7 @@ body {
 #marketing .step .step5 {background-image: url(../images/marketing_step5_EN.webp); background-repeat: no-repeat; background-size:100%;}
 #marketing .step ul dl {
 	width:95%;
-	height:230px;
+	height:240px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -558,7 +558,7 @@ body {
 }
 #marketing .step ul dd {
 	width:95%;
-	height:230px;
+	height:240px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -676,8 +676,8 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 15px;
-	line-height: 22px;
+	font-size: 14px;
+	line-height: 20px;
 	font-weight: bold;
 	color: #4078bf;
 	text-align:left;
@@ -690,7 +690,7 @@ body {
 	margin:0% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
@@ -733,7 +733,7 @@ body {
 }
 #customer_service ul li {
 	width:27.1%;
-	height:305px;
+	height:325px;
 	margin:0 3% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -744,7 +744,7 @@ body {
 }
 #customer_service ul dl {
 	width:27.1%;
-	height:305px;
+	height:325px;
 	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -805,7 +805,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 44px;
+	font-size: 40px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -1033,7 +1033,7 @@ body {
 	width:80%;
 	height:auto;
 	margin:0% 0;
-	padding:11% 10% 9% 10%;
+	padding:11% 10% 10% 10%;
 	background-image: url(../images/connect_bg_EN.webp);
 	background-size:100%;
 	float:left;

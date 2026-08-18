@@ -14,7 +14,72 @@ body {
 	margin:0 auto 0 auto;
 	background-color:#ffffff;
 }
-		
+#alpaca {
+    width:100%;
+	height:auto;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	overflow:hidden;
+	float:left;
+    background-color:#ffffff;
+}
+#alpaca ul {
+	width:40%;
+	height:auto;
+	margin:10% 30%;
+	padding:0 0;
+	float:left;
+}
+#alpaca ul li {
+	width:43%;
+	height:auto;
+	margin:0% 2%;
+	padding:0% 0 4% 0;
+	border: 10px solid #5ea0ee;
+	background-color:#dedede;
+	border-radius:20px;
+	cursor:pointer;
+	float:left;
+}
+#alpaca ul li:hover {background-color:#ffffff;}
+#alpaca ul li ol {
+	width:40%;
+	height:auto;
+	margin:0 30%;
+	padding:8% 0;
+	border-radius:400px;
+	float:left;
+}
+#alpaca ul li ol img {
+	width:100%;
+}
+#alpaca ul li h1 {
+	width:100%;
+	height:auto;
+	margin:0% 0% 0 0%;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size:68px;
+	line-height: 68px;
+	font-weight: bold;
+	color: #333;
+	text-align:center;
+	cursor:pointer;
+}
+#alpaca ul li h2 {
+	width:100%;
+	height:auto;
+	margin:2% 0% 0 0%;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size:21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #0a3c77;
+	text-align:center;
+	cursor:pointer;
+}
+
 #wrapper {
 	width:100%;
 	height:auto;
@@ -128,7 +193,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title_CN.webp);
+	background-image: url(../images/main_visual_title_cn.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -549,6 +614,7 @@ body {
 	font-size: 18px;
 	line-height: 26px;
 	font-weight: normal;
+	letter-spacing:-3%;
 	color: #444444;
 	text-align:justify;
 	display:inline;
@@ -594,6 +660,7 @@ body {
 	font-size: 18px;
 	line-height: 26px;
 	font-weight: normal;
+	letter-spacing:-3%;
 	color: #444444;
 	text-align:justify;
 	display:inline;
@@ -985,6 +1052,7 @@ body {
 	line-height: 28px;
 	font-weight: bold;
 	color: #ffffff;
+
 	text-align:center;
 	display:inline;
 	float:left;
@@ -1037,8 +1105,8 @@ body {
 	width:80%;
 	height:auto;
 	margin:0% 0;
-	padding:11% 10% 9% 10%;
-	background-image: url(../images/connect_bg_CN.webp);
+	padding:11% 10% 10% 10%;
+	background-image: url(../images/connect_bg_cn.webp);
 	background-size:100%;
 	float:left;
 }
