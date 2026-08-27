@@ -280,7 +280,7 @@ body {
 	line-height: 38px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:left;
+	text-align:justify;
 	display:inline;
 	float:left;
 }
@@ -735,7 +735,7 @@ body {
 }
 #customer_service ul li {
 	width:27.1%;
-	height:385px;
+	height:365px;
 	margin:0 3% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -746,7 +746,7 @@ body {
 }
 #customer_service ul dl {
 	width:27.1%;
-	height:385px;
+	height:365px;
 	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -783,7 +783,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 15px;
-	line-height: 22px;
+	line-height: 19px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;

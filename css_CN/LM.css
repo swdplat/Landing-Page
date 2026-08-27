@@ -1017,8 +1017,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 22px;
+	line-height: 28px;
 	font-weight: bold;
 	color:  #333333;
 	text-align:center;
@@ -1039,7 +1039,7 @@ body {
 	width:80%;
 	height:auto;
 	margin:0% 0;
-	padding:11% 10% 9% 10%;
+	padding:11% 10% 10% 10%;
 	background-image: url(../images/connect_bg_CN.webp);
 	background-size:100%;
 	float:left;

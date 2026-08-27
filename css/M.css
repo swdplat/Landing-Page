@@ -398,8 +398,8 @@ body {
 	margin:1% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 32px;
+	font-size: 18px;
+	line-height: 26px;
 	font-weight: normal;
 	color: #666666;
 	text-align:left;
@@ -457,10 +457,10 @@ body {
 	float:left;
 }
 #global_payment ul li {
-	width:28%;
-	height:340px;
-	margin:0 2.9% 0 0;
-	padding:2% 1.3%;
+	width:95.5%;
+	height:auto;
+	margin:0 0% 2% 0%;
+	padding:1% 2%;
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -468,10 +468,10 @@ body {
 	float:left;
 }
 #global_payment ul dl {
-	width:28%;
-	height:340px;
-	margin:0 0 0 0;
-	padding:2% 1.3%;
+	width:95.5%;
+	height:auto;
+	margin:0 0 2% 0;
+	padding:1% 2%;
 	border-radius:20px;
 	border:2px solid #d5ecff;
     background: linear-gradient(to bottom,  #ffffff 50%,#d6ecff 100%); 
@@ -479,13 +479,13 @@ body {
 	float:left;
 }
 #global_payment ul h1 {
-	width:100%;
+	width:67%;
 	height:auto;
-	margin:1% 0 4.5% 0;
+	margin:2% 0 2% 2%;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 26px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -493,12 +493,12 @@ body {
 	float:left;
 }
 #global_payment ul p {
-	width:100%;
+	width:68%;
 	height:auto;
-	margin:0.5% 0 0.5% 0;
+	margin:0.5% 0 0.5% 2%;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
 	color: #333333;
@@ -507,15 +507,15 @@ body {
 	float:left;
 }
 #global_payment ul .icon {
-	width:70%;
-	margin:0% 15% 0% 15%;
+	width:23%;
+	margin:-10% 2% 0% 0%;
 	padding:0 0;
 	float:right;
 }
 #global_payment ul .icon img {width:100%;}
 #global_payment ul .icon2 {
-	width:70%;
-	margin:13% 15% 0% 15%;
+	width:23%;
+	margin:-10% 2% 0% 0%;
 	padding:0 0;
 	float:right;
 }
@@ -564,7 +564,7 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 32px;
+	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -578,7 +578,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
@@ -594,8 +594,8 @@ body {
 	float:left;
 }
 #marketing .step ul {
-	width:25%;
-	margin:0;
+	width:50%;
+	margin:0 0 2% 0;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -604,33 +604,33 @@ body {
 	width:70%;
 	height:auto;
 	margin:0 0;
-	padding:7% 15%;
+	padding:6% 15%;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 22px;
+	font-size: 24px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
 	display:inline;
 	float:left;
 }
-#marketing .step .step1 {background-image: url(../images/marketing_step1.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step2 {background-image: url(../images/marketing_step2.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step3 {background-image: url(../images/marketing_step3.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step4 {background-image: url(../images/marketing_step4.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step5 {background-image: url(../images/marketing_step5.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step1 {background-image: url(../images/marketing_step1m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step2 {background-image: url(../images/marketing_step2m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step3 {background-image: url(../images/marketing_step3m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step4 {background-image: url(../images/marketing_step4m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step5 {background-image: url(../images/marketing_step5m.webp); background-repeat: no-repeat; background-size:100%;}
 #marketing .step ul dl {
-	width:95%;
-	height:210px;
+	width:91%;
+	height:230px;
 	margin:0 5% 2% 0;
-	padding:3% 0;
+	padding:3% 2%;
 	border-radius:10px;
 	display:inline;
     float:left;
 }
 #marketing .step ul dl .icon {
-	width:50%;
-	margin:3% 25%;
+	width:40%;
+	margin:3% 30% 1% 30%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -639,10 +639,10 @@ body {
 #marketing .step ul dl h3 {
     width:90%;
 	height:auto;
-	margin:5% 0 2.5% 0;
+	margin:2% 0 1.5% 0;
 	padding:0 5%;
 	font-family: "微軟正黑體";
-	font-size: 15px;
+	font-size: 20px;
 	line-height: 20px;
 	font-weight: bold;
 	color: #333333;
@@ -656,8 +656,8 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 15px;
+	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -665,17 +665,17 @@ body {
 	float:left;
 }
 #marketing .step ul dd {
-	width:95%;
-	height:210px;
+	width:91%;
+	height:230px;
 	margin:0 5% 2% 0;
-	padding:3% 0;
+	padding:3% 2%;
 	border-radius:10px;
 	display:inline;
     float:left;
 }
 #marketing .step ul dd .icon {
-	width:50%;
-	margin:3% 25%;
+	width:40%;
+	margin:3% 30% 1% 30%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -684,10 +684,10 @@ body {
 #marketing .step ul dd h3 {
     width:88%;
 	height:auto;
-	margin:5% 0 2.5% 0;
+	margin:2% 0 2.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 20px;
 	font-weight: bold;
 	color: #333333;
@@ -701,8 +701,8 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 15px;
+	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -742,7 +742,7 @@ body {
 	margin:2% 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 28px;
+	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -759,15 +759,15 @@ body {
 }
 
 #security ul dt {
-	width:50%;
-	margin:2% 25% 4% 25%;
+	width:40%;
+	margin:2% 30% 4% 30%;
 	padding:0 0;
 	float:left;
 }
 #security ul dt img {width:100%;}
 #security ul li {
 	width:42%;
-	height:auto;
+	height:245px;
 	margin:0 1% 4% 1%;
 	padding:2.5% 3%;
 	border-radius:10px;
@@ -778,7 +778,7 @@ body {
 }
 #security ul dl {
 	width:42%;
-	height:auto;
+	height:245px;
 	margin:0 1% 4% 1%;
 	padding:2.5% 3%;
 	border-radius:10px;
@@ -793,10 +793,10 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
-	color: #4078bf;
+	color: #333333;
 	text-align:center;
 	display:inline;
 	float:left;
@@ -808,7 +808,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 15px;
-	line-height: 24px;
+	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -832,7 +832,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 32px;
+	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -849,7 +849,7 @@ body {
 }
 #customer_service ul li {
 	width:27.7%;
-	height:320px;
+	height:265px;
 	margin:0 2% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -860,7 +860,7 @@ body {
 }
 #customer_service ul dl {
 	width:27.7%;
-	height:320px;
+	height:265px;
 	margin:0 0% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -882,8 +882,8 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 32px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -897,7 +897,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 15px;
-	line-height: 25px;
+	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -918,10 +918,10 @@ body {
 #choice h1 {
 	width:100%;
 	height:auto;
-	margin:0 0 4% 0;
+	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 32px;
+	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -935,10 +935,10 @@ body {
 	margin:0 0 4% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 32px;
+	font-size: 20px;
+	line-height: 26px;
 	font-weight: bold;
-	color: #3184e4;
+	color: #333333;
 	text-align:left;
 	display:inline;
 	float:left;
@@ -962,13 +962,13 @@ body {
     width:100%;
 	height:auto;
 	border-top:1px solid #cccccc;
-	margin:2% 0 0 0;
-	padding:1.2% 0 0% 0;
+	margin:0% 0 0 0;
+	padding:1.2% 0 0.5% 0;
 	float:left;
 }
 #choice dl dt {
 	width:15.6%;
-	margin:2% 0.5% 1.5% 0.5%;
+	margin:0.5% 0.5% 0.5% 0.5%;
 	padding:0;
 	border-radius:10px;
 	display:inline;
@@ -991,7 +991,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 32px;
+	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -1005,7 +1005,7 @@ body {
 	margin:0 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
@@ -1068,7 +1068,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 22px;
 	font-weight: bold;
 	color: #333333;
@@ -1125,7 +1125,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 22px;
 	font-weight: bold;
 	color:  #333333;
