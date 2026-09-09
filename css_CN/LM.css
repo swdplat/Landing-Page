@@ -1,4 +1,4 @@
-@charset "utf-8";
+#global_payment h1@charset "utf-8";
 /*一般設定**************************************************************************/
 body, img, p, ul, li, ol, h1, h2, h3, h4, h5, h6, th, dl, dd, dt, b, a, div {
 	margin: 0px;
@@ -14,7 +14,75 @@ body {
 	margin:0 auto 0 auto;
 	background-color:#ffffff;
 }
-		
+
+#alpaca {
+    width:100%;
+	height:auto;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	overflow:hidden;
+	float:left;
+    background-color:#ffffff;
+}
+#alpaca ul {
+	width:40%;
+	height:auto;
+	margin:4% 30%;
+	padding:0 0;
+	float:left;
+}
+#alpaca ul li {
+	width:42%;
+	height:auto;
+	margin:2% 2%;
+	padding:0% 0 4% 0;
+	border: 8px solid #5ea0ee;
+	background-color:#dedede;
+	border-radius:20px;
+	cursor:pointer;
+	float:left;
+}
+#alpaca ul li:hover {background-color:#ffffff;}
+#alpaca ul li ol {
+	width:40%;
+	height:auto;
+	margin:0 30%;
+	padding:8% 0;
+	border-radius:400px;
+	float:left;
+}
+#alpaca ul li ol img {
+	width:100%;
+}
+#alpaca ul li h1 {
+	width:100%;
+	height:auto;
+	margin:0% 0% 0 0%;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size:68px;
+	line-height: 68px;
+	font-weight: bold;
+	color: #333;
+	text-align:center;
+	cursor:pointer;
+}
+#alpaca ul li h2 {
+	width:100%;
+	height:auto;
+	margin:2% 0% 0 0%;
+	padding:0 0;
+	font-family: "微軟正黑體";
+	font-size:21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #0a3c77;
+	text-align:center;
+	cursor:pointer;
+}
+
+
+
 #wrapper {
 	width:100%;
 	height:auto;
@@ -126,7 +194,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title_CN.webp);
+	background-image: url(../images/main_visual_title.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -234,7 +302,7 @@ body {
 	color: #333333;
 	text-align:left;
 }
-#main_visual #diagram .amount {font-size: 68px!important; line-height:98px; }
+#main_visual #diagram .amount {font-size:68px!important; line-height:98px; }
 
 
 
@@ -249,7 +317,7 @@ body {
 	float:left;
 }
 #brand .text {
-	width:48%;
+	width:50%;
 	height:auto;
 	display:inline;
 	float:left;
@@ -266,6 +334,7 @@ body {
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
+	white-space: nowrap; 
 	display:inline;
 	float:left;
 }
@@ -280,6 +349,7 @@ body {
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
+	white-space: nowrap; 
 	display:inline;
 	float:left;
 }
@@ -289,8 +359,8 @@ body {
 	margin:1% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 36px;
+	font-size: 20px;
+	line-height: 34px;
 	font-weight: normal;
 	color: #666666;
 	text-align:justify;
@@ -298,7 +368,7 @@ body {
 	float:left;
 }
 #brand .photo {
-	width:47%;
+	width:45%;
 	margin:0 0 0 0;
 	padding:0 0;
 	display:inline;
@@ -319,7 +389,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 46px;
+	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -375,7 +445,7 @@ body {
 	margin:0 0 3.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #333333;
@@ -390,7 +460,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 26px;
 	font-weight: normal;
 	color: #333333;
 	text-align:justify;
@@ -454,7 +524,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 46px;
+	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -549,6 +619,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
+	letter-spacing:normal;
 	color: #444444;
 	text-align:justify;
 	display:inline;
@@ -594,6 +665,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
+	letter-spacing:normal;
 	color: #444444;
 	text-align:justify;
 	display:inline;
@@ -631,7 +703,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 46px;
+	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -657,7 +729,7 @@ body {
 #security ul li {
 	width:20%;
 	height:260px;
-	margin:0 2% 0 0;
+	margin:0 2.6% 0 0;
 	padding:1.5% 1.5%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
@@ -668,7 +740,7 @@ body {
 #security ul dl {
 	width:20%;
 	height:260px;
-	margin:0 2% 0 0;
+	margin:0 0 0 0;
 	padding:1.5% 1.5%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(249,249,249,0.9) 0%,rgba(255,255,255,0.6) 100%);
@@ -682,10 +754,10 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 32px;
+	font-size: 20px;
+	line-height: 24px;
 	font-weight: bold;
-	color: #4078bf;
+	color: #333333;
 	text-align:center;
 	display:inline;
 	float:left;
@@ -721,7 +793,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 46px;
+	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -738,9 +810,9 @@ body {
 	float:left;
 }
 #customer_service ul li {
-	width:27.1%;
-	height:335px;
-	margin:0 3% 0 0;
+	width:19%;
+	height:285px;
+	margin:0 2.35% 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 99%);
@@ -749,8 +821,8 @@ body {
 	float:left;
 }
 #customer_service ul dl {
-	width:27.1%;
-	height:335px;
+	width:19%;
+	height:285px;
 	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -760,8 +832,8 @@ body {
 	float:right;
 }
 #customer_service ul ol {
-	width:60%;
-	margin:2% 20% 2% 20%;
+	width:46%;
+	margin:2% 27% 2% 27%;
 	padding:0 0;
 	float:left;
 }
@@ -772,7 +844,7 @@ body {
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 32px;
 	font-weight: bold;
 	color: #333333;
@@ -811,7 +883,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 46px;
+	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -825,10 +897,10 @@ body {
 	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 20px;
+	line-height: 28px;
 	font-weight: bold;
-	color: #3184e4;
+	color: #333333;
 	text-align:left;
 	display:inline;
 	float:left;
@@ -866,8 +938,6 @@ body {
 }
 #choice dl dt img {width:100%; border-radius:10px;}
 
-
-
 /*合作流程*/
 #cooperate {
     width:62%;
@@ -883,7 +953,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 46px;
+	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -960,7 +1030,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 28px;
 	font-weight: bold;
 	color: #333333;
@@ -1017,7 +1087,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 28px;
 	font-weight: bold;
 	color:  #333333;
@@ -1040,7 +1110,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:11% 10% 10% 10%;
-	background-image: url(../images/connect_bg_CN.webp);
+	background-image: url(../images/connect_bg.webp);
 	background-size:100%;
 	float:left;
 }
