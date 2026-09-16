@@ -17,23 +17,23 @@ window.COUNTRY_PAYMENTS = {
       bnpl           : ["zingala", "aftee"],
     }
   },
-  "HK": { // 香港
-    "map-flag-Places": true,
-    methods: {
-      credit_card    : ["visa", "mastercard", "union_pay", "paypal_card"],
-      ewallet        : ["alipayhk", "payme", "octopus", "alipay"],
-      bank_transfer  : ["hsb_webatm_hk", "fps", "boc_atm_cn", "hsbc_webatm"],
-      carrier_billing: [],
-      cash_store     : [],
-      bnpl           : [],
-    }
-  },
   "CN": { // 中國
     "map-flag-Places": true,
     methods: {
       credit_card    : ["union_pay"],
       ewallet        : ["alipay", "wechat_pay"],
       bank_transfer  : ["icbc_atm_cn", "abc_atm_cn", "ccb_atm_cn", "boc_atm_cn", "cn_bank_transfer"],
+      carrier_billing: [],
+      cash_store     : [],
+      bnpl           : [],
+    }
+  },
+  "HK": { // 香港
+    "map-flag-Places": true,
+    methods: {
+      credit_card    : ["visa", "mastercard", "union_pay", "paypal_card"],
+      ewallet        : ["alipayhk", "payme", "octopus", "alipay"],
+      bank_transfer  : ["hsb_webatm_hk", "fps", "boc_atm_cn", "hsbc_webatm"],
       carrier_billing: [],
       cash_store     : [],
       bnpl           : [],
@@ -50,40 +50,29 @@ window.COUNTRY_PAYMENTS = {
       bnpl           : [],
     }
   },
-  "ID": { // 印尼
+    "JP": { // 日本
     "map-flag-Places": true,
     methods: {
-      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
-      ewallet        : ["ovo", "gopay", "dana", "linkaja", "doku", "shopee_pay", "qris", "sakuku"],
-      bank_transfer  : ["bca", "bni", "permata_bank", "cimb_clicks", "mandiri", "bri", "qris"],
-      carrier_billing: ["indosat", "three", "xl"],
-      cash_store     : ["alfamart", "indomaret"],
-      bnpl           : [],
-    }
-  },
-  "MY": { // 馬來西亞
-    "map-flag-Places": true,
-    methods: {
-      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
-      ewallet        : ["grab_pay", "shopee_pay", "touchgo_ewallet", "boost_my"],
-      bank_transfer  : ["fpx"],
+      credit_card    : ["visa", "mastercard", "jcb","paypal_card"],
+      ewallet        : ["apple_pay", "google_pay", "paypal"],
+      bank_transfer  : [],
       carrier_billing: [],
       cash_store     : [],
       bnpl           : [],
     }
   },
-  "PH": { // 菲律賓
+  "KR": { // 南韓
     "map-flag-Places": true,
     methods: {
-      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
-      ewallet        : ["grab_pay", "shopee_pay", "bitcoin_ethereum_tether", "coins_ph", "gcash", "moneygment", "paymaya"],
-      bank_transfer  : ["bdo_network_bank", "bank_of_commerce", "bpi", "landbank", "chinabank", "rcbc", "pnb", "maybank", "security_bank", "unionbank", "ucpb", "aub", "psbank", "robinsons_bank", "metrobank", "aub_online_cash_payment", "metrobank_otc_ph", "robinson_s_bank_otc", "robinson_s_online"],
+      credit_card    : [],
+      ewallet        : [],
+      bank_transfer  : [],
       carrier_billing: [],
-      cash_store     : ["seven_eleven_ph", "cebuana_bills_paymen", "ec_pay", "m_lhuillier", "palawan_pawnshop", "rd_pawnshop", "robinsons_dept_store", "sm_retail"],
+      cash_store     : [],
       bnpl           : [],
     }
   },
-  "SG": { // 新加坡
+    "SG": { // 新加坡
     "map-flag-Places": true,
     methods: {
       credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
@@ -94,7 +83,18 @@ window.COUNTRY_PAYMENTS = {
       bnpl           : [],
     }
   },
-  "TH": { // 泰國
+    "MY": { // 馬來西亞
+    "map-flag-Places": true,
+    methods: {
+      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
+      ewallet        : ["grab_pay", "shopee_pay", "touchgo_ewallet", "boost_my"],
+      bank_transfer  : ["fpx"],
+      carrier_billing: [],
+      cash_store     : [],
+      bnpl           : [],
+    }
+  },
+    "TH": { // 泰國
     "map-flag-Places": true,
     methods: {
       credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
@@ -102,6 +102,28 @@ window.COUNTRY_PAYMENTS = {
       bank_transfer  : ["bangkok_bank", "k_plus", "krung_thai_bank", "krungsri_bank", "prompt_pay", "qrpayment", "siam_commercial_bank", "thanachart_bank"],
       carrier_billing: [],
       cash_store     : ["bigc", "cenpay"],
+      bnpl           : [],
+    }
+  },
+    "PH": { // 菲律賓
+    "map-flag-Places": true,
+    methods: {
+      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
+      ewallet        : ["grab_pay", "shopee_pay", "bitcoin_ethereum_tether", "coins_ph", "gcash", "moneygment", "paymaya"],
+      bank_transfer  : ["bdo_network_bank", "bank_of_commerce", "bpi", "landbank", "chinabank", "rcbc", "pnb", "maybank", "security_bank", "unionbank", "ucpb", "aub", "psbank", "robinsons_bank", "metrobank", "aub_online_cash_payment", "metrobank_otc_ph", "robinson_s_bank_otc", "robinson_s_online"],
+      carrier_billing: [],
+      cash_store     : ["seven_eleven_ph", "cebuana_bills_paymen", "ec_pay", "m_lhuillier", "palawan_pawnshop", "rd_pawnshop", "robinsons_dept_store", "sm_retail"],
+      bnpl           : [],
+    }
+  },
+  "ID": { // 印尼
+    "map-flag-Places": true,
+    methods: {
+      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
+      ewallet        : ["ovo", "gopay", "dana", "linkaja", "doku", "shopee_pay", "qris", "sakuku"],
+      bank_transfer  : ["bca", "bni", "permata_bank", "cimb_clicks", "mandiri", "bri", "qris"],
+      carrier_billing: ["indosat", "three", "xl"],
+      cash_store     : ["alfamart", "indomaret"],
       bnpl           : [],
     }
   },
@@ -116,6 +138,17 @@ window.COUNTRY_PAYMENTS = {
       bnpl           : [],
     }
   },
+    "IN": { // 印度
+    "map-flag-Places": true,
+    methods: {
+      credit_card    : [],
+      ewallet        : [],
+      bank_transfer  : [],
+      carrier_billing: [],
+      cash_store     : [],
+      bnpl           : [],
+    }
+  },
   "US": { // 美國
     "map-flag-Places": true,
     methods: {
@@ -124,6 +157,17 @@ window.COUNTRY_PAYMENTS = {
       bank_transfer  : [],
       carrier_billing: [],
       cash_store     : [],
+      bnpl           : [],
+    }
+  },
+    "MX": { // 墨西哥
+    "map-flag-Places": true,
+    methods: {
+      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
+      ewallet        : [],
+      bank_transfer  : [],
+      carrier_billing: [],
+      cash_store     : ["over_the_counter_mexico"],
       bnpl           : [],
     }
   },
@@ -160,17 +204,6 @@ window.COUNTRY_PAYMENTS = {
       bnpl           : [],
     }
   },
-  "MX": { // 墨西哥
-    "map-flag-Places": true,
-    methods: {
-      credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
-      ewallet        : [],
-      bank_transfer  : [],
-      carrier_billing: [],
-      cash_store     : ["over_the_counter_mexico"],
-      bnpl           : [],
-    }
-  },
   "PE": { // 祕魯
     "map-flag-Places": true,
     methods: {
@@ -182,38 +215,15 @@ window.COUNTRY_PAYMENTS = {
       bnpl           : [],
     }
   },
-  "UY": { // 烏拉圭
-    "map-flag-Places": true,
+  // ===== 其他地區 =====
+    "UY": { // 烏拉圭
+    "map-flag-Places": false,
     methods: {
       credit_card    : ["visa", "mastercard", "jcb", "paypal_card"],
       ewallet        : [],
       bank_transfer  : [],
       carrier_billing: [],
       cash_store     : ["over_the_counter_uruguay"],
-      bnpl           : [],
-    }
-  },
-
-  // ===== 其他地區 =====
-  "JP": { // 日本
-    "map-flag-Places": false,
-    methods: {
-      credit_card    : [],
-      ewallet        : [],
-      bank_transfer  : [],
-      carrier_billing: [],
-      cash_store     : [],
-      bnpl           : [],
-    }
-  },
-  "KR": { // 南韓
-    "map-flag-Places": false,
-    methods: {
-      credit_card    : [],
-      ewallet        : [],
-      bank_transfer  : [],
-      carrier_billing: [],
-      cash_store     : [],
       bnpl           : [],
     }
   },
@@ -284,17 +294,6 @@ window.COUNTRY_PAYMENTS = {
     }
   },
   "EC": { // 厄瓜多
-    "map-flag-Places": false,
-    methods: {
-      credit_card    : [],
-      ewallet        : [],
-      bank_transfer  : [],
-      carrier_billing: [],
-      cash_store     : [],
-      bnpl           : [],
-    }
-  },
-  "IN": { // 印度
     "map-flag-Places": false,
     methods: {
       credit_card    : [],
