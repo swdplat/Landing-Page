@@ -919,7 +919,7 @@ body {
 	display:inline;
 	float:left;
 }
-#choice ul li img {width:100%;}
+#choice ul li img {width:100%;border-radius:20px;}
 #choice dl {
     width:100%;
 	height:auto;
