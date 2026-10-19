@@ -144,16 +144,16 @@ body {
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
 #top_bar .btn {
-	width:5%;
+	width:6%;
 	height:auto;
 	margin:0.75% 2% 0 0;
-	padding:0.25% 0 0.75% 0;
+	padding:0.25% 0 0.5% 0;
 	background-image: url(../images/top_bar_connect_button.png);
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 13px;
-	line-height: 13px;
+	font-size: 12px;
+	line-height: 12px;
 	font-weight: normal;
 	color: #ffffff;
 	text-align:center;
@@ -194,7 +194,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title.webp);
+	background-image: url(../images/main_visual_title_CN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -211,8 +211,8 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 24px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -566,10 +566,10 @@ body {
 	width:70%;
 	height:auto;
 	margin:0 0;
-	padding:7% 15%;
+	padding:9.5% 15%;
 	font-family: "微軟正黑體";
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 22px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -771,7 +771,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 16px;
-	line-height: 24px;
+	line-height: normal;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -861,7 +861,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -921,7 +921,7 @@ body {
 	display:inline;
 	float:left;
 }
-#choice ul li img {width:100%;}
+#choice ul li img {width:100%;border-radius:20px;}
 #choice dl {
     width:100%;
 	height:auto;
@@ -931,7 +931,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:11.5%;
+	width:13.2%;
 	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
@@ -1113,7 +1113,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:11% 10% 10% 10%;
-	background-image: url(../images/connect_bg.webp);
+	background-image: url(../images/connect_bg_CN.webp);
 	background-size:100%;
 	float:left;
 }
