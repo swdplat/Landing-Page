@@ -152,8 +152,8 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 14px;
+	line-height: 14px;
 	font-weight: normal;
 	color: #ffffff;
 	text-align:center;
@@ -194,7 +194,7 @@ body {
 	width:27%;
 	margin:18.5% 8% 0 65%;
 	padding:9% 0;
-	background-image: url(../images/main_visual_title.webp);
+	background-image: url(../images/main_visual_title_CN.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
 }
@@ -566,8 +566,8 @@ body {
 	margin:0 0;
 	padding:7% 15%;
 	font-family: "微軟正黑體";
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 28px;
+	line-height: 28px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -859,7 +859,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 16px;
-	line-height: 28px;
+	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
 	text-align:justify;
@@ -919,7 +919,7 @@ body {
 	display:inline;
 	float:left;
 }
-#choice ul li img {width:100%;}
+#choice ul li img {width:100%;border-radius:20px;}
 #choice dl {
     width:100%;
 	height:auto;
@@ -929,7 +929,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:11.5%;
+	width:13.2%;
 	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
@@ -1110,7 +1110,7 @@ body {
 	height:auto;
 	margin:0% 0;
 	padding:11% 10% 10% 10%;
-	background-image: url(../images/connect_bg.webp);
+	background-image: url(../images/connect_bg_CN.webp);
 	background-size:100%;
 	float:left;
 }
