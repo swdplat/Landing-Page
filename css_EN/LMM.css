@@ -58,9 +58,9 @@ body {
 	float:left;
 }
 #top_bar .menu li {
-    width:15.6%;
+    width:16.6%;
 	height:auto;
-	margin:0 0.5% 0 0.5%;
+	margin:0 0;
 	padding:0.3% 0;
 	border-radius:50px;
 	background-color:transparent;
@@ -76,10 +76,10 @@ body {
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
 #top_bar .btn {
-	width:8%;
+	width:7%;
 	height:auto;
-	margin:0.3% 2% 0 0;
-	padding:0.75% 0 0.75% 0;
+	margin:0.5% 2% 0 0;
+	padding:0.5% 0 0.5% 0;
 	background-image: url(../images/top_bar_connect_button.png);
 	background-repeat: no-repeat;
 	background-size:100%;
@@ -279,7 +279,7 @@ body {
 	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -293,7 +293,7 @@ body {
 	line-height: 23px;
 	font-weight: normal;
 	color: #666666;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -393,7 +393,7 @@ body {
 	line-height: 22px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -475,7 +475,7 @@ body {
 	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -515,7 +515,7 @@ body {
 #marketing .step .step5 {background-image: url(../images/marketing_step5_EN.webp); background-repeat: no-repeat; background-size:100%;}
 #marketing .step ul dl {
 	width:95%;
-	height:216px;
+	height:236px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -554,13 +554,13 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
 #marketing .step ul dd {
 	width:95%;
-	height:216px;
+	height:236px;
 	margin:0 5% 2% 0;
 	padding:3% 0;
 	border-radius:10px;
@@ -599,7 +599,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -696,7 +696,7 @@ body {
 	line-height: 16px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:right;
 }
@@ -787,7 +787,7 @@ body {
 	line-height: 16px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:right;
 }
@@ -827,7 +827,7 @@ body {
 	line-height: 24px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -855,7 +855,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:11.5%;
+	width:13.2%;
 	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
@@ -1052,7 +1052,7 @@ body {
 	line-height: 62px;
 	font-weight: bold;
 	color: #0c59cf;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }

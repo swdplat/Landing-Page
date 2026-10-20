@@ -50,17 +50,17 @@ body {
 }
 #top_bar .logo img {width:100%;}
 #top_bar .menu {
-	width:72%;
+	width:68%;
 	height:auto;
-	margin:0.8% 7% 0 7%;
+	margin:0.8% 9% 0 9%;
 	padding:0 0;
 	display:inline;
 	float:left;
 }
 #top_bar .menu li {
-    width:12.6%;
+    width:16.6%;
 	height:auto;
-	margin:0 2% 0 2%;
+	margin:0 0% 0 0%;
 	padding:0.3% 0;
 	border-radius:50px;
 	background-color:transparent;
@@ -143,8 +143,8 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	font-family: "微軟正黑體";
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 28px;
+	line-height: 28px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -279,7 +279,7 @@ body {
 	line-height: 27px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -293,7 +293,7 @@ body {
 	line-height: 26px;
 	font-weight: normal;
 	color: #666666;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -393,7 +393,7 @@ body {
 	line-height: 22px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -474,7 +474,7 @@ body {
 	line-height: 27px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -498,8 +498,8 @@ body {
 	margin:0 0;
 	padding:3.5% 10% 3.5% 8%;
 	font-family: "微軟正黑體";
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -552,7 +552,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -597,7 +597,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -694,7 +694,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:right;
 }
@@ -785,7 +785,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:right;
 }
@@ -824,7 +824,7 @@ body {
 	line-height: 24px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -852,7 +852,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:11.5%;
+	width:13.2%;
 	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
@@ -1049,7 +1049,7 @@ body {
 	line-height: 62px;
 	font-weight: bold;
 	color: #0c59cf;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }

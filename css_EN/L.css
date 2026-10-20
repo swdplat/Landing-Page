@@ -1,5 +1,4 @@
 @charset "utf-8";
-@charset "utf-8";
 /*一般設定**************************************************************************/
 body, img, p, ul, li, ol, h1, h2, h3, h4, h5, h6, th, dl, dd, dt, b, a, div {
 	margin: 0px;
@@ -280,7 +279,7 @@ body {
 	line-height: 38px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -294,7 +293,7 @@ body {
 	line-height: 32px;
 	font-weight: normal;
 	color: #666666;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -394,7 +393,7 @@ body {
 	line-height: 24px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -553,7 +552,7 @@ body {
 	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -598,7 +597,7 @@ body {
 	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -652,7 +651,7 @@ body {
 #security ul dt img {width:100%;}
 #security ul li {
 	width:45%;
-	height:auto;
+	height:140px;
 	margin:0 2% 2% 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -663,7 +662,7 @@ body {
 }
 #security ul dl {
 	width:45%;
-	height:auto;
+	height:140px;
 	margin:0 0 2% 0;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -696,7 +695,7 @@ body {
 	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:right;
 }
@@ -787,7 +786,7 @@ body {
 	line-height: 24px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:right;
 }
@@ -826,7 +825,7 @@ body {
 	line-height: 24px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -854,7 +853,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:11.5%;
+	width:13.2%;
 	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
