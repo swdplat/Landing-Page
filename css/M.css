@@ -205,7 +205,7 @@ body {
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
-	width:28%;
+	width:19%;
 	height:auto;
 	margin:1.5% 1% 0 0%;
 	padding:0.5% 0 0.6% 0%;
@@ -219,11 +219,11 @@ body {
 	padding:0.5% 0 0.5% 0%;
 	float:left;
 }
-#top_bar #language img {position:absolute; width:20px; height:20px; margin:4px 0 0 4%; float:left;}
+#top_bar #language img {position:absolute; width:20px; height:20px; margin:0.5% 0 0 4%; float:left;}
 #top_bar #language select {
-	width:88%;
+	width:82%;
 	margin:0 0;
-	padding:0.6% 0 0.6% 12%;
+	padding:0.6% 0 0.6% 18%;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;

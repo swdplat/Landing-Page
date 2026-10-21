@@ -215,21 +215,6 @@ body {
 }
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
-#top_bar #language {
-	width:44%;
-	height:auto;
-	margin:1% 1% 0 0%;
-	padding:0.4% 0 0.4% 0%;
-	text-align:left;
-	display:inline;
-	float:right;
-}
-#top_bar #language .change {
-    width:100%;
-	margin:0 0;
-	padding:0.5% 0 0.5% 0%;
-	float:left;
-}
 #top_bar #language img {position:absolute; width:16px; height:16px; margin:4px 0 0 5.5%; float:left;}
 #top_bar #language select {
 	width:90%;
@@ -247,6 +232,97 @@ body {
 	display:inline;
 	float:right;
 }
+#language-desktop-icon {display:none;}
+/* 手機版語系選單：預設只顯示語言圖示，點擊後展開選項 */
+/* 手機版語系：預設只顯示圖示；點擊後向左展開原生 select */
+#top_bar #language {
+  position:relative;
+  width:18px;
+  height:18px;
+  margin:2% 2% 0 0;
+  padding:0;
+  float:right;
+  z-index:20;
+  overflow:visible;
+}
+#top_bar #language .change {
+  position:relative;
+  width:18px;
+  height:18px;
+  margin:0 0 0 0;
+  padding:0;
+  float:none;
+  overflow:visible;
+}
+#top_bar #language #language-toggle {
+  position:absolute;
+  top:0;
+  right:0;
+  left:auto;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:18px;
+  height:18px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+}
+#top_bar #language #language-toggle img {
+  position:static;
+  display:block;
+  width:18px;
+  height:18px;
+  margin:0;
+  float:none;
+}
+#top_bar #language #language-select {
+  box-sizing:border-box;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:2;
+  display:block;
+  width:80px;
+  height:auto;
+  margin:-1px 0 0 0;
+  padding:0 2% 0.5% 2%;
+  border:1px solid #cccccc;
+  border-radius:100px;
+  background:#eeeeee;
+  color:#666666;
+  font-family:"微軟正黑體",sans-serif;
+  font-size:13px;
+  line-height:normal;
+  text-align:left;
+  float:none;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:scaleX(.25);
+  transform-origin:right center;
+  transition:transform .22s ease, opacity .18s ease, visibility .18s;
+}
+#top_bar #language.is-open #language-select {
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:scaleX(1);
+}
+/* 展開後圖示移到整個下拉選單的左側，與 PC 版一致 */
+#top_bar #language.is-open #language-toggle {
+  right:128px;
+}
+#top_bar #language.is-open #language-toggle img {
+  width:18px;
+  height:18px;
+margin:1.5px 0 0 500%;
+}
+
+
 
 
 
@@ -1290,3 +1366,4 @@ body {
 	text-align:center;
 	float:left;
 }
+

@@ -161,7 +161,7 @@ body {
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
-	width:12%;
+	width:9%;
 	height:auto;
 	margin:-0.1% 0.5% 0 0%;
 	padding:0.6% 0 0.6% 0%;
@@ -175,11 +175,12 @@ body {
 	padding:1% 0 1% 0%;
 	float:left;
 }
-#top_bar #language img {position:absolute; width:20px; height:20px; margin:0.2% 0 0 35px; float:left;}
+#top_bar #language .change .icon {display:inline;}
+#top_bar #language img {position:absolute; width:20px; height:20px; margin:0.25% 0 0 1.8%; float:left;}
 #top_bar #language select {
-	width:87%;
+	width:84%;
 	margin:0 0;
-	padding:1% 0 1% 13%;
+	padding:1.5% 0 1.5% 16%;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
@@ -192,6 +193,7 @@ body {
 	display:inline;
 	float:right;
 }
+#language-toggle {display:none;}
 
 
 /*回到頂端鈕*/
