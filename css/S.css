@@ -198,9 +198,8 @@ body {
 #top_bar .btn {
 	width:20%;
 	height:auto;
-	margin:2.2% 2% 0 0;
-	padding:0.8% 0 0.8% 0;
-	padding:0.75% 0 0.95% 0;
+	margin:1.4% 2% 0 0;
+	padding:1.2% 0 1.2% 0;
 	border-radius:100px;
 	background-image: none;
 	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);  Chrome26+, 
@@ -215,6 +214,41 @@ body {
 	float:right;
 }
 #top_bar .btn:hover {color: #83f5ff;}
+/*切換語系*/
+#top_bar #language {
+	width:44%;
+	height:auto;
+	margin:1% 1% 0 0%;
+	padding:0.4% 0 0.4% 0%;
+	text-align:left;
+	display:inline;
+	float:right;
+}
+#top_bar #language .change {
+    width:100%;
+	margin:0 0;
+	padding:0.5% 0 0.5% 0%;
+	float:left;
+}
+#top_bar #language img {position:absolute; width:16px; height:16px; margin:4px 0 0 5.5%; float:left;}
+#top_bar #language select {
+	width:90%;
+	margin:0 0;
+	padding:0.4% 0 0.4% 10%;
+	background-color:#eeeeee;
+	border:1px solid #cccccc;
+	border-radius:100px;
+	font-family: "微軟正黑體";
+	font-size: 13px;
+	line-height: 13px;
+	font-weight: normal;
+	color: #666666;
+	text-align:left;
+	display:inline;
+	float:right;
+}
+
+
 
 /*回到頂端鈕*/
 #btn_top {

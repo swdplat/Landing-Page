@@ -1,13 +1,23 @@
 ﻿<!DOCTYPE html>
-<html lang["zh-tw">
+<html lang="zh-CN">
 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scaleble=yes, initial-scale=1.0, maximum-scale=2.0" />
 <meta property="og:image" content="" />
 
-<title>MyCard形象官網</title>
-<meta name="description" content="MyCard形象官網">
+
+<title>MyCard Business | 全球游戏支付与整合营销服务</title>
+
+<meta property="og:site_name" content="MyCard Business">
+<meta property="og:title" content="MyCard Business | 全球游戏支付与整合营销服务">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://devmycard.com">
+
+<meta name="description" content="MyCard 是全球游戏支付的领军品牌。我們提供安全多元的跨境支付方案、全方位整合营销与 24 小时即时客服支持，助力企业厂商轻松布局全球数字娱乐市场。">
+<meta property="og:description" content="MyCard 是全球游戏支付的领军品牌。我們提供安全多元的跨境支付方案、全方位整合营销与 24 小时即时客服支持，助力企业厂商轻松布局全球数字娱乐市场。">
+
+<meta name="keywords" content="MyCard, 全球游戏支付, 游戏整合营销, 游戏出海支付, 跨境支付方案, 数字娱乐支付, 风险监控, 点数卡接入, 游戏B2B服务">
 	
 <!-- favico -->
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon_1.ico" />
@@ -133,6 +143,16 @@ $(function() {
 		<li id="tab6m">合作流程</li>
 	  </div>
 	  <a href="https://member.mycard520.com/local/Cooperate/Partner?utm_source=corporatewebsite&utm_medium=main-zh-tw-connectbtn" target="_blank"><div class="btn">联系我们</div></a>
+      <div id="language">
+		<div class="change">
+		  <img src="images/language_icon.svg" alt=""/>
+          <select id="language-select">
+			  <option value="cn.html"><span>中国大陆 /简体中文</span></option>
+	          <option value="index.html"><span>台灣 / 繁體中文</span></option>            
+              <option value="en.html"><span>Global / English</span></option>
+	      </select>
+		</div>
+	  </div>
     </div>
 	
 <!--主視覺-->
@@ -488,6 +508,16 @@ $(function() {
        new WOW().init();
      </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var languageSelect = document.querySelector('#language #language-select');
+  if (!languageSelect) return;
+  languageSelect.addEventListener('change', function () {
+    if (this.value) window.location.href = this.value;
+  });
+});
+</script>
 </body>
 
 </html>

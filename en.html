@@ -1,13 +1,22 @@
 ﻿<!DOCTYPE html>
-<html lang["zh-tw">
+<html lang="en">
 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scaleble=yes, initial-scale=1.0, maximum-scale=2.0" />
 <meta property="og:image" content="" />
 
-<title>MyCard形象官網</title>
-<meta name="description" content="MyCard形象官網">
+<title>MyCard Business | Global Game Payment & Marketing Solutions</title>
+
+<meta property="og:site_name" content="MyCard Business">
+<meta property="og:title" content="MyCard Business | Global Game Payment & Marketing Solutions">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://devmycard.com">
+
+<meta name="description" content="MyCard is a global leader in game payment services. We provide secure, diverse cross-border payment solutions, comprehensive marketing services, and 24/7 support to help enterprises effortlessly expand into the digital entertainment market.">
+<meta property="og:description" content="MyCard is a global leader in game payment services. We provide secure, diverse cross-border payment solutions, comprehensive marketing services, and 24/7 support to help enterprises effortlessly expand into the digital entertainment market.">
+
+<meta name="keywords" content="MyCard, game payment gateway, global payment solution, game marketing solutions, cross-border payment, digital entertainment payment, fraud control, API integration, gaming B2B services">
 	
 <!-- favico -->
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon_1.ico" />
@@ -133,6 +142,16 @@ $(function() {
 		<li id="tab6">Collaboration Process</li>
 	  </div>
    	  <a href="https://member.mycard520.com/en-us/Cooperate/Partner?utm_source=footer-zh-tw3-1&utm_medium=web&utm_campaign=footer&_gl=1*1610iyl*_ga*MTM0MTUzMDYzNi4xNzQ4MjIzOTY2*_ga_3NC7MLJ8DD*czE3NjU3ODk5MDckbzE3MyRnMCR0MTc2NTc4OTkwNyRqNjAkbDAkaDA." target="_blank"><div class="btn">CONTACT US</div></a>
+	  <div id="language">
+		<div class="change">
+		  <img src="images/language_icon.svg" alt=""/>
+          <select id="language-select">
+			  <option value="en.html"><span>Global / English</span></option>
+	          <option value="index.html"><span>台灣 / 繁體中文</span></option>
+              <option value="cn.html"><span>中国大陆 /简体中文</span></option>
+	      </select>
+		</div>
+	  </div>
     </div>
 	
 <!--主視覺-->
@@ -490,6 +509,16 @@ Together with digital service providers, we create a thriving entertainment ecos
        new WOW().init();
      </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var languageSelect = document.querySelector('#language #language-select');
+  if (!languageSelect) return;
+  languageSelect.addEventListener('change', function () {
+    if (this.value) window.location.href = this.value;
+  });
+});
+</script>
 </body>
 
 </html>
