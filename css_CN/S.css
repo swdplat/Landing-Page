@@ -117,7 +117,7 @@ body {
 #top_bar .menu img {width:100%;}
 #top_bar .logo {
 	width:16%;
-	margin:0.4% 0 0.5% 2%;
+	margin:1.2% 0 0.5% 1%;
 	display:inline;
 	float:left;
 }
@@ -198,9 +198,8 @@ body {
 #top_bar .btn {
 	width:20%;
 	height:auto;
-	margin:2.2% 2% 0 0;
-	padding:0.8% 0 0.8% 0;
-	padding:0.75% 0 0.95% 0;
+	margin:1.6% 2% 0 0;
+	padding:1.2% 0 1.2% 0;
 	border-radius:100px;
 	background-image: none;
 	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);  Chrome26+, 

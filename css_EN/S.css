@@ -50,7 +50,7 @@ body {
 #top_bar .menu img {width:100%;}
 #top_bar .logo {
 	width:18%;
-	margin:0.4% 0 0 2%;
+	margin:1.2% 0 0 1%;
 	display:inline;
 	float:left;
 }
@@ -131,8 +131,8 @@ body {
 #top_bar .btn {
 	width:24%;
 	height:auto;
-	margin:2.2% 2% 0 0;
-	padding:2% 0 2% 0;
+	margin:1.6% 2% 0 0;
+	padding:1.2% 0 1.2% 0;
 	background-image: url(../images/top_bar_connect_button.png);
 	background-repeat: no-repeat;
 	background-size:100%;
