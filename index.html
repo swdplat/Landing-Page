@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
@@ -120,6 +120,7 @@ $(function() {
 /* 桌面版沿用原本的語系下拉選單，手機版樣式由 css/S.css 控制 */
 #top_bar #language #language-toggle { display:none; }
 #top_bar #language .language-desktop-icon { display:block; }
+@media (min-width:600px) { #top_bar #language #languag_callout { display:none; } }
 @media (max-width:599px) {
   #top_bar #language #language-toggle { display:flex; }
   #top_bar #language .language-desktop-icon { display:none; }
@@ -152,12 +153,18 @@ $(function() {
 	  </div>  
 	  <a href="https://member.mycard520.com/local/Cooperate/Partner?utm_source=corporatewebsite&utm_medium=main-zh-tw-connectbtn" target="_blank"><div class="btn">聯絡我們</div></a>
 	  <div id="language">
+		<div id="languag_callout" aria-hidden="true">
+		  <button type="button" id="close" aria-label="關閉語言選單"><img src="images/language_close.svg" alt=""></button>
+			<ul><a href="index.html" target="_self">繁體中文</a></ul>
+		    <ul><a href="cn.html" target="_self">简体中文</a></ul>
+		    <ul><a href="en.html" target="_self">English</a></ul>
+		</div>
         <div class="change">
           <img class="language-desktop-icon" src="images/language_icon.svg" alt="" aria-hidden="true">
           <button type="button" id="language-toggle" aria-label="展開語言選單" aria-expanded="false" aria-controls="language-select"><img src="images/language_icon.svg" alt=""></button>
           <select id="language-select" aria-label="選擇語言">
-            <option value="index.html">繁體中文</option>
-            <option value="cn.html">简体中文</option>
+			<option value="index.html">繁體中文</option>
+			<option value="cn.html">简体中文</option>
             <option value="en.html">English</option>
           </select>
         </div>
@@ -526,11 +533,22 @@ document.addEventListener('DOMContentLoaded', function () {
   languageSelect.addEventListener('change', function () {
     if (this.value) window.location.href = this.value;
   });
+  // 手機版僅顯示目前語言，不能開啟原生下拉選單；語言切換改由彈窗連結操作。
+  function syncMobileLanguageSelect() {
+    var isMobile = window.matchMedia('(max-width: 599px)').matches;
+    languageSelect.disabled = isMobile;
+    if (isMobile) languageSelect.value = 'index.html';
+  }
+  syncMobileLanguageSelect();
+  window.addEventListener('resize', syncMobileLanguageSelect);
   var toggle = document.getElementById('language-toggle');
   var language = document.getElementById('language');
+  var callout = document.getElementById('languag_callout');
+  var closeButton = callout && callout.querySelector('#close');
   if (toggle && language) {
     function setLanguageOpen(open) {
       language.classList.toggle('is-open', open);
+      if (callout) callout.setAttribute('aria-hidden', String(!open));
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? '收合語言選單' : '展開語言選單');
     }
@@ -538,6 +556,13 @@ document.addEventListener('DOMContentLoaded', function () {
       event.stopPropagation();
       setLanguageOpen(!language.classList.contains('is-open'));
     });
+    if (closeButton) {
+      closeButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        setLanguageOpen(false);
+      });
+    }
     document.addEventListener('click', function (event) {
       if (!language.contains(event.target)) setLanguageOpen(false);
     });

@@ -152,9 +152,15 @@ $(function() {
 	  </div>
    	  <a href="https://member.mycard520.com/en-us/Cooperate/Partner?utm_source=footer-zh-tw3-1&utm_medium=web&utm_campaign=footer&_gl=1*1610iyl*_ga*MTM0MTUzMDYzNi4xNzQ4MjIzOTY2*_ga_3NC7MLJ8DD*czE3NjU3ODk5MDckbzE3MyRnMCR0MTc2NTc4OTkwNyRqNjAkbDAkaDA." target="_blank"><div class="btn">CONTACT US</div></a>
 	  <div id="language">
+		<div id="languag_callout" aria-hidden="true">
+		  <button type="button" id="close" aria-label="關閉語言選單"><img src="images/language_close.svg" alt=""></button>
+			<ul><a href="index.html" target="_self">繁體中文</a></ul>
+		    <ul><a href="cn.html" target="_self">简体中文</a></ul>
+		    <ul><a href="en.html" target="_self">English</a></ul>
+		</div>
         <div class="change">
           <img class="language-desktop-icon" src="images/language_icon.svg" alt="" aria-hidden="true">
-          <button type="button" id="language-toggle" aria-label="展開語言選單" aria-expanded="false" aria-controls="language-select"><img src="images/language_icon.svg" alt=""></button>
+          <button type="button" id="language-toggle" aria-label="展開語言選單" aria-expanded="false" aria-controls="languag_callout language-select"><img src="images/language_icon.svg" alt=""></button>
           <select id="language-select" aria-label="選擇語言">
             <option value="en.html">English</option>
 			<option value="index.html">繁體中文</option>
@@ -526,17 +532,34 @@ document.addEventListener('DOMContentLoaded', function () {
   languageSelect.addEventListener('change', function () {
     if (this.value) window.location.href = this.value;
   });
+  // Mobile: show English as a read-only language label; desktop keeps all choices.
+  function syncMobileLanguageSelect() {
+    var mobile = window.matchMedia('(max-width: 599px)').matches;
+    languageSelect.disabled = mobile;
+    languageSelect.value = 'en.html';
+    languageSelect.setAttribute('aria-label', mobile ? 'Current language: English' : '選擇語言');
+  }
+  syncMobileLanguageSelect();
+  window.addEventListener('resize', syncMobileLanguageSelect);
   var toggle = document.getElementById('language-toggle');
   var language = document.getElementById('language');
+  var callout = document.getElementById('languag_callout');
+  var closeButton = callout && callout.querySelector('#close');
   if (toggle && language) {
     function setLanguageOpen(open) {
       language.classList.toggle('is-open', open);
+      if (callout) callout.setAttribute('aria-hidden', String(!open));
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? '收合語言選單' : '展開語言選單');
     }
     toggle.addEventListener('click', function (event) {
       event.stopPropagation();
       setLanguageOpen(!language.classList.contains('is-open'));
+    });
+    if (closeButton) closeButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      setLanguageOpen(false);
     });
     document.addEventListener('click', function (event) {
       if (!language.contains(event.target)) setLanguageOpen(false);

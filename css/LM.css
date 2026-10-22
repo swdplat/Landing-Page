@@ -196,7 +196,8 @@ body {
 	display:inline;
 	float:right;
 }
-
+#language-toggle {display:none;}
+#languag_callout {display:none;}
 
 /*回到頂端鈕*/
 #btn_top {

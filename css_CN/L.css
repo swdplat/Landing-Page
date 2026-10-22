@@ -192,6 +192,8 @@ body {
 	display:inline;
 	float:right;
 }
+#language-toggle {display:none;}
+#languag_callout {display:none;}
 
 
 

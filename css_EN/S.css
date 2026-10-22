@@ -67,7 +67,7 @@ body {
 /*手機版menu選單*/
 #menu_list {
     position:fixed;
-	z-index:12;
+	z-index:98;
 	width:90%;
 	height:auto;
 	top:0;
@@ -96,7 +96,7 @@ body {
 }
 #menu_list #menu_close {
     position:fixed;
-	z-index:13;
+	z-index:99;
 	top:0;
 	right:0;
 	width:8%;
@@ -149,6 +149,64 @@ body {
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language img {position:absolute; width:16px; height:16px; margin:4px 0 0 5.5%; float:left;}
+#top_bar #language .area {
+	width:65px;
+	margin:-1px 0 0 0;
+	padding:3px 0 3px 32%;
+	background-color:#eeeeee;
+	border:1px solid #cccccc;
+	border-radius:100px;
+	font-family: "微軟正黑體";
+	font-size: 13px;
+	line-height: 13px;
+	font-weight: normal;
+	color: #666666;
+	text-align:left;
+    appearance: none;
+	display:inline;
+	float:right;
+}
+#languag_callout {
+	position:fixed;
+	z-index:8;
+	top:0;
+	right:0;
+	width:40%;
+	height:auto;
+	margin:11% 30% 0 30%;
+	padding:2% 0;
+	border:1px solid #efefef;
+	background-color:#fff;
+	border-radius:10px;
+    background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	box-shadow: 5px 5px 5px -6px rgba(0, 0, 0, 0.5);
+	display:block;
+}
+#languag_callout ul {
+	width:100%;
+	height:auto;
+	margin:14% 0;
+	font-family: "微軟正黑體";
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #666666;
+	text-align:center;
+	cursor:pointer;
+}
+#languag_callout ul a:link {color: #666666; text-decoration:none; }
+#languag_callout ul a:hover {color: #666666; text-decoration:none; }
+#languag_callout ul a:visited {color: #666666; text-decoration:none; }
+#languag_callout #close {
+	position:absolute;
+	z-index:9;
+	width:12px;
+	height:12px;
+	margin:-2% 0 0 85%;
+	padding:0;
+	cursor:pointer;
+}
+#languag_callout #close img {width:80%;}
 #top_bar #language select {
 	width:90%;
 	margin:0 0;
@@ -162,9 +220,11 @@ body {
 	font-weight: normal;
 	color: #666666;
 	text-align:left;
+    appearance: none;
 	display:inline;
 	float:right;
 }
+#language-desktop-icon {display:none;}
 /* 手機版語系選單：預設只顯示語言圖示，點擊後展開選項 */
 /* 手機版語系：預設只顯示圖示；點擊後向左展開原生 select */
 #top_bar #language {
@@ -219,9 +279,9 @@ body {
   z-index:2;
   display:block;
   width:80px;
-  height:auto;
+  height:24px;
   margin:-1px 0 0 0;
-  padding:0 2% 0.5% 2%;
+  padding:1% 2% 1% 12px;
   border:1px solid #cccccc;
   border-radius:100px;
   background:#eeeeee;
@@ -1295,4 +1355,56 @@ margin:1.5px 0 0 500%;
 	color: #333333;
 	text-align:center;
 	float:left;
+}
+
+/* 手機版語言彈窗：初始隱藏，點擊語言圖示後同時顯示彈窗及下拉選單 */
+#top_bar #language #languag_callout {
+  display: none;
+  position: fixed;
+  z-index: 30;
+}
+#top_bar #language.is-open #languag_callout {
+  display: block;
+}
+#top_bar #language #languag_callout #close {
+  display: block;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+#top_bar #language #languag_callout #close img {
+  position: static;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 4px;
+  float: none;
+}
+#top_bar #language #language-select {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+#top_bar #language.is-open #language-select {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* English mobile: display the current language only, without native dropdown. */
+#top_bar #language #language-select,
+#top_bar #language.is-open #language-select {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: none;
+  cursor: default;
+  background-image: none;
+}
+#top_bar #language #language-select:disabled {
+  -webkit-text-fill-color: #666666;
+  color: #666666;
+  opacity: 0;
+}
+#top_bar #language.is-open #language-select:disabled {
+  opacity: 1;
 }
