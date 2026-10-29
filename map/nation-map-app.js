@@ -73,9 +73,12 @@ const __nmEscapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ '&':'&amp
 // 整段 try/catch：Intl 不支援或丟例外（無效 region code）時 fallback 回傳呼叫端字串（通常是 COUNTRY_INFO.zhName）。
 const localizedRegionName = (iso2, locale, fallback) => {
   try {
-    if (!iso2 || typeof Intl === 'undefined' || !Intl.DisplayNames) return fallback;
+    if (!iso2) return fallback;
     const code = String(iso2).toUpperCase().split('-')[0];
     if (code.length !== 2) return fallback;
+    // 繁體中文介面沿用國家資料的名稱，避免 iOS Safari 將 CN 顯示為「中國大陸」。
+    if (code === 'CN' && (locale === 'zh-TW' || locale === 'zh-HK')) return fallback || '中國';
+    if (typeof Intl === 'undefined' || !Intl.DisplayNames) return fallback;
     const useShort = (code === 'HK' || code === 'MO');
     const dn = __nmGetDisplayNames(locale, 'region', useShort ? 'short' : 'long');
     const name = dn.of(code);
