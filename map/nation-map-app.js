@@ -74,21 +74,33 @@ const __nmEscapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ '&':'&amp
 const localizedRegionName = (iso2, locale, fallback) => {
   try {
     if (!iso2) return fallback;
+
     const code = String(iso2).toUpperCase().split('-')[0];
     if (code.length !== 2) return fallback;
-    // 繁體中文介面沿用國家資料的名稱，避免 iOS Safari 將 CN 顯示為「中國大陸」。
-    if (code === 'CN' && (locale === 'zh-TW' || locale === 'zh-HK')) return fallback || '中國';
-    if (typeof Intl === 'undefined' || !Intl.DisplayNames) return fallback;
+
+    // 簡體中文版固定顯示「中国」
+    if (code === 'CN' && locale === 'zh-CN') {
+      return '中国';
+    }
+
+    if (typeof Intl === 'undefined' || !Intl.DisplayNames) {
+      return fallback;
+    }
+
     const useShort = (code === 'HK' || code === 'MO');
-    const dn = __nmGetDisplayNames(locale, 'region', useShort ? 'short' : 'long');
+    const dn = __nmGetDisplayNames(
+      locale,
+      'region',
+      useShort ? 'short' : 'long'
+    );
+
     const name = dn.of(code);
-    // Intl 對「格式正確但無對應」的 code 會原樣回傳 code（不丟例外）→ 視為未解析，退回 COUNTRY_INFO
     return (name && name !== code) ? name : fallback;
   } catch (_) {
     return fallback;
   }
 };
-
+	
 // 幣名：以 Intl.DisplayNames(type:'currency') 依當前 locale 動態產生。
 // HK/MO 同樣走 style:'short'。失敗或無幣別（'—'）時 fallback 回 COUNTRY_INFO.currencyName。
 const localizedCurrencyName = (currencyCode, iso2, locale, fallback) => {
