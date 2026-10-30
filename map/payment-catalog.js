@@ -149,7 +149,7 @@ window.PAYMENT_METHODS = {
     { id: "SMBC_bank", name_zh: "三井住友銀行", name_en: "SMBC bank", icon: "./assest/payments/vendor/bank_transfer/SMBC_bank.png" },
     { id: "PBB_bank", name_zh: "Public Bank", name_en: "Public Bank", icon: "./assest/payments/vendor/bank_transfer/PBB_bank.png" },
     { id: "BAY_bank", name_zh: "Bank of Ayudhya", name_en: "Bank of Ayudhya", icon: "./assest/payments/vendor/bank_transfer/BAY_bank.png" },
-    { id: "QRPH_bank", name_zh: "QRPH 銀行", name_en: "QRPH bank", icon: "./assest/payments/vendor/bank_transfer/QRPH_bank.png" },
+    { id: "QRPH_bank", name_zh: "QRPH 銀行", name_en: "QRPH bank", icon: "https://raw.githubusercontent.com/swdplat/Landing-Page/refs/heads/main/assest/payments/vendor/bank_transfer/QRPh_bank.png" },
     { id: "VietQR_bank", name_zh: "VietQR", name_en: "VietQR", icon: "./assest/payments/vendor/bank_transfer/VietQR_bank.png" },
     { id: "VCB_bank", name_zh: "VCB bank", name_en: "VCB bank", icon: "./assest/payments/vendor/bank_transfer/VCB_bank.png" },
     { id: "Vietin_bank", name_zh: "Vietin bank", name_en: "Vietin bank", icon: "./assest/payments/vendor/bank_transfer/Vietin_bank.png" },
