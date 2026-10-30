@@ -176,7 +176,7 @@ window.PAYMENT_METHODS = {
     { id: "xl", name_zh: "XL", name_en: "XL", icon: "./assest/payments/vendor/carrier_billing/xl.svg" },
   ],
   cash_store: [
-    { id: "seven_eleven_tw", name_zh: "7-11 統一超商", name_en: "7-Eleven", icon: "./assest/payments/vendor/cash_store/seven_eleven_tw.svg" },
+    { id: "seven_eleven_tw", name_zh: "7-11 統一超商", name_en: "7-ELEVEN", icon: "./assest/payments/vendor/cash_store/seven_eleven_tw.svg" },
     { id: "family_mart_tw", name_zh: "全家便利商店", name_en: "FamilyMart", icon: "./assest/payments/vendor/cash_store/family_mart_tw.svg" },
     { id: "hi_life_tw", name_zh: "萊爾富便利商店", name_en: "HiLIFE", icon: "./assest/payments/vendor/cash_store/hi_life_tw.svg" },
     { id: "ok_mart_tw", name_zh: "OK 超商", name_en: "OKMart", icon: "./assest/payments/vendor/cash_store/ok_mart_tw.svg" },

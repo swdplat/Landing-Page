@@ -184,7 +184,7 @@
     indosat: { zh: 'Indosat', en: 'Indosat', cn: 'Indosat' },
     three: { zh: 'Three', en: 'Three', cn: 'Three' },
     xl: { zh: 'XL', en: 'XL', cn: 'XL' },
-    seven_eleven_tw: { zh: '7-11 統一超商', en: '7-Eleven', cn: '7-11 统一超商' },
+    seven_eleven_tw: { zh: '7-11 統一超商', en: '7-ELEVEN', cn: '7-11 统一超商' },
     family_mart_tw: { zh: '全家便利商店', en: 'FamilyMart', cn: '全家便利商店' },
     hi_life_tw: { zh: '萊爾富便利商店', en: 'HiLIFE', cn: '莱尔富便利商店' },
     ok_mart_tw: { zh: 'OK 超商', en: 'OKMart', cn: 'OK 超商' },
