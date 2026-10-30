@@ -196,7 +196,7 @@ window.PAYMENT_METHODS = {
     { id: "robinsons_dept_store", name_zh: "Robinsons Dept Store", name_en: "Robinsons Dept Store", icon: "./assest/payments/vendor/cash_store/robinsons_dept_store.svg" },
     { id: "sm_retail", name_zh: "SM Retail", name_en: "SM Retail", icon: "./assest/payments/vendor/cash_store/sm_retail.svg" },
     { id: "so_cash", name_zh: "SoCash", name_en: "SoCash", icon: "./assest/payments/vendor/cash_store/so_cash.svg" },
-    { id: "bigc", name_zh: "BIG C", name_en: "BIG C", icon: "./assest/payments/vendor/cash_store/bigc.svg" },
+    { id: "bigc", name_zh: "Big C", name_en: "Big C", icon: "./assest/payments/vendor/cash_store/bigc.svg" },
     { id: "cenpay", name_zh: "Cenpay", name_en: "Cenpay", icon: "./assest/payments/vendor/cash_store/cenpay.svg" },
     { id: "over_the_counter_brazil", name_zh: "實體商店繳費 (Brazil)", name_en: "Over the Counter (Brazil)", icon: "./assest/payments/vendor/cash_store/over_the_counter_brazil.svg" },
     { id: "over_the_counter_colombia", name_zh: "實體商店繳費 (Colombia)", name_en: "Over the Counter (Colombia)", icon: "./assest/payments/vendor/cash_store/over_the_counter_colombia.svg" },

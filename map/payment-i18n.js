@@ -203,7 +203,7 @@
     rd_pawnshop: { zh: 'RD Pawnshop', en: 'RD Pawnshop', cn: 'RD Pawnshop' },
     robinsons_dept_store: { zh: 'Robinsons Dept Store', en: 'Robinsons Dept Store', cn: 'Robinsons Dept Store' },
     sm_retail: { zh: 'SM Retail', en: 'SM Retail', cn: 'SM Retail' },
-    bigc: { zh: 'BIG C', en: 'BIG C', cn: 'BIG C' },
+    bigc: { zh: 'Big C', en: 'Big C', cn: 'Big C' },
     cenpay: { zh: 'Cenpay', en: 'Cenpay', cn: 'Cenpay' },
     over_the_counter_brazil: { zh: '實體商店繳費 (Brazil)', en: 'Over the Counter (Brazil)', cn: '实体商店缴费 (Brazil)' },
     over_the_counter_colombia: { zh: '實體商店繳費 (Colombia)', en: 'Over the Counter (Colombia)', cn: '实体商店缴费 (Colombia)' },
