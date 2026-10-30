@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 62.86 62.86">
+  <!-- Generator: Adobe Illustrator 30.6.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 109)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-width: 3.01px;
+      }
+
+      .st0, .st1, .st2 {
+        fill: none;
+        stroke: #666;
+        stroke-miterlimit: 10;
+      }
+
+      .st1 {
+        stroke-width: 3.26px;
+      }
+
+      .st2 {
+        stroke-width: 3.21px;
+      }
+    </style>
+  </defs>
+  <circle class="st0" cx="31.43" cy="31.43" r="29.92"/>
+  <polyline class="st0" points="1.51 31.43 15.97 31.43 31.43 31.43 46.88 31.43 61.35 31.43"/>
+  <polyline class="st0" points="31.43 61.47 31.43 61.35 31.43 46.02 31.43 31.43 31.43 16.84 31.43 1.51 31.43 1.38"/>
+  <ellipse class="st2" cx="31.43" cy="31.43" rx="15.22" ry="29.58"/>
+  <path class="st1" d="M8.97,11.65c2.62,1.52,5.82,2.77,9.41,3.66,3.95.98,8.37,1.53,13.05,1.53s9.1-.55,13.05-1.53c3.59-.89,6.79-2.14,9.41-3.66"/>
+  <path class="st1" d="M8.97,51.21c2.62-1.52,5.82-2.77,9.41-3.66,3.95-.98,8.37-1.53,13.05-1.53s9.1.55,13.05,1.53c3.59.89,6.79,2.14,9.41,3.66"/>
+</svg>
