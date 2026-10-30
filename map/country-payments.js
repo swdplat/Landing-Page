@@ -54,7 +54,7 @@ window.COUNTRY_PAYMENTS = {
     "map-flag-Places": true,
     methods: {
       credit_card    : ["visa", "mastercard", "jcb","paypal_card"],
-      ewallet        : ["apple_pay", "google_pay", "paypal"],
+      ewallet        : ["apple_pay", "google_pay","paypay_ewallet"],
       bank_transfer  : ["MHBK_bank","MUFG_bank","SMBC_bank"],
       carrier_billing: [],
       cash_store     : ["family_mart_tw","Lawson_jp"],
