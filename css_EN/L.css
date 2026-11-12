@@ -50,15 +50,15 @@ body {
 }
 #top_bar .logo img {width:100%;}
 #top_bar .menu {
-	width:60%;
+	width:50%;
 	height:auto;
-	margin:0.8% 0 0 13%;
+	margin:0.8% 0 0 20%;
 	padding:0 0;
 	display:inline;
 	float:left;
 }
 #top_bar .menu li {
-    width:14.6%;
+    width:auto;
 	height:auto;
 	margin:0 1% 0 1%;
 	padding:0.3% 0;
@@ -266,8 +266,8 @@ body {
 	margin:0 2% 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 28px;
-	line-height:28px;
+	font-size: 24px;
+	line-height:24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -294,11 +294,11 @@ body {
 #brand .text h1 {
 	width:100%;
 	height:auto;
-	margin:2% 0 3% 0;
+	margin:2% 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 36px;
-	line-height: 38px;
+	font-size: 42px;
+	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
@@ -308,11 +308,11 @@ body {
 #brand .text h2 {
 	width:100%;
 	height:auto;
-	margin:0 0 2% 0;
+	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
-	line-height: 38px;
+	font-size: 26px;
+	line-height: 34px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -325,8 +325,8 @@ body {
 	margin:0.5% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 32px;
+	font-size: 18px;
+	line-height: 28px;
 	font-weight: normal;
 	color: #666666;
 	text-align:left;
@@ -355,7 +355,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 48px;
+	font-size: 46px;
 	line-height: 48px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -411,8 +411,8 @@ body {
 	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 36px;
-	line-height: 38px;
+	font-size: 26px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -492,7 +492,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 48px;
+	font-size: 46px;
 	line-height: 48px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -661,7 +661,7 @@ body {
 	margin:0% 0 2.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 48px;
+	font-size: 46px;
 	line-height: 48px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -752,7 +752,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 48px;
+	font-size: 46px;
 	line-height: 48px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -912,7 +912,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 48px;
+	font-size: 46px;
 	line-height: 48px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -951,12 +951,12 @@ body {
 #cooperate ul li dt {
 	width:26%;
 	margin:0 2% 0 0;
-	padding:1% 0;
+	padding:1% 0 1.5% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 22px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -967,10 +967,10 @@ body {
 	width:72%;
 	height:50px;
 	margin:0 0 0 0;
-	padding:0.5% 0 0.5% 0;
+	padding:1% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 23px;
-	line-height: 26px;
+	font-size: 18px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -990,8 +990,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 26px;
+	font-size: 16px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -1009,12 +1009,12 @@ body {
 #cooperate ul dl dt {
 	width:26%;
 	margin:0 2% 0 0;
-	padding:1% 0;
+	padding:1% 0 1.5% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 22px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1025,10 +1025,10 @@ body {
 	width:72%;
 	height:50px;
 	margin:0 0 0 0;
-	padding:0.5% 0 0.5% 0;
+	padding:1% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 23px;
-	line-height: 26px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -1048,7 +1048,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 26px;
 	font-weight: bold;
 	color:  #333333;

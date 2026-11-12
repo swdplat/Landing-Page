@@ -50,17 +50,17 @@ body {
 }
 #top_bar .logo img {width:100%;}
 #top_bar .menu {
-	width:64%;
+	width:58%;
 	height:auto;
-	margin:0.8% 0 0 4%;
+	margin:0.8% 0 0 15%;
 	padding:0 0;
 	display:inline;
 	float:left;
 }
 #top_bar .menu li {
-    width:16.6%;
+    width:auto;
 	height:auto;
-	margin:0 0;
+	margin:0 1%;
 	padding:0.3% 0;
 	border-radius:50px;
 	background-color:transparent;
@@ -265,7 +265,7 @@ body {
 	margin:-4% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
+	font-size: 18px;
 	line-height:20px;
 	font-weight: bold;
 	color: #333333;
@@ -768,6 +768,7 @@ body {
 	height:auto;
 	margin:0.5% 0 0 0;
 	padding:0 0 0% 0;
+	display:inline;
 	float:left;
 }
 #customer_service ul li {
@@ -821,7 +822,7 @@ body {
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 12px;
-	line-height: 16px;
+	line-height: 15px;
 	font-weight: normal;
 	color: #444444;
 	text-align:left;
@@ -918,8 +919,8 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 32px;
-	line-height: 40px;
+	font-size: 38px;
+	line-height: 46px;
 	font-weight: bold;
 	color: #0c59cf;
 	text-align:left;
@@ -932,8 +933,8 @@ body {
 	margin:0 0 3% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 24px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -956,13 +957,13 @@ body {
 }
 #cooperate ul li dt {
 	width:26%;
-	margin:0 1% 0 0;
-	padding:1.5% 0;
+	margin:0 2% 0 0;
+	padding:1% 0 1.5% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 15px;
+	line-height: 15px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -970,12 +971,13 @@ body {
 	float:left;
 }
 #cooperate ul li dd {
-	width:68%;
+	width:72%;
+	height:50px;
 	margin:0 0 0 0;
-	padding:0.5% 0 0.5% 0;
+	padding:1% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 14px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -984,7 +986,7 @@ body {
 }
 #cooperate ul li .sample {
 	width:100%;
-	margin:4% 0;
+	margin:4% 0 2.5% 0;
 	padding:0 0;
 	float:left;
 }
@@ -995,8 +997,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 12px;
-	line-height: 18px;
+	font-size: 13px;
+	line-height: 21px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -1013,13 +1015,13 @@ body {
 }
 #cooperate ul dl dt {
 	width:26%;
-	margin:0 1% 0 0;
-	padding:1.5% 0;
+	margin:0 2% 0 0;
+	padding:1% 0 1.5% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 15px;
+	line-height: 15px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1027,12 +1029,13 @@ body {
 	float:left;
 }
 #cooperate ul dl dd {
-	width:68%;
+	width:72%;
+	height:50px;
 	margin:0 0 0 0;
-	padding:0.5% 0 0.5% 0;
+	padding:1% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 14px;
+	line-height: 22px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -1041,7 +1044,7 @@ body {
 }
 #cooperate ul dl .sample {
 	width:100%;
-	margin:4% 0;
+	margin:4% 0 2.5% 0;
 	padding:0 0;
 	float:left;
 }
@@ -1052,8 +1055,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 12px;
-	line-height: 18px;
+	font-size: 13px;
+	line-height: 21px;
 	font-weight: bold;
 	color:  #333333;
 	text-align:center;

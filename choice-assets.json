@@ -1,0 +1,302 @@
+{
+  "gameIcons": [
+    {
+      "id": "game-icon01",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_01.webp",
+      "alt": "天堂經典版"
+    },
+    {
+      "id": "game-icon02",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_02.webp",
+      "alt": "RO仙境傳說：世界之旅"
+    },
+    {
+      "id": "game-icon03",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_03.webp",
+      "alt": "AION"
+    },
+    {
+      "id": "game-icon04",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_04.webp",
+      "alt": "英雄聯盟"
+    },
+    {
+      "id": "game-icon05",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_05.webp",
+      "alt": "楓之谷世界"
+    },
+    {
+      "id": "game-icon06",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_06.webp",
+      "alt": "特戰英豪"
+    },
+    {
+      "id": "game-icon07",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_07.webp",
+      "alt": "天堂W"
+    },
+    {
+      "id": "game-icon08",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_08.webp",
+      "alt": "燕雲十六聲"
+    },
+    {
+      "id": "game-icon09",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_09.webp",
+      "alt": "巨商"
+    },
+    {
+      "id": "game-icon10",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_10.webp",
+      "alt": "七騎士 Re:BIRTH"
+    },
+    {
+      "id": "game-icon11",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_11.webp",
+      "alt": "三國志戰略版"
+    },
+    {
+      "id": "game-icon12",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_12.webp",
+      "alt": "時光大爆炸"
+    },
+    {
+      "id": "game-icon13",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_13.webp",
+      "alt": "締造者：放逐之境"
+    },
+    {
+      "id": "game-icon14",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_14.webp",
+      "alt": "RO仙境傳說"
+    },
+    {
+      "id": "game-icon15",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_15.webp",
+      "alt": "瑪奇Mobile"
+    },
+    {
+      "id": "game-icon16",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_16.webp",
+      "alt": "夢幻魔法屋：我的魔法庄園"
+    },
+    {
+      "id": "game-icon17",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_17.webp",
+      "alt": "鳴潮"
+    },
+    {
+      "id": "game-icon18",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_18.webp",
+      "alt": "菇勇者傳說"
+    },
+    {
+      "id": "game-icon19",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_19.webp",
+      "alt": "RO仙境傳說Online：樂園"
+    },
+    {
+      "id": "game-icon20",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_20.webp",
+      "alt": "Legend of YMIR"
+    },
+    {
+      "id": "game-icon21",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_21.webp",
+      "alt": "絕地求生M"
+    },
+    {
+      "id": "game-icon22",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_22.webp",
+      "alt": "斗羅大陸：獵魂世界"
+    },
+    {
+      "id": "game-icon23",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_23.webp",
+      "alt": "三國：謀定天下"
+    },
+    {
+      "id": "game-icon24",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_24.webp",
+      "alt": "SD鋼彈 G世代 永恆"
+    },
+    {
+      "id": "game-icon25",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_25.webp",
+      "alt": "三國群英傳M"
+    },
+    {
+      "id": "game-icon26",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_26.webp",
+      "alt": "幻想神域：源神啟動"
+    },
+    {
+      "id": "game-icon27",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_27.webp",
+      "alt": "遺忘之劍"
+    },
+    {
+      "id": "game-icon28",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_28.webp",
+      "alt": "棕色塵埃 2"
+    },
+    {
+      "id": "game-icon29",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_29.webp",
+      "alt": "VAMPIR：血之繼承者"
+    },
+    {
+      "id": "game-icon30",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_30.webp",
+      "alt": "戀與深空"
+    },
+    {
+      "id": "game-icon31",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_31.webp",
+      "alt": "飛飛宇宙"
+    },
+    {
+      "id": "game-icon32",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_32.webp",
+      "alt": "青丘世界：緣起"
+    },
+    {
+      "id": "game-icon33",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_33.webp",
+      "alt": "RO仙境傳說：新世代的誕生"
+    },
+    {
+      "id": "game-icon34",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_34.webp",
+      "alt": "黑色沙漠 MOBILE"
+    },
+    {
+      "id": "game-icon35",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_35.webp",
+      "alt": "黎明再現"
+    },
+    {
+      "id": "game-icon36",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_36.webp",
+      "alt": "第五人格"
+    },
+    {
+      "id": "game-icon37",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_37.webp",
+      "alt": "救世主超忙"
+    },
+    {
+      "id": "game-icon38",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_38.webp",
+      "alt": "異環"
+    },
+    {
+      "id": "game-icon39",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_39.webp",
+      "alt": "嘎嘎特攻"
+    },
+    {
+      "id": "game-icon40",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_40.webp",
+      "alt": "天堂2M"
+    },
+    {
+      "id": "game-icon41",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_41.webp",
+      "alt": "聖鬥士星矢EX"
+    },
+    {
+      "id": "game-icon42",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_42.webp",
+      "alt": "RO仙境傳說：愛如初見"
+    },
+    {
+      "id": "game-icon43",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_43.webp",
+      "alt": "熱血江湖：福利加強版"
+    },
+    {
+      "id": "game-icon44",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_44.webp",
+      "alt": "賽馬娘 Pretty Derby"
+    },
+    {
+      "id": "game-icon45",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_45.webp",
+      "alt": "夜鴉 NIGHT CROWS"
+    },
+    {
+      "id": "game-icon46",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_46.webp",
+      "alt": "大航海時代：傳說"
+    },
+    {
+      "id": "game-icon47",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_47.webp",
+      "alt": "明日方舟：終末地"
+    },
+    {
+      "id": "game-icon48",
+      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_48.webp",
+      "alt": "雀魂麻將"
+    }
+  ],
+  "vendorLogos": [
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_chinesegamer.webp",
+      "alt": "中華網龍"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_finger.webp",
+      "alt": "芬格國際"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_gameflier.webp",
+      "alt": "遊戲新幹線"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_gravity.webp",
+      "alt": "GRAVITY"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_happytuk.webp",
+      "alt": "樂意傳播"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_igs.webp",
+      "alt": "鈊象電子"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_legend.webp",
+      "alt": "傳奇網路"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_nc.webp",
+      "alt": "吉恩立數位科技"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_netmarble.webp",
+      "alt": "網石集團"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_nexon.webp",
+      "alt": "NEXON"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_taiwanmobile.webp",
+      "alt": "台灣大哥大"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_wemade.webp",
+      "alt": "Wemade"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_yile.webp",
+      "alt": "弈樂科技"
+    },
+    {
+      "src": "https://swdplat.github.io/Landing-Page/images/company/logo_CayenneTech.webp",
+      "alt": "紅心辣椒"
+    }
+  ]
+}
