@@ -163,7 +163,7 @@ body {
 	padding:0.5% 0 0.5% 0%;
 	float:left;
 }
-#top_bar #language img {position:absolute; width:20px; height:20px; margin:0.5% 0 0 4%; float:left;}
+#top_bar #language img {position:absolute; width:20px; height:20px; margin:0% 0 0 4%; float:left;}
 #top_bar #language select {
 	width:82%;
 	margin:0 0;
