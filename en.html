@@ -572,6 +572,79 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  if (location.protocol === 'file:') return
+
+  const fields = { member: 'A2', mnthly: 'B2', community: 'C2', payment: 'D2' }
+
+  try {
+    const workbookUrl = new URL('https://swdplat.github.io/Landing-Page/devmycard.xlsx', location.href)
+    const response = await fetch(workbookUrl, { cache: 'no-store' })
+    if (!response.ok) throw new Error('Excel HTTP ' + response.status)
+
+    const workbook = XLSX.read(await response.arrayBuffer(), { type: 'array' })
+    const sheet = workbook.Sheets[workbook.SheetNames[0]]
+
+    for (const [id, address] of Object.entries(fields)) {
+      const cell = sheet?.[address]
+      if (!cell || cell.t === 'e' || cell.v == null || String(cell.v).trim() === '') continue
+      document.getElementById(id).textContent = String(cell.v).trim()
+    }
+  } catch (error) {
+    console.warn('無法讀取 devmycard.xlsx，顯示預設數值。', error)
+  }
+})
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const gameList = document.querySelector('#choice > ul')
+
+  function gameOrder(id) {
+    return Number(/^game-icon([0-9]+)$/.exec(id)?.[1] ?? Infinity)
+  }
+
+  function byGameOrder(a, b) {
+    return gameOrder(a.id) - gameOrder(b.id)
+  }
+
+  gameList.replaceChildren(...Array.from(gameList.children).sort(byGameOrder))
+  if (location.protocol === 'file:') return
+
+  function buildImages(items, tag) {
+    if (!Array.isArray(items)) throw new Error('圖片清單格式錯誤')
+
+    const fragment = document.createDocumentFragment()
+    for (const item of items) {
+      if (typeof item?.src !== 'string' || !item.src.trim() || typeof item.alt !== 'string') {
+        throw new Error('圖片項目需要有效的 src 和 alt')
+      }
+      const entry = document.createElement(tag)
+      if (tag === 'li' && Number.isFinite(gameOrder(item.id))) entry.id = item.id
+      const image = document.createElement('img')
+      image.src = item.src
+      image.alt = item.alt
+      entry.append(image)
+      fragment.append(entry)
+    }
+    return fragment
+  }
+
+  try {
+    const response = await fetch('./choice-assets.json', { cache: 'no-store' })
+    if (!response.ok) throw new Error('JSON HTTP ' + response.status)
+
+    const { gameIcons, vendorLogos } = await response.json()
+    const icons = buildImages([...gameIcons].sort(byGameOrder), 'li')
+    const logos = buildImages(vendorLogos, 'dt')
+    gameList.replaceChildren(icons)
+    document.querySelector('#choice > dl').replaceChildren(logos)
+  } catch (error) {
+    console.warn('無法載入 choice-assets.json，顯示原始圖片清單。', error)
+  }
+})
+</script>
 </body>
 
 </html>
