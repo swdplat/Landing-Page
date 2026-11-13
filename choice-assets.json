@@ -1,20 +1,12 @@
 {
   "gameIcons": [
     {
-<<<<<<< HEAD
       "id": "game-icon01",
       "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_02.webp",
       "alt": "RO仙境傳說：世界之旅"
     },
     {
-=======
->>>>>>> 778e8c1082ec7fecca728f2f29db07b367746a7a
       "id": "game-icon02",
-      "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_01.webp",
-      "alt": "天堂經典版"
-    },
-    {
-      "id": "game-icon01",
       "src": "https://swdplat.github.io/Landing-Page/images/game_icon/best_choice_01.webp",
       "alt": "天堂經典版"
     },
