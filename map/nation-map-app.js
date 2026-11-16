@@ -68,6 +68,21 @@ const __nmGetDisplayNames = (locale, type, style) => {
 // 與 MapViewer.escapeHtml 同一套規則，供付款名插進 innerHTML 前跳脫，和國名/幣名一致。
 const __nmEscapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'': '&#39;' }[ch]));
 
+// HK/MO 去除「特別行政區 / SAR」後綴。
+// 新版 Chrome/Edge（ICU）即使指定 style:'short'，仍可能輸出 "Hong Kong SAR China"、"Macao SAR China"
+// 或「中國香港特別行政區」，因此在取得名稱後再統一清理，各瀏覽器顯示一致。
+const __nmStripSar = (name) => {
+  if (!name) return name;
+  let n = String(name);
+  // 中日韓：中國／中国／中華人民共和国 前綴 + 特別行政區／特别行政区／特別行政区／특별행정구 後綴
+  n = n.replace(/^(中華人民共和國|中华人民共和国|中華人民共和国|中國|中国)\s*/, '');
+  n = n.replace(/\s*[（(][^）)]*(特別行政區|特别行政区|特別行政区|특별행정구)[^）)]*[）)]$/, '');
+  n = n.replace(/\s*[（(]?\s*(中國|中国)?\s*(特別行政區|特别行政区|特別行政区|특별행정구)\s*[）)]?$/, '');
+  // 英文／歐語：SAR China、SAR of China、(SAR China)、RAS de Chine、RAE de China、SAR van China…
+  n = n.replace(/\s*[,(]?\s*\b(SAR|S\.A\.R\.|RAS|RAE|SVR|ÖSV|Özel İdari Bölge)\b[^)]*\)?\s*$/i, '');
+  return n.trim();
+};
+
 // 國名／地區名：以 Intl.DisplayNames 依當前 locale 動態產生。
 // HK/MO 一律用 style:'short'（long 會輸出「中國香港特別行政區」塞爆 UI）。
 // 整段 try/catch：Intl 不支援或丟例外（無效 region code）時 fallback 回傳呼叫端字串（通常是 COUNTRY_INFO.zhName）。
@@ -94,7 +109,9 @@ const localizedRegionName = (iso2, locale, fallback) => {
       useShort ? 'short' : 'long'
     );
 
-    const name = dn.of(code);
+    let name = dn.of(code);
+    // HK/MO：去掉 SAR／特別行政區 後綴（Edge、Chrome 新版 ICU 會帶出）
+    if (useShort && name) name = __nmStripSar(name);
     return (name && name !== code) ? name : fallback;
   } catch (_) {
     return fallback;
