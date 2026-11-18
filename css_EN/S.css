@@ -512,7 +512,7 @@ margin:1.5px 0 0 500%;
 	line-height: 21px;
 	font-weight: normal;
 	color: #666666;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -612,7 +612,7 @@ margin:1.5px 0 0 500%;
 	line-height: 16px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -640,7 +640,7 @@ margin:1.5px 0 0 500%;
 	line-height: 18px;
 	font-weight: bold;
 	color: #00a5e3;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -769,7 +769,7 @@ margin:1.5px 0 0 500%;
 	line-height: 16px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -814,7 +814,7 @@ margin:1.5px 0 0 500%;
 	line-height: 16px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -919,7 +919,7 @@ margin:1.5px 0 0 500%;
 	line-height: 16px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -1009,7 +1009,7 @@ margin:1.5px 0 0 500%;
 	line-height: 16px;
 	font-weight: normal;
 	color: #444444;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -1048,7 +1048,7 @@ margin:1.5px 0 0 500%;
 	line-height: 19px;
 	font-weight: normal;
 	color: #333333;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -1118,7 +1118,7 @@ margin:1.5px 0 0 500%;
 	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
@@ -1273,7 +1273,7 @@ margin:1.5px 0 0 500%;
 	line-height: 62px;
 	font-weight: bold;
 	color: #0c59cf;
-	text-align:justify;
+	text-align:left;
 	display:inline;
 	float:left;
 }
