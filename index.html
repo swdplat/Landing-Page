@@ -649,6 +649,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 })
 </script>
+<script>
+(async function redirectByCountry() {
+  // 只在網址為 / 時自動分流。手動選擇 /index.html 可留在繁中版。
+  if (window.location.pathname !== '/') return;
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 2500);
+
+  try {
+    const response = await fetch('https://ipapi.co/country/', {
+      signal: controller.signal
+    });
+
+    if (!response.ok) return;
+
+    const country = (await response.text()).trim().toUpperCase();
+
+    // 查不到有效代碼，或訪客在台灣，就留在繁中首頁。
+    if (!/^[A-Z]{2}$/.test(country) || country === 'TW') return;
+
+    const page = country === 'CN' ? '/cn.html' : '/en.html';
+    const { search, hash } = window.location;
+
+    // 保留入口網址的 UTM 參數及錨點。
+    window.location.replace(page + search + hash);
+  } catch {
+    // 查詢失敗或逾時就留在繁中首頁。
+  } finally {
+    clearTimeout(timeout);
+  }
+})();
+</script>
 </body>
 
 </html>
