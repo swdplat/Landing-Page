@@ -77,27 +77,29 @@ body {
 #top_bar .menu li:hover {background-color:#bddafd;}
 #top_bar .btn {
 	width:7%;
-	height:auto;
-	margin:0.5% 2% 0 0;
-	padding:0.5% 0 0.5% 0;
-	background-image: url(../images/top_bar_connect_button.png);
-	background-repeat: no-repeat;
-	background-size:100%;
+	height:28px;
+	margin:0.25% 2% 0 0;
+	padding:0% 0 0% 0;
+	border-radius:100px;
+	background-image: none;
+	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 11px;
-	line-height: 11px;
+	font-size: 12px;
+	line-height: 12px;
 	font-weight: normal;
 	color: #ffffff;
 	text-align:center;
 	cursor:pointer;
-	display:inline;
+	display: flex;
+    justify-content: center;    
+    align-items: center;     
 	float:right;
 }
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
 	width:9%;
-	height:auto;
+	height:28px;
 	margin:0% 0.5% 0 0%;
 	padding:0.5% 0 0.6% 0%;
 	text-align:left;
@@ -113,7 +115,7 @@ body {
 #top_bar #language img {position:absolute; width:15px; height:15px; margin:0.3% 0 0 1.8%; float:left;}
 #top_bar #language select {
 	width:84%;
-	margin:0 0;
+	margin:-2% 0 0 0;
 	padding:0% 0 1% 16%;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
