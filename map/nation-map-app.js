@@ -93,20 +93,18 @@ const localizedRegionName = (iso2, locale, fallback) => {
     const code = String(iso2).toUpperCase().split('-')[0];
     if (code.length !== 2) return fallback;
 
-    // CN 固定名稱：Safari 的 Intl.DisplayNames 會輸出 "China mainland"／「中國大陸」，
-    // 因此簡中固定「中国」、英文固定「China」，與 Chrome/Edge 一致。
-    // locale 先正規化（小寫、底線轉連字號），避免 'zh-cn' / 'zh-Hans' / 'en-US' 比對失敗。
+    // CN 固定名稱：Safari 的 Intl.DisplayNames 會輸出 "China mainland"／「中國大陸」／「中国大陆」，
+    // 與 Chrome/Edge 不一致，因此 CN 不交給 Intl，依語系直接固定：
+    //   簡中（zh-CN / zh-SG / zh-Hans…）→「中国」；其餘 zh 系列（zh-TW / zh-HK / zh-Hant / zh…）→「中國」；英文 → "China"。
+    // locale 先正規化（小寫、底線轉連字號），避免大小寫或寫法不同造成比對失敗。
     if (code === 'CN') {
       const loc = String(locale || '').toLowerCase().replace(/_/g, '-');
-      if (loc === 'zh-cn' || loc === 'zh-sg' || loc.startsWith('zh-hans')) {
-        return '中国';
+      if (loc === 'zh' || loc.startsWith('zh-')) {
+        const isHans = loc === 'zh-cn' || loc === 'zh-sg' || loc.startsWith('zh-hans');
+        return isHans ? '中国' : '中國';
       }
       if (loc === 'en' || loc.startsWith('en-')) {
         return 'China';
-      }
-      // 繁中（zh-TW / zh-Hant / zh-HK / zh-MO）：Safari 會輸出「中國大陸」，固定顯示「中國」
-      if (loc === 'zh-tw' || loc === 'zh-hk' || loc === 'zh-mo' || loc.startsWith('zh-hant')) {
-        return '中國';
       }
     }
 
@@ -122,6 +120,8 @@ const localizedRegionName = (iso2, locale, fallback) => {
     );
 
     let name = dn.of(code);
+    // 保險：CN 在 Safari 可能帶「大陸／大陆／mainland」字樣，統一去掉
+    if (code === 'CN' && name) name = name.replace(/\s*(大陸|大陆|mainland)\s*/i, '').trim() || name;
     // HK/MO：去掉 SAR／特別行政區 後綴（Edge、Chrome 新版 ICU 會帶出）
     if (useShort && name) name = __nmStripSar(name);
     return (name && name !== code) ? name : fallback;

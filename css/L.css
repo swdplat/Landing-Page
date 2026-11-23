@@ -200,7 +200,10 @@ body {
 }
 #language-toggle {display:none;}
 #languag_callout {display:none;}
-
+@supports (-webkit-touch-callout: none) {
+  /* 僅在 iOS Safari / WebKit 觸控環境套用 */
+	#top_bar #language img {display:none;}
+}
 
 
 /*回到頂端鈕*/
@@ -966,7 +969,7 @@ body {
 	float:left;
 }
 #choice dl dt {
-	width:13.2%;
+	width:15.6%;
 	margin:0 0.5% 1.5% 0.5%;
 	padding:0;
 	border-radius:10px;
