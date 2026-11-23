@@ -104,6 +104,10 @@ const localizedRegionName = (iso2, locale, fallback) => {
       if (loc === 'en' || loc.startsWith('en-')) {
         return 'China';
       }
+      // 繁中（zh-TW / zh-Hant / zh-HK / zh-MO）：Safari 會輸出「中國大陸」，固定顯示「中國」
+      if (loc === 'zh-tw' || loc === 'zh-hk' || loc === 'zh-mo' || loc.startsWith('zh-hant')) {
+        return '中國';
+      }
     }
 
     if (typeof Intl === 'undefined' || !Intl.DisplayNames) {

@@ -1,4 +1,4 @@
-/* ============================================================
+<strong></strong>/* ============================================================
    MyCard Map｜nation-map-style.css（整理註解版）
    - 功能：地圖畫布、浮動資訊卡、金流顯示、提示與工具列、其他地區區塊、RWD
    - 重點：Reset/主題變數只在 body.nation-map 生效；未掛該 class 時，var(--*) 可能為空而導致邊框/底色/字色不套用。
@@ -610,7 +610,7 @@ body.nation-map *::after {
 .active-region { filter: drop-shadow(0 0 0 rgb(204, 204, 204)); stroke: var(--accent); stroke-width: 1.2; fill: rgba(0,173,238,0.75) !important; }
 
 /* 區塊標題 */
-.sec-title { font-weight: 800; margin: 6px 5px 10px; }
+.sec-title { font-weight: 800; margin: 6px 5px 10px;font-family: "微軟正黑體", "PingFang TC"; }
 
 /* === [07] 金流區塊（payments-card / 類別列 / chip） ===
    - 功能：把付款方式按「大類」分組呈現；icon-only 模式把文字交給 tooltip 以節省空間。
