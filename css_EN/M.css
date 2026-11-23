@@ -348,7 +348,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -362,8 +362,8 @@ body {
 	margin:0 0 1% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 20px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -373,11 +373,11 @@ body {
 #brand .text p {
 	width:100%;
 	height:auto;
-	margin:1% 0 0 0;
+	margin:0 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: normal;
 	color: #666666;
 	text-align:left;
@@ -406,7 +406,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -420,8 +420,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 20px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -462,8 +462,8 @@ body {
 	margin:1% 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 18px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -476,8 +476,8 @@ body {
 	margin:0.5% 0 0.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 15px;
-	line-height: 21px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: normal;
 	color: #333333;
 	text-align:left;
@@ -485,15 +485,15 @@ body {
 	float:left;
 }
 #global_payment ul .icon {
-	width:25%;
-	margin:-9% 0% 0% 0%;
+	width:20%;
+	margin:-6% 2% 0% 0%;
 	padding:0 0;
 	float:right;
 }
 #global_payment ul .icon img {width:100%;}
 #global_payment ul .icon2 {
-	width:25%;
-	margin:-9% 0% 0% 0%;
+	width:20%;
+	margin:-4% 2% 0% 0%;
 	padding:0 0;
 	float:right;
 }
@@ -541,7 +541,7 @@ body {
 	margin:2% 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -556,7 +556,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 20px;
-	line-height: 28px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -619,8 +619,8 @@ body {
 	margin:2% 0 0.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 26px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -664,8 +664,8 @@ body {
 	margin:2% 0 0.5% 0;
 	padding:0 6%;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 26px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -762,10 +762,10 @@ body {
 	margin:1% 0 0% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 22px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 24px;
 	font-weight: bold;
-	color: #4078bf;
+	color: #333333;
 	text-align:left;
 	display:inline;
 	float:left;
@@ -801,7 +801,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -839,8 +839,8 @@ body {
 	float:right;
 }
 #customer_service ul ol {
-	width:20%;
-	margin:2% 0% 2% 0%;
+	width:15%;
+	margin:0 2% 0 0%;
 	padding:0 0;
 	float:right;
 }
@@ -848,11 +848,11 @@ body {
 #customer_service ul h6 {
 	width:75%;
 	height:auto;
-	margin:5% 0 1.5% 0;
+	margin:3% 0 1.5% 2%;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 18px;
+	line-height: 18px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
@@ -862,11 +862,11 @@ body {
 #customer_service ul p {
     width:75%;
 	height:auto;
-	margin:0% 0 1.5% 0;
+	margin:0% 0 1.5% 2%;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
 	text-align:left;
@@ -890,7 +890,7 @@ body {
 	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -904,9 +904,9 @@ body {
 	margin:0 0 2% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 28px;
-	font-weight: normal;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
 	color: #333333;
 	text-align:left;
 	display:inline;
@@ -960,7 +960,7 @@ body {
 	margin:0 0 1.5% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 30px;
+	font-size: 28px;
 	line-height: 36px;
 	font-weight: bold;
 	color: #0c59cf;
@@ -975,7 +975,7 @@ body {
 	padding:0 0;
 	font-family: "微軟正黑體";
 	font-size: 20px;
-	line-height: 28px;
+	line-height: 24px;
 	font-weight: bold;
 	color: #3184e4;
 	text-align:left;
@@ -1003,8 +1003,8 @@ body {
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 15px;
-	line-height: 15px;
+	font-size: 12px;
+	line-height: 12px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1016,8 +1016,8 @@ body {
 	margin:0 0 0 0;
 	padding:0% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -1026,19 +1026,19 @@ body {
 }
 #cooperate ul li .sample {
 	width:100%;
-	margin:5% 0 4% 0;
+	margin:-2% 0 4% 0;
 	padding:0 0;
 	float:left;
 }
 #cooperate ul li .sample img {width:100%; border-radius:10px;}
 
 #cooperate ul li ol {
-	width:100%;
-	margin:0 0 2% 0;
+	width:120%;
+	margin:0 0 2% -10%;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 11px;
-	line-height: 15px;
+	font-size: 12px;
+	line-height: 16px;
 	font-weight: bold;
 	color: #333333;
 	text-align:center;
@@ -1060,8 +1060,8 @@ body {
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 15px;
-	line-height: 15px;
+	font-size: 12px;
+	line-height: 12px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1073,8 +1073,8 @@ body {
 	margin:0 0 0 0;
 	padding:0% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -1083,7 +1083,7 @@ body {
 }
 #cooperate ul dl .sample {
 	width:100%;
-	margin:2.2% 0;
+	margin:-2% 0 0 0;
 	padding:0 0;
 	float:left;
 }
@@ -1094,8 +1094,8 @@ body {
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 11px;
-	line-height: 15px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: bold;
 	color:  #333333;
 	text-align:center;
