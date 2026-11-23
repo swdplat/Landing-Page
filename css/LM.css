@@ -1040,8 +1040,8 @@ body {
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 26px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1053,8 +1053,8 @@ body {
 	margin:0 0 0 0;
 	padding:0.5% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 34px;
-	line-height: 34px;
+	font-size: 30px;
+	line-height: 30px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
