@@ -95,7 +95,7 @@ body {
 
 /*天邊*/
 #top_bar {
-	position:absolute;
+	position:fixed;
 	z-index:9;
 	width:100%;
 	height:auto;
