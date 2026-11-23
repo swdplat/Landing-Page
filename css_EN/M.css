@@ -728,8 +728,8 @@ body {
 }
 
 #security ul dt {
-	width:20%;
-	margin:0% 0% 0% 0%;
+	width:15%;
+	margin:0% 2% 0% 0%;
 	padding:0 0;
 	float:right;
 }
@@ -759,7 +759,7 @@ body {
 #security ul h5 {
 	width:76%;
 	height:auto;
-	margin:1% 0 0% 0;
+	margin:1% 0 0% 2%;
 	padding:0 0%;
 	font-family: "微軟正黑體";
 	font-size: 18px;
@@ -773,11 +773,11 @@ body {
 #security ul p {
     width:76%;
 	height:auto;
-	margin:1% 0 1.5% 0;
+	margin:1% 0 1.5% 2%;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 17px;
-	line-height: 24px;
+	font-size: 12px;
+	line-height: 18px;
 	font-weight: normal;
 	color: #444444;
 	text-align:left;
