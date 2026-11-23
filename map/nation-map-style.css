@@ -394,7 +394,7 @@ body.nation-map *::after {
 
 @media (max-width: 899px) {
     .mc-map .map-hint {
-        width: auto;
+        width: 80%;
         height: auto;
         max-width: max-content;
         top: 12px;
@@ -464,7 +464,8 @@ body.nation-map *::after {
   overflow: hidden;
   visibility: hidden;
   pointer-events: none;
-
+  border:none!important;
+  border-width:0px!important;
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(12px) saturate(1.1);
   -webkit-backdrop-filter: blur(12px) saturate(1.1);border: 1px solid transparent;

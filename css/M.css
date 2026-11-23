@@ -322,6 +322,7 @@ body {
 }
 #main_visual #diagram li {
 	width:46%;
+	height:100px;
 	margin:0 0.5% 2% 0.5%;
 	padding:3% 0 4% 3%;
 	display:inline;
@@ -330,6 +331,7 @@ body {
 }
 #main_visual #diagram dl {
 	width:46%;
+	height:100px;
 	margin:0 0.5% 2% 0.5%;
 	padding:3% 0 4% 3%;
 	display:inline;
