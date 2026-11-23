@@ -133,7 +133,25 @@ body {
 }
 #language-toggle {display:none;}
 #languag_callout {display:none;}
-
+@supports (-webkit-touch-callout: none) {
+  /* 僅在 iOS Safari / WebKit 觸控環境套用 */
+#top_bar #language select {
+	width:84%;
+	margin:0 0;
+	padding:1.5% 0 1.5% 16%;
+	background-color:#eeeeee;
+	border:1px solid #cccccc;
+	border-radius:100px;
+	font-family: "微軟正黑體";
+	font-size: 13px;
+	line-height: 13px;
+	font-weight: normal;
+	color: #666666;
+	text-align:center;
+	display:inline;
+	float:right;
+}
+}
 
 
 /*回到頂端鈕*/

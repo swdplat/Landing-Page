@@ -389,6 +389,7 @@ body.nation-map *::after {
     display: inline-flex;
     align-items: center;
     gap: 4px;
+	font-family: "微軟正黑體", "PingFang TC";
 }
 
 @media (max-width: 899px) {
@@ -572,11 +573,13 @@ body.nation-map *::after {
 .currency-box .zh-cur {
   font-weight: 600;
   color: var(--text);
+   font-family: "微軟正黑體", "PingFang TC";
 }
 .currency-box .en-cur {
   margin-top: 4px;
   font-size: 13px;
   color: var(--text);
+   font-family: "微軟正黑體", "PingFang TC";
 }
 
 .flag-card .flag-box {
@@ -633,7 +636,7 @@ body.nation-map *::after {
   align-items: flex-start;
 }
 
-.payments-card .cat-title { font-weight: 600; }
+.payments-card .cat-title { font-weight: 600;font-family: "微軟正黑體", "PingFang TC"; }
 .payments-card .cat-sub { font-size: 12px; color: var(--muted); }
 
 .method-list {
@@ -780,8 +783,9 @@ body.nation-map *::after {
     font-family: inherit;
     cursor: pointer;
     outline: none;
+	font-family: "微軟正黑體", "PingFang TC";
 }
-.mode-toggle .opt.active { color: var(--text, #1f2937); font-weight: 700; }
+.mode-toggle .opt.active { color: var(--text, #1f2937); font-weight: 700;font-family: "微軟正黑體", "PingFang TC"; }
 
 /* Icon-only 模式：只顯示大 icon，不顯示 chip 內文字，文字改交給 tooltip 負責 */
 .payments-card.icon-only {

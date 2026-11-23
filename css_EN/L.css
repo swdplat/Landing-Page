@@ -133,10 +133,30 @@ body {
     align-items: center;   
 	float:right;
 }
-}
 #language-toggle {display:none;}
 #languag_callout {display:none;}
-
+@supports (-webkit-touch-callout: none) {
+  /* 僅在 iOS Safari / WebKit 觸控環境套用 */
+#top_bar #language select {
+	width:84%;
+	height:28px;
+	margin:0 0;
+	padding:0 0 0 16%;
+	background-color:#eeeeee;
+	border:1px solid #cccccc;
+	border-radius:100px;
+	font-family: "微軟正黑體";
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: normal;
+	color: #666666;
+	text-align:center;
+	display: flex;
+    justify-content: center;    
+    align-items: center;   
+	float:right;
+}
+}
 
 
 /*回到頂端鈕*/
@@ -799,7 +819,7 @@ body {
 }
 #customer_service ul ol {
 	width:22%;
-	margin:2% 4% 2% 0%;
+	margin:0 4% 2% 0%;
 	padding:0 0;
 	display:inline;
 	float:left;
@@ -825,8 +845,8 @@ body {
 	margin:1% 0 1.5% 0;
 	padding:0 0%;
 	font-family: "微軟正黑體";
-	font-size: 14px;
-	line-height: 24px;
+	font-size: 15px;
+	line-height: 22px;
 	font-weight: normal;
 	color: #444444;
 	text-align:left;

@@ -93,9 +93,17 @@ const localizedRegionName = (iso2, locale, fallback) => {
     const code = String(iso2).toUpperCase().split('-')[0];
     if (code.length !== 2) return fallback;
 
-    // 簡體中文版固定顯示「中国」
-    if (code === 'CN' && locale === 'zh-CN') {
-      return '中国';
+    // CN 固定名稱：Safari 的 Intl.DisplayNames 會輸出 "China mainland"／「中國大陸」，
+    // 因此簡中固定「中国」、英文固定「China」，與 Chrome/Edge 一致。
+    // locale 先正規化（小寫、底線轉連字號），避免 'zh-cn' / 'zh-Hans' / 'en-US' 比對失敗。
+    if (code === 'CN') {
+      const loc = String(locale || '').toLowerCase().replace(/_/g, '-');
+      if (loc === 'zh-cn' || loc === 'zh-sg' || loc.startsWith('zh-hans')) {
+        return '中国';
+      }
+      if (loc === 'en' || loc.startsWith('en-')) {
+        return 'China';
+      }
     }
 
     if (typeof Intl === 'undefined' || !Intl.DisplayNames) {

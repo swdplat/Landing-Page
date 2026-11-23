@@ -117,9 +117,10 @@ body {
 #top_bar .menu {
 	width:40%;
 	height:auto;
-	margin:0.8% 0 0 23%;
-	padding:0 0;
-	display:inline;
+	margin:0 0 0 23%;
+	padding:0.8% 0;
+	display: flex;
+    align-items: center;
 	float:left;
 }
 #top_bar .menu li {
@@ -396,8 +397,8 @@ body {
 	margin:1% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 28px;
-	line-height: 48px;
+	font-size: 22px;
+	line-height: 40px;
 	font-weight: normal;
 	color: #666666;
 	text-align:justify;
@@ -496,8 +497,8 @@ body {
 	margin:0 0 0% 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 17px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 26px;
 	font-weight: normal;
 	color: #333333;
 	text-align:justify;
@@ -1046,8 +1047,8 @@ body {
 	margin:0 0 0 0;
 	padding:0.5% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 34px;
-	line-height: 34px;
+	font-size: 32px;
+	line-height: 32px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;

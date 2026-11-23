@@ -120,9 +120,10 @@ body {
 #top_bar .menu {
 	width:42%;
 	height:auto;
-	margin:0.8% 0 0 22%;
-	padding:0 0;
-	display:inline;
+	margin:0 0 0 22%;
+	padding:0.7% 0;
+	display: flex;
+    align-items: center;
 	float:left;
 }
 #top_bar .menu li {
@@ -337,13 +338,13 @@ body {
 	margin:-1% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體";
-	font-size: 24px;
+	font-size: 22px;
 	line-height:24px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
 }
-#main_visual #diagram .amount {font-size:68px!important; line-height:98px; }
+#main_visual #diagram .amount {font-size:64px!important; line-height:98px; }
 
 
 
@@ -1036,8 +1037,8 @@ body {
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
 	font-family: "微軟正黑體";
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 26px;
+	line-height: 26px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1049,8 +1050,8 @@ body {
 	margin:0 0 0 0;
 	padding:0.5% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 34px;
-	line-height: 34px;
+	font-size: 30px;
+	line-height: 30px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
@@ -1106,8 +1107,8 @@ body {
 	margin:0 0 0 0;
 	padding:0.5% 0 0.5% 0;
 	font-family: "微軟正黑體";
-	font-size: 34px;
-	line-height: 34px;
+	font-size: 30px;
+	line-height: 30px;
 	font-weight: bold;
 	color: #0AA6DD;
 	text-align:left;
