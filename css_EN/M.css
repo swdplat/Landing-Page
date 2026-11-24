@@ -1177,7 +1177,7 @@ body {
 	float:left;
 }
 #copyright .logo {
-	width:20%;
+	width:12%;
 	margin:1% 0 0 2%;
 	padding:0 1%;
 	display:inline;
@@ -1185,7 +1185,7 @@ body {
 }
 #copyright .logo img {width:100%;}
 #copyright .community {
-	width:40%;
+	width:25%;
 	margin:0.2% 2% 1% 0%;
 	padding:0 0;
 	display:inline;
