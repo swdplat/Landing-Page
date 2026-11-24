@@ -133,6 +133,10 @@ const localizedRegionName = (iso2, locale, fallback) => {
 // 幣名：以 Intl.DisplayNames(type:'currency') 依當前 locale 動態產生。
 // HK/MO 同樣走 style:'short'。失敗或無幣別（'—'）時 fallback 回 COUNTRY_INFO.currencyName。
 const localizedCurrencyName = (currencyCode, iso2, locale, fallback) => {
+  // MOP 英文版固定顯示 "Macanese Pataca"。放在最前面、不依賴 Intl：
+  // Safari 舊版無 Intl.DisplayNames，或 style:'short' 只回傳代碼／丟例外時，都會退回中文「澳門幣」。
+  const __loc = String(locale || '').toLowerCase().replace(/_/g, '-');
+  if (String(currencyCode || '').toUpperCase() === 'MOP' && (__loc === 'en' || __loc.startsWith('en-'))) return 'Macanese Pataca';
   try {
     if (!currencyCode || currencyCode === '—' || typeof Intl === 'undefined' || !Intl.DisplayNames) return fallback;
     const region = String(iso2 || '').toUpperCase().split('-')[0];

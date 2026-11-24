@@ -244,8 +244,8 @@ body {
 	z-index:9;
 	bottom:0;
 	right:0;
-	width:10%;
-	margin:0 2% 0 0;
+	width:6%;
+	margin:0 2% 12% 0;
 	cursor:pointer;
 }
 #btn_top img {width:100%;}
@@ -580,7 +580,7 @@ body {
 	margin:0 0;
 	padding:0 0 4% 0;
 	float:left;
-	overflow:scroll;
+	overflow-y:scroll;
     background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 35%);
 }
 
