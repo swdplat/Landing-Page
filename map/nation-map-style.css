@@ -1,4 +1,4 @@
-<strong></strong>/* ============================================================
+/* ============================================================
    MyCard Map｜nation-map-style.css（整理註解版）
    - 功能：地圖畫布、浮動資訊卡、金流顯示、提示與工具列、其他地區區塊、RWD
    - 重點：Reset/主題變數只在 body.nation-map 生效；未掛該 class 時，var(--*) 可能為空而導致邊框/底色/字色不套用。
@@ -293,6 +293,52 @@ body.nation-map *::after {
   will-change: transform;
   will-change: transform, opacity;
   isolation: isolate;
+}
+
+@media (min-width: 2561px) {
+.map-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;  /* 避免鎖捲動/手勢期間 viewport 寬度重算，導致外框視覺貼邊 */
+  aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+
+
+  /* iOS/Safari：提升合成層，減少 overlay/backdrop-filter 閃爍 */
+  transform: translateZ(0);
+  will-change: transform;
+  will-change: transform, opacity;
+  isolation: isolate;
+}
+}
+
+@media (min-width: 1921px) {
+.map-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;  /* 避免鎖捲動/手勢期間 viewport 寬度重算，導致外框視覺貼邊 */
+  aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+
+
+  /* iOS/Safari：提升合成層，減少 overlay/backdrop-filter 閃爍 */
+  transform: translateZ(0);
+  will-change: transform;
+  will-change: transform, opacity;
+  isolation: isolate;
+}
 }
 
 /* SVG 跟著框縮放 */
@@ -1137,6 +1183,18 @@ body.nation-map *::after {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
 }
+@media (min-width: 2561px) {
+.region-wrap{
+  width: min(1980px, calc(100% - 48px));
+  margin: 0 auto;
+}
+}
+@media (min-width: 1921px) {
+.region-wrap{
+  width: min(1580px, calc(100% - 48px));
+  margin: 0 auto;
+}
+}
 
 .region-title{
   font-family: "微軟正黑體";
@@ -1146,6 +1204,27 @@ body.nation-map *::after {
   letter-spacing: .5px;
   margin-bottom: 12px;
 }
+@media (min-width: 2561px) {
+.region-title{
+  font-family: "微軟正黑體";
+  font-size: 68px;
+  font-weight: bold;
+  color:#3184e4;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+}
+}
+@media (min-width: 1921px) {
+.region-title{
+  font-family: "微軟正黑體";
+  font-size: 60px;
+  font-weight: bold;
+  color:#3184e4;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+}
+}
+
 
 .region-desc{
   font-family: "微軟正黑體";
@@ -1154,6 +1233,25 @@ body.nation-map *::after {
   color: rgba(0,0,0,.55);
   margin:3% 0 2% 0;
 }
+@media (min-width: 1921px) {
+.region-desc{
+  font-family: "微軟正黑體";
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(0,0,0,.55);
+  margin:3% 0 2% 0;
+}
+}
+@media (min-width: 2561px) {
+.region-desc{
+  font-family: "微軟正黑體";
+  font-size: 36px;
+  line-height: 48px;
+  color: rgba(0,0,0,.55);
+  margin:3% 0 2% 0;
+}
+}
+
 
 .empty-title {font-size: 15px; line-height: 22px; margin:18px 0 0 6px;}
 .empty-sub {font-size: 15px; line-height: 22px; margin:0 0 0 6px;}
@@ -1181,7 +1279,7 @@ body.nation-map *::after {
   justify-content: center;
   gap: 12px;
   width: 100%;
-  padding: 10px 10px;
+  padding: 10px 0x;
   border: 1px solid rgba(0,0,0,.15);
   border-radius: 12px;
   background: #f3f3f3;
@@ -1227,9 +1325,9 @@ body.nation-map *::after {
 
 }
 
-@media (max-width: 640px){
+@media (max-width: 980px){
   .region-wrap{ width: calc(100% - 28px); }
-  .region-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .region-grid{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .region-title{ font-size: 28px; }
 }
 
@@ -1240,7 +1338,118 @@ body.nation-map *::after {
   gap: 12px;
   justify-content: center;
   width: 100%;
-  padding: 14px 14px;
+  padding: 14px 0px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 12px;
+  background: #f3f3f3;
+
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+@media (min-width: 2561px) {
+.region-btn{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+  padding: 28px 0px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 24px;
+  background: #f3f3f3;
+
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+}
+@media (min-width: 1921px) {
+.region-btn{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+  padding: 28px 0px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 24px;
+  background: #f3f3f3;
+
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+}
+.region-btn:active{
+  transform: scale(.98);
+}
+
+.region-btn:active{
+  transform: scale(.98);
+}
+
+.region-flag{
+  width: 44px;
+  height: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  background: rgba(0,0,0,.05);
+}
+
+.region-flag img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.region-name{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.region-name .zh {
+  font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+@media (min-width: 2561px) {
+.region-name .zh {
+  font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: normal;
+}
+}
+@media (min-width: 1921px) {
+.region-name .zh {
+  font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
+  font-size: 32px;
+  line-height: 23px;
+  font-weight: normal;
+}
+}
+.region-name .en{
+  font-size: 12px;
+  margin-top: 6px;
+  color: rgba(0,0,0,.55);
+	text-align:center;
+}
+
+@media (max-width: 640px){
+  .region-wrap{ width: calc(100% - 28px); }
+  .region-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .region-title{ font-size: 28px; }
+/* 按鈕卡片 */
+.region-btn{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px;
   border: 1px solid rgba(0,0,0,.15);
   border-radius: 12px;
   background: #f3f3f3;
@@ -1276,9 +1485,9 @@ body.nation-map *::after {
 }
 
 .region-name .zh {
-  font-family: "微軟正黑體";
-  font-size: 20px;
-  line-height: 20px;
+  font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: normal;;
 }
 
@@ -1288,6 +1497,10 @@ body.nation-map *::after {
   color: rgba(0,0,0,.55);
 	text-align:center;
 }
+}
+
+
+
 
 @media (max-width: 360px){
   .payments-card.icon-only .method-list{

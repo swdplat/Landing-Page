@@ -59,7 +59,7 @@ body {
 	height:auto;
 	margin:0% 0% 0 0%;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size:68px;
 	line-height: 68px;
 	font-weight: bold;
@@ -72,7 +72,7 @@ body {
 	height:auto;
 	margin:2% 0% 0 0%;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size:21px;
 	line-height: 26px;
 	font-weight: bold;
@@ -99,14 +99,13 @@ body {
 	position:absolute;
 	z-index:9;
 	width:100%;
-	height:auto;
+	height:35px;
 	top:0;
 	left:0;
 	margin:0;
-	padding:0 0 1% 0;
-	background-image: url(../images/top_bar_bg.webp);
-	background-repeat: repeat-x;
-	background-size:100%;
+	padding:0 0 0 0;
+	background: linear-gradient(to bottom,  #fefefe 0%,#e2e2e2 47%,#fefefe 100%); 
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 3px 5px 0 rgba(0, 0, 0, 0.05);
 }
 #top_bar .menu_icon {display:none;}
 #menu_list {display:none;}
@@ -118,9 +117,9 @@ body {
 }
 #top_bar .logo img {width:100%;}
 #top_bar .menu {
-	width:48%;
+	width:56%;
 	height:auto;
-	margin:0% 0 0 18%;
+	margin:0% 0 0 14%;
 	padding:0.4% 0;
 	display: flex;
     align-items: center;
@@ -129,18 +128,20 @@ body {
 #top_bar .menu li {
     width:12.6%;
 	height:auto;
-	margin:0 2% 0 2%;
-	padding:0.3% 0;
+	margin:0.8% 2% 0 2%;
+	padding:0% 0;
 	border-radius:50px;
 	background-color:transparent;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 16px;
 	line-height: 16px;
 	font-weight: normal;
 	color: #333;
 	text-align:center;
 	cursor:pointer;
-	display:inline;
+	display: flex;
+    justify-content: center;    
+    align-items: center;  
 	float:left;
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
@@ -152,7 +153,7 @@ body {
 	border-radius:100px;
 	background-image: none;
 	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 12px;
 	line-height: 12px;
 	font-weight: normal;
@@ -184,12 +185,13 @@ body {
 #top_bar #language img {position:absolute; width:20px; height:20px; margin:2px 0 0 -2%; float:left;display: flex; align-items: center;}
 #top_bar #language select {
 	width:100%;
+	height:28px;
 	margin:-2% 0 0 0;
 	padding:0% 0 1% 0;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 13px;
 	line-height: 13px;
 	font-weight: normal;
@@ -253,7 +255,7 @@ body {
 	background-image: url(../images/main_visual_connect_button.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: bold;
@@ -327,7 +329,7 @@ body {
 	width:100%;
 	margin:0 0 0 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 48px;
 	line-height:48px;
 	font-weight: bold;
@@ -338,7 +340,7 @@ body {
 	width:100%;
 	margin:-1% 0 0 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 24px;
 	line-height:24px;
 	font-weight: bold;
@@ -371,7 +373,7 @@ body {
 	height:auto;
 	margin:0 0 3% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -386,7 +388,7 @@ body {
 	height:auto;
 	margin:0 0 3% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 34px;
 	line-height: 34px;
 	font-weight: bold;
@@ -401,7 +403,7 @@ body {
 	height:auto;
 	margin:1% 0 0 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 34px;
 	font-weight: normal;
@@ -433,7 +435,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -447,7 +449,7 @@ body {
 	height:auto;
 	margin:0 0 2% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 34px;
 	line-height: 34px;
 	font-weight: bold;
@@ -489,7 +491,7 @@ body {
 	height:auto;
 	margin:0 0 3.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 28px;
 	line-height: 32px;
 	font-weight: bold;
@@ -503,7 +505,7 @@ body {
 	height:130px;
 	margin:1.5% 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 16px;
 	line-height: 26px;
 	font-weight: normal;
@@ -531,9 +533,9 @@ body {
 	height:auto;
 	margin:2% 0 0.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
-	font-size: 18px;
-	line-height: 26px;
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
+	font-size: 20px;
+	line-height: 28px;
 	font-weight: bold;
 	color: #00a5e3;
 	text-align:center;
@@ -568,7 +570,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -582,7 +584,7 @@ body {
 	height:auto;
 	margin:0 0 2% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 34px;
 	line-height: 34px;
 	font-weight: bold;
@@ -610,7 +612,7 @@ body {
 	height:auto;
 	margin:0 0;
 	padding:9.5% 15%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 22px;
 	line-height: 22px;
 	font-weight: bold;
@@ -646,7 +648,7 @@ body {
 	height:auto;
 	margin:5% 0 1.5% 0;
 	padding:0 6%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: bold;
@@ -660,9 +662,9 @@ body {
 	height:auto;
 	margin:2% 0 1.5% 0;
 	padding:0 6%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 20px;
 	font-weight: normal;
 	letter-spacing:normal;
 	color: #444444;
@@ -692,7 +694,7 @@ body {
 	height:auto;
 	margin:5% 0 1.5% 0;
 	padding:0 6%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: bold;
@@ -706,9 +708,9 @@ body {
 	height:auto;
 	margin:2% 0 1.5% 0;
 	padding:0 6%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 20px;
 	font-weight: normal;
 	letter-spacing:normal;
 	color: #444444;
@@ -747,7 +749,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -798,7 +800,7 @@ body {
 	height:auto;
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: bold;
@@ -812,7 +814,7 @@ body {
 	height:auto;
 	margin:4% 0 1.5% 0;
 	padding:0 0%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 16px;
 	line-height: normal;
 	font-weight: normal;
@@ -837,7 +839,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -888,7 +890,7 @@ body {
 	height:auto;
 	margin:5% 0 1.5% 0;
 	padding:0 0%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 32px;
 	font-weight: bold;
@@ -902,7 +904,7 @@ body {
 	height:auto;
 	margin:2% 0 1.5% 0;
 	padding:0 0%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
@@ -927,7 +929,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -941,7 +943,7 @@ body {
 	height:auto;
 	margin:0 0 1% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: bold;
@@ -998,7 +1000,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: bold;
@@ -1012,7 +1014,7 @@ body {
 	height:auto;
 	margin:0 0 3% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 34px;
 	line-height: 34px;
 	font-weight: bold;
@@ -1041,7 +1043,7 @@ body {
 	padding:1% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: bold;
@@ -1054,7 +1056,7 @@ body {
 	width:63%;
 	margin:0 0 0 0;
 	padding:0% 0 0.5% 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: bold;
@@ -1075,7 +1077,7 @@ body {
 	width:100%;
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: bold;
@@ -1098,7 +1100,7 @@ body {
 	padding:1% 0;
 	border-radius:50px;
 	background: linear-gradient(to bottom,  rgba(10,166,221,1) 0%,rgba(0,122,221,1) 100%);
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: bold;
@@ -1111,7 +1113,7 @@ body {
 	width:63%;
 	margin:0 0 0 0;
 	padding:0% 0 0.5% 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: bold;
@@ -1132,7 +1134,7 @@ body {
 	width:100%;
 	margin:0 0 2% 0;
 	padding:0.5% 0 3.5% 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: bold;
@@ -1165,7 +1167,7 @@ body {
 	height:auto;
 	margin:0 0 1.5% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 52px;
 	line-height: 62px;
 	font-weight: bold;
@@ -1179,7 +1181,7 @@ body {
 	height:auto;
 	margin:0 0 1% 0;
 	padding:0 0;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 33px;
 	line-height: 48px;
 	font-weight: bold;
@@ -1195,7 +1197,7 @@ body {
 	background-image: url(../images/connect_button.webp);
 	background-repeat: no-repeat;
 	background-size:100%;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: bold;
@@ -1245,7 +1247,7 @@ body {
 	margin:0 0;
 	padding:0.5% 0;
 	background-color:#eeeeee;
-	font-family: "微軟正黑體";
+	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 15px;
 	line-height: 15px;
 	font-weight: normal;
