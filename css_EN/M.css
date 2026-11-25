@@ -277,7 +277,7 @@ body {
 #main_visual #diagram li {
 	width:46%;
 	margin:0 0.5% 2% 0.5%;
-	padding:3% 0 4% 3%;
+	padding:3% 0 7% 3%;
 	display:inline;
 	border-radius:20px;
 	float:left;
@@ -285,7 +285,7 @@ body {
 #main_visual #diagram dl {
 	width:46%;
 	margin:0 0.5% 2% 0.5%;
-	padding:3% 0 4% 3%;
+	padding:3% 0 7% 3%;
 	display:inline;
 	border-radius:20px;
 	float:right;

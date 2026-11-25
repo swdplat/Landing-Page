@@ -344,7 +344,7 @@ body {
 	width:46%;
 	height:100px;
 	margin:0 0.5% 2% 0.5%;
-	padding:3% 0 4% 3%;
+	padding:3% 0 7% 3%;
 	display:inline;
 	border-radius:20px;
 	float:left;
@@ -353,7 +353,7 @@ body {
 	width:46%;
 	height:100px;
 	margin:0 0.5% 2% 0.5%;
-	padding:3% 0 4% 3%;
+	padding:3% 0 7% 3%;
 	display:inline;
 	border-radius:20px;
 	float:right;
@@ -383,8 +383,8 @@ body {
 	margin:2.5% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 30px;
-	line-height:30px;
+	font-size:42px;
+	line-height:42px;
 	font-weight: bold;
 	color: #ff0098;
 	text-alignleft;
@@ -394,13 +394,13 @@ body {
 	margin:0.5% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 18px;
-	line-height:20px;
+	font-size: 22px;
+	line-height:26px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
 }
-#main_visual #diagram .amount {font-size: 52px!important; line-height:62px; }
+#main_visual #diagram .amount {font-size: 72px!important; line-height:82px; }
 
 
 

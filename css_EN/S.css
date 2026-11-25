@@ -416,16 +416,16 @@ margin:0 0 0 500%;
 	width:94%;
 	height:100px;
 	margin:0 0 2% 0;
-	padding:5.5% 0 8% 6%;
+	padding:5.5% 0 6% 6%;
 	display:inline;
 	border-radius:20px;
 	float:left;
 }
 #main_visual #diagram dl {
 	width:94%;
-	height:120px;
+	height:100px;
 	margin:0 0 2% 0;
-	padding:5.5% 0 8% 6%;
+	padding:5.5% 0 6% 6%;
 	display:inline;
 	border-radius:20px;
 	float:right;
@@ -452,7 +452,7 @@ margin:0 0 0 500%;
 }
 #main_visual #diagram h5 {
 	width:100%;
-	margin:2.5% 0 0 0;
+	margin:2% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
 	font-size: 32px;
@@ -463,10 +463,10 @@ margin:0 0 0 500%;
 }
 #main_visual #diagram h6 {
 	width:100%;
-	margin:2.5% 0 0 0;
+	margin:3% 0 0 0;
 	padding:0 0;
 	font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	line-height:17px;
 	font-weight: bold;
 	color: #333333;
