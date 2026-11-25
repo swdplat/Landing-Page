@@ -586,7 +586,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const fields = { member: 'A2', mnthly: 'B2', community: 'C2', payment: 'D2' }
 
   try {
-    const workbookUrl = new URL('https://image.mycard520.com/devmycard/devmycard.xlsx', location.href)
+    const workbookUrl = new URL('https://image.mycard520.com/devmycard/devmycard_EN.xlsx', location.href)
     const response = await fetch(workbookUrl, { cache: 'no-store' })
     if (!response.ok) throw new Error('Excel HTTP ' + response.status)
 
