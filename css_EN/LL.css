@@ -53,7 +53,7 @@ body {
 	width:50%;
 	height:auto;
 	margin:0% 0 0 20%;
-	padding:0.8% 0;
+	padding:0.7% 0;
 	display: flex;
     align-items: center;
 	float:left;
@@ -76,17 +76,25 @@ body {
 	float:left;
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
+
+#top_bar #twin {
+	width:14%;
+	margin:14px 0 0 0;
+	padding:0 2% 0 0;
+	display:inline;
+	float:right;
+}
 #top_bar .btn {
-	width:5.8%;
-	height:37px;
-	margin:0.6% 2% 0 0;
+	width:50%;
+	height:36px;
+	margin:0 0 0 0;
 	padding:0 0;
 	border-radius:100px;
 	background-image: none;
-	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%); 
-	font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 20px;
-	line-height: 20px;
+	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);
+	font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
+	font-size: 21px;
+	line-height: 21px;
 	font-weight: normal;
 	color: #ffffff;
 	text-align:center;
@@ -99,10 +107,10 @@ body {
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
-	width:7%;
+	width:46%;
 	height:auto;
-	margin:-0.1% 0.5% 0 0%;
-	padding:0.6% 0 0.6% 0%;
+	margin:0 4% 0 0%;
+	padding:0 0;
 	text-align:left;
 	display:inline;
 	float:right;
@@ -110,21 +118,21 @@ body {
 #top_bar #language .change {
     width:100%;
 	margin:0 0;
-	padding:1% 0 1% 0%;
+	padding:0 0 0 0%;
 	float:left;
 }
-#top_bar #language img {position:absolute; width:32px; height:32px; margin:0.15% 0 0 -1.5%; float:left;}
+#top_bar #language img {position:absolute; width:31px; height:31px; margin:2px 0 0 -1.6%; float:left;display: flex; align-items: center;}
 #top_bar #language select {
 	width:100%;
-	height:37px;
-	margin:0 0;
-	padding:0 0 0 0%;
+	height:36px;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
 	font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 21px;
+	line-height: 21px;
 	font-weight: normal;
 	color: #666666;
 	text-align:center;

@@ -936,14 +936,12 @@ body.nation-map *::after {
 
   .app-main {
     padding: 8px;
-    height: calc(100dvh - 56px);
-    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    height: auto;     
   }
 
   .map-frame {
-    height: 100%;
-    max-width: none;
-    aspect-ratio: auto;
+    height: calc(100vh - 72px);      /* 舊瀏覽器後備 */
+    height: calc(100svh - 72px);
   }
 
   /* 資訊卡：左右留一點空隙，稍微拉高一點 */
@@ -1175,7 +1173,7 @@ body.nation-map *::after {
 /* === 地圖下方：其他地區區塊 === */
 .region-section{
   margin:12px 0 0 0;
-  padding: 36px 0 92px 0;
+  padding: 36px 0 4% 0;
   background: #fff;
 }
 

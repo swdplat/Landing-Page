@@ -143,10 +143,18 @@ body {
 	float:left;
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
+
+#top_bar #twin {
+	width:12%;
+	margin:20px 0 0 0;
+	padding:0 2% 0 0;
+	display:inline;
+	float:right;
+}
 #top_bar .btn {
-	width:5.8%;
+	width:40%;
 	height:56px;
-	margin:0.6% 2% 0 0;
+	margin:0 0;
 	padding:0 0;
 	border-radius:100px;
 	background-image: none;
@@ -166,10 +174,10 @@ body {
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
-	width:7%;
+	width:56%;
 	height:auto;
-	margin:-0.1% 0.5% 0 0%;
-	padding:0.6% 0 0.6% 0%;
+	margin:0 4% 0 0%;
+	padding:0 0%;
 	text-align:left;
 	display:inline;
 	float:right;
@@ -177,7 +185,7 @@ body {
 #top_bar #language .change {
     width:100%;
 	margin:0 0;
-	padding:1% 0 1% 0%;
+	padding:0 0;
 	float:left;
 }
 #top_bar #language img {position:absolute; width:48px; height:48px; margin:4px 0 0 -2%; float:left;display: flex; align-items: center;}
@@ -190,8 +198,8 @@ body {
 	border:1px solid #cccccc;
 	border-radius:100px;
 	font-family: "微軟正黑體","Microsoft JhengHei","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 2rem;
-	line-height: 2rem;
+	font-size: 32px;
+	line-height: 32px;
 	font-weight: normal;
 	color: #666666;
 	text-align:center;

@@ -140,14 +140,22 @@ body {
 	float:left;
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
+
+#top_bar #twin {
+	width:12%;
+	margin:11px 0 0 0;
+	padding:0 2% 0 0;
+	display:inline;
+	float:right;
+}
 #top_bar .btn {
-	width:5.8%;
+	width:40%;
 	height:28px;
-	margin:0.6% 2% 0 0;
+	margin:0 0 0 0;
 	padding:0 0;
 	border-radius:100px;
 	background-image: none;
-	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);
 	font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
 	font-size: 16px;
 	line-height: 16px;
@@ -163,10 +171,10 @@ body {
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
-	width:7%;
+	width:56%;
 	height:auto;
-	margin:-0.1% 0.5% 0 0%;
-	padding:0.6% 0 0.6% 0%;
+	margin:0 4% 0 0;
+	padding:0 0;
 	text-align:left;
 	display:inline;
 	float:right;
@@ -174,7 +182,7 @@ body {
 #top_bar #language .change {
     width:100%;
 	margin:0 0;
-	padding:1% 0 1% 0%;
+	padding: 0 0;
 	float:left;
 }
 #top_bar #language img {position:absolute; width:24px; height:24px; margin:2px 0 0 -1.6%; float:left;display: flex; align-items: center;}
@@ -182,16 +190,16 @@ body {
 	width:100%;
 	height:28px;
 	margin:0 0;
-	padding:0 0 0 16%;
+	padding:0 0 0 0;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
 	font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: 16px;
+	line-height: 16px;
 	font-weight: normal;
 	color: #666666;
-	text-align:left;
+	text-align:center;
 	display: flex;
     justify-content: center;    
     align-items: center;   

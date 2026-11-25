@@ -9,12 +9,22 @@ body, img, p, ul, li, ol, h1, h2, h3, h4, h5, h6, th, dl, dd, dt, b, a, div {
 	font-size: 100%;
 	border:0px;
 }
+
+html, body { overflow-x: hidden; overflow-x: clip; }
 body {
 	padding:0px;
 	margin:0 auto 0 auto;
 	background-color:#ffffff;
 }
-
+#wrapper {
+	width:100%;
+	height:auto;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	overflow:hidden;
+	float:left;
+	position: relative;
+}
 
 #alpaca {
     width:100%;
@@ -81,6 +91,8 @@ body {
 	text-align:center;
 	cursor:pointer;
 }
+
+
 
 /*天邊*/
 #top_bar {
@@ -184,11 +196,19 @@ body {
 	float:left;
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
+
+#top_bar #twin {
+	width:30%;
+	margin:14px 0 0 0;
+	padding:0 2% 0 0;
+	display:inline;
+	float:right;
+}
 #top_bar .btn {
-	width:12%;
-	height:auto;
-	margin:2.2% 2% 0 0;
-	padding:0.75% 0 0.75% 0;
+	width:42%;
+	height:28px;
+	margin:0 0;
+	padding:0 0;
 	border-radius:100px;
 	background-image: none;
 	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);
@@ -199,16 +219,17 @@ body {
 	color: #ffffff;
 	text-align:center;
 	cursor:pointer;
-	display:inline;
+	display: flex;
+  align-items: center; /* 垂直置中 */
 	float:right;
 }
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
 #top_bar #language {
-	width:12%;
+	width:56%;
 	height:auto;
-	margin:1.5% 1% 0 0%;
-	padding:0.5% 0 0.6% 0%;
+	margin:0 2% 0 0%;
+	padding:0;
 	text-align:left;
 	display:inline;
 	float:right;
@@ -216,15 +237,15 @@ body {
 #top_bar #language .change {
     width:100%;
 	margin:0 0;
-	padding:0.5% 0 0.5% 0%;
+	padding:0;
 	float:left;
 }
-#top_bar #language img {position:absolute; width:22px; height:22px; margin:0.4% 0 0 -3%; float:left;}
+#top_bar #language img {position:absolute; width:22px; height:22px; margin:0.4% 0 0 -3.5%; float:left;}
 #top_bar #language select {
 	width:100%;
-	height:auto!important;
+	height:28px;
 	margin:0 0;
-	padding:2% 0 2% 0%;
+	padding:0;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
@@ -234,7 +255,8 @@ body {
 	font-weight: normal;
 	color: #666666;
 	text-align:center;
-	display:inline;
+	display: flex;
+  align-items: center; /* 垂直置中 */
 	float:right;
 }
 
@@ -578,11 +600,11 @@ body {
 /*地圖*/
 #map {
 	width:100%;
-	height:1380px;
+	height:auto;
 	margin:0 0;
-	padding:0 0 4% 0;
+	padding:0 0 0 0;
 	float:left;
-	overflow-y:scroll;
+	overflow:hidden;
     background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 35%);
 }
 

@@ -9,6 +9,7 @@ body, img, p, ul, li, ol, h1, h2, h3, h4, h5, h6, th, dl, dd, dt, b, a, div {
 	font-size: 100%;
 	border:0px;
 }
+html, body { overflow-x: hidden; overflow-x: clip; }
 body {
 	padding:0px;
 	margin:0 auto 0 auto;
@@ -89,8 +90,7 @@ body {
 	padding:0 0 0 0;
 	overflow:hidden;
 	float:left;
-	
-	overflow:hidden;
+	position: relative;
 }
 
 /*天邊*/
@@ -194,11 +194,20 @@ body {
 	float:left;
 }
 #top_bar .menu li:hover {background-color:#bddafd;}
+
+
+#top_bar #twin {
+	width:50%;
+	margin:8px 0 0 0;
+	padding:0 2% 0 0;
+	display:inline;
+	float:right;
+}
 #top_bar .btn {
-	width:20%;
-	height:auto;
-	margin:1.6% 2% 0 0;
-	padding:1.2% 0 1.2% 0;
+	width:40%;
+	height:22px;
+	margin:0 0 0 0;
+	padding:0 0;
 	border-radius:100px;
 	background-image: none;
 	background: linear-gradient(to bottom,  rgba(66,66,66,1) 0%,rgba(66,66,66,1) 47%,rgba(66,66,66,1) 47%,rgba(36,36,36,1) 48%,rgba(69,69,69,1) 100%);
@@ -209,16 +218,17 @@ body {
 	color: #ffffff;
 	text-align:center;
 	cursor:pointer;
-	display:inline;
+	display: flex;
+  align-items: center; /* 垂直置中 */
 	float:right;
 }
 #top_bar .btn:hover {color: #83f5ff;}
 /*切換語系*/
-#top_bar #language img {position:absolute; width:16px; height:16px; margin:4px 0 0 5.5%; float:left;}
+#top_bar #language img {position:absolute; width:16px; height:16px; margin:2px 0 0 5.5%; float:left;}
 #top_bar #language .area {
-	width:65px;
-	margin:-1px 0 0 0;
-	padding:3px 0 3px 32%;
+	width:44px;
+	margin:0 2% 0 0;
+	padding:0;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
@@ -274,20 +284,22 @@ body {
 }
 #languag_callout #close img {width:80%;}
 #top_bar #language select {
-	width:90%;
+	width:60%;
 	margin:0 0;
-	padding:0.4% 0 0.4% 10%;
+	padding:0 0;
 	background-color:#eeeeee;
 	border:1px solid #cccccc;
 	border-radius:100px;
 	font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
+
 	font-size: 13px;
 	line-height: 13px;
 	font-weight: normal;
 	color: #666666;
 	text-align:left;
     appearance: none;
-	display:inline;
+	display: flex;
+  align-items: center; /* 垂直置中 */
 	float:right;
 }
 #language-desktop-icon {display:none;}
@@ -297,7 +309,7 @@ body {
   position:relative;
   width:18px;
   height:18px;
-  margin:2% 2% 0 0;
+  margin:0 2% 0 0;
   padding:0;
   float:right;
   z-index:20;
@@ -314,7 +326,7 @@ body {
 }
 #top_bar #language #language-toggle {
   position:absolute;
-  top:0;
+  top:2px;
   right:0;
   left:auto;
   z-index:3;
@@ -345,14 +357,15 @@ body {
   z-index:2;
   display:block;
   width:80px;
-  height:24px;
-  margin:-1px 0 0 0;
-  padding:1% 2% 1% 12px;
+  height:22px;
+  margin:0 0 0 0;
+  padding:0 2% 0 12px;
   border:1px solid #cccccc;
   border-radius:100px;
   background:#eeeeee;
   color:#666666;
-  font-family:"微軟正黑體",sans-serif;
+  font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
+
   font-size:13px;
   line-height:normal;
   text-align:left;
@@ -377,7 +390,7 @@ body {
 #top_bar #language.is-open #language-toggle img {
   width:18px;
   height:18px;
-margin:1.5px 0 0 500%;
+margin:0 0 0 500%;
 }
 
 
@@ -719,11 +732,11 @@ margin:1.5px 0 0 500%;
 /*地圖*/
 #map {
 	width:100%;
-	height:980px;
+	height:auto;
 	margin:0 0;
-	padding:0 0 4% 0;
+	padding:0 0;
 	float:left;
-	overflow-y:scroll;
+	overflow:hidden;
     background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 35%);
 }
 
