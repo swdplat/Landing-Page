@@ -1,4 +1,5 @@
 @charset "utf-8";
+@charset "utf-8";
 /*一般設定**************************************************************************/
 body, img, p, ul, li, ol, h1, h2, h3, h4, h5, h6, th, dl, dd, dt, b, a, div {
 	margin: 0px;
@@ -305,8 +306,8 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	 font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 48px;
+	line-height: 48px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;
@@ -1243,8 +1244,8 @@ body {
 	background-repeat: no-repeat;
 	background-size:100%;
 	 font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
-	font-size: 42px;
-	line-height: 42px;
+	font-size: 48px;
+	line-height: 48px;
 	font-weight: bold;
 	color: #ffffff;
 	text-align:center;

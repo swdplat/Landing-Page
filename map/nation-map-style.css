@@ -1280,6 +1280,7 @@ body.nation-map *::after {
   padding: 10px 0x;
   border: 1px solid rgba(0,0,0,.15);
   border-radius: 12px;
+  color:#333333;
   background: #f3f3f3;
   cursor: pointer;
   transition: transform .12s ease, box-shadow .12s ease;
