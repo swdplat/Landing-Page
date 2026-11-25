@@ -660,7 +660,7 @@ body {
 	width:70%;
 	height:auto;
 	margin:0 0;
-	padding:6% 15%;
+	padding:3% 15% 4% 15%;
 	 font-family: "微軟正黑體","Microsoft YaHei","PingFang SC","Noto Sans SC";
 	font-size: 24px;
 	line-height: 24px;
@@ -670,14 +670,14 @@ body {
 	display:inline;
 	float:left;
 }
-#marketing .step .step1 {background-image: url(../images/marketing_step1m.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step2 {background-image: url(../images/marketing_step2m.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step3 {background-image: url(../images/marketing_step3m.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step4 {background-image: url(../images/marketing_step4m.webp); background-repeat: no-repeat; background-size:100%;}
-#marketing .step .step5 {background-image: url(../images/marketing_step5m.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step1 {background-image: url(../images/marketing_step1_EN.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step2 {background-image: url(../images/marketing_step2_EN.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step3 {background-image: url(../images/marketing_step3_EN.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step4 {background-image: url(../images/marketing_step4_EN.webp); background-repeat: no-repeat; background-size:100%;}
+#marketing .step .step5 {background-image: url(../images/marketing_step5_EN.webp); background-repeat: no-repeat; background-size:100%;}
 #marketing .step ul dl {
 	width:91%;
-	height:230px;
+	height:260px;
 	margin:0 5% 2% 0;
 	padding:3% 2%;
 	border-radius:10px;
@@ -722,7 +722,7 @@ body {
 }
 #marketing .step ul dd {
 	width:91%;
-	height:230px;
+	height:260px;
 	margin:0 5% 2% 0;
 	padding:3% 2%;
 	border-radius:10px;
@@ -823,7 +823,7 @@ body {
 #security ul dt img {width:100%;}
 #security ul li {
 	width:42%;
-	height:245px;
+	height:auto;
 	margin:0 1% 4% 1%;
 	padding:2.5% 3%;
 	border-radius:10px;
@@ -834,7 +834,7 @@ body {
 }
 #security ul dl {
 	width:42%;
-	height:245px;
+	height:auto;
 	margin:0 1% 4% 1%;
 	padding:2.5% 3%;
 	border-radius:10px;
@@ -905,7 +905,7 @@ body {
 }
 #customer_service ul li {
 	width:43.7%;
-	height:265px;
+	height:auto;
 	margin:0 1% 2% 1%;
 	padding:1.5% 2%;
 	border-radius:10px;
@@ -916,7 +916,7 @@ body {
 }
 #customer_service ul dl {
 	width:43.7%;
-	height:265px;
+	height:auto;
 	margin:0 1% 2% 1%;
 	padding:1.5% 2%;
 	border-radius:10px;

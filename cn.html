@@ -185,19 +185,19 @@ $(function() {
 	  <div id="more"></div>
 	  <div id="diagram">
         <li class="p1">
-	      <h5><span class="amount">785</span>万+</h5>
+	      <h5><span class="amount" id="member">785</span>万+</h5>
 		  <h6>MyCard会员数</h6>
 		</li>
 		<dl class="p2">
-		  <h5><span class="amount">2200</span>万+</h5>
+		  <h5><span class="amount" id="mnthly">2200</span>万+</h5>
 		  <h6>MyCard官网月访问量</h6>
 		</dl>
 		<li class="p3">
-		  <h5><span class="amount">52</span>万+</h5>
+		  <h5><span class="amount" id="community">52</span>万+</h5>
 		  <h6>MyCard社群粉丝数</h6>
 		</li>
 		<dl class="p4">
-		  <h5><span class="amount">200+</h5>
+		  <h5><span class="amount" id="payment">200+</span></h5>
 		  <h6>支付方式</h6>
 		</dl>
       </div>
@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const fields = { member: 'A2', mnthly: 'B2', community: 'C2', payment: 'D2' }
 
   try {
-    const workbookUrl = new URL('https://image.mycard520.com/devmycard/devmycard.xlsx, location.href)
+    const workbookUrl = new URL('https://image.mycard520.com/devmycard/devmycard.xlsx', location.href)
     const response = await fetch(workbookUrl, { cache: 'no-store' })
     if (!response.ok) throw new Error('Excel HTTP ' + response.status)
 
@@ -598,7 +598,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const [id, address] of Object.entries(fields)) {
       const cell = sheet?.[address]
       if (!cell || cell.t === 'e' || cell.v == null || String(cell.v).trim() === '') continue
-      document.getElementById(id).textContent = String(cell.v).trim()
+      const target = document.getElementById(id)
+      if (target) target.textContent = String(cell.v).trim()
     }
   } catch (error) {
     console.warn('無法讀取 devmycard.xlsx，顯示預設數值。', error)

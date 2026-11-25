@@ -657,12 +657,12 @@ body {
 }
 #marketing .step li {
 	width:92%;
-	height:44px;
+	height:auto;
 	margin:0 0;
-	padding:0 0% 0 8%;
+	padding:4% 0% 4% 8%;
 	font-family: "微軟正黑體","PingFang TC","Noto Sans TC",Arial,sans-serif;
-	font-size: 18px;
-	line-height: 18px;
+	font-size: 22px;
+	line-height:22px;
 	font-weight: bold;
 	color: #333333;
 	text-align:left;
